@@ -947,3 +947,68 @@ $$f: a \to b \quad \text{or} \quad a \xrightarrow{f} b.$$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>针对 $f$ 的这些操作通过将 $f$ 展示为一个从其*定义域*（或称*源*）开始并终止于其*陪域*（或称*靶*）的实际态射来表示：
 $$f: a \to b \quad \text{或} \quad a \xrightarrow{f} b。$$</details>
+
+#### 4.1.1.2 Metacategories | 元范畴
+
+::: {.callout-note appearance="simple"}
+**4.1.1.2 Metacategories:** A *metacategory* is a metagraph with two additional operations as:
+
+* *Identity*, which assigns to each object $a$ a morphism $\text{id}_a : a \to a$;
+* *Composition*, which assigns to each pair $(g, f)$ of morphisms with $\text{dom } g = \text{cod } f$ a morphism $g \circ f : \text{dom } f \to \text{cod } g$, called their composite.
+
+These operations in a metacategory are subject to the two following axioms as:
+
+* *Associativity.* For given objects and morphisms in the configuration
+$$a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d, \quad $$
+one always has the equality $h \circ (g \circ f) = (h \circ g) \circ f$.
+* *Unit law.* For all morphisms $f : a \to b$ and $g : b \to c$ composition with the identity morphism $\text{id}_b$ gives $\text{id}_b \circ f = f$ and $g \circ \text{id}_b = g$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.1.2 元范畴：** 一个 *元范畴* 是一个带有如下两种额外运算的元图：
+* *恒等运算*：为每个对象 $a$ 指定一个态射 $\text{id}_a : a \to a$；
+* *复合运算*：为每一对满足 $\text{dom } g = \text{cod } f$ 的态射 $(g, f)$ 指定一个态射 $g \circ f : \text{dom } f \to \text{cod } g$，称为它们的复合态射。
+
+元范畴中的这些运算须满足以下两条公理：
+* *结合律*：对于给定配置中的对象与态射
+$$a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d, \quad $$
+恒有等式 $h \circ (g \circ f) = (h \circ g) \circ f$。
+* *单位律*：对于所有态射 $f : a \to b$ 与 $g : b \to c$，与恒等态射 $\text{id}_b$ 的复合满足 $\text{id}_b \circ f = f$ 以及 $g \circ \text{id}_b = g$。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.1.1.3 Proposition:** For any object $a$, the identity morphism $\text{id}_a$ is unique.
+
+*Proof:* If $\text{id}'_a : a \to a$ is another identity morphism, then $\text{id}'_a = \text{id}_a \circ \text{id}'_a = \text{id}_a$. ■
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.1.3 命题：** 对于任何对象 $a$，恒等态射 $\text{id}_a$ 是唯一的。
+
+*证明：* 若 $\text{id}'_a : a \to a$ 是另一个恒等态射，则有 $\text{id}'_a = \text{id}_a \circ \text{id}'_a = \text{id}_a$。■
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.1.4 The metacategory of sets:** The metacategory of sets has all sets as objects and all maps between sets as morphisms. The identity takes the *identity map* $\text{id}_X : X \to X, p \mapsto p$ at each set $X$, and the composition is the composition of maps.
+
+<details><summary style="color: gray; pointer;">[点击展开翻译]</summary>
+**4.1.1.4 集合元范畴：** 集合元范畴以所有集合为对象，以集合之间的所有映射为态射。恒等运算在每个集合 $X$ 上取 *恒等映射* $\text{id}_X : X \to X, p \mapsto p$，而复合运算即映射的复合。
+</details>
+:::
+
+Note that, in any compatible set theory, such as Zermelo–Fraenkel set theory, there is no set of all sets, to avoid the Russell’s paradox. Russell found in Frege’s earlier axiomatic system of set theory a paradox that demonstrated an inconsistency in it. In Frege’s system there is an unrestricted comprehension principle that, given any condition expressible by a predicate $P(X)$ on any set $X$, there is a set of all sets meeting that condition, denoted by $\{X : P(X)\}$. This principle is the cause of the inconsistency. Instead, we shall call the *class* of all sets instead. In general, a metacategory has a class of objects and a class of morphisms, not sets.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+请注意，在任何相容的集合论（如 Zermelo–Fraenkel 集合论）中，为了避免罗素悖论，并不存在“所有集合的集合”。罗素在弗雷格早期的集合论公理体系中发现了一个悖论，证明了该体系的不自洽性。在弗雷格的体系中存在一个无限制概括原则，即给定任何可在集合 $X$ 上由谓词 $P(X)$ 表达的条件，都存在一个由满足该条件的所有集合组成的集合，记作 $\{X : P(X)\}$。这一原则是不自洽性的根源。相反，我们应将其称为所有集合的 *类 (class)*。通常情况下，一个元范畴拥有一类对象和一类态射，而非集合。
+</details>
+
+::: {.callout-important appearance="simple"}
+**4.1.1.5 Russell's paradox:** There is no set of all non-self-membered sets.
+
+*Proof:* Suppose there is one, denoted by $\mathcal{R} = \{X \text{ is a set} : X \notin X\}$. Then either $\mathcal{R} \in \mathcal{R}$ or $\mathcal{R} \notin \mathcal{R}$. If $\mathcal{R} \in \mathcal{R}$, then by the construction of $\mathcal{R}$ we have $\mathcal{R} \notin \mathcal{R}$. If $\mathcal{R} \notin \mathcal{R}$ , then by the construction of $\mathcal{R}$ we have $\mathcal{R} \in \mathcal{R}$. Either way leads to a contradiction. ■
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.1.5 罗素悖论：** 不存在由所有不属于自身的集合构成的集合。
+
+*证明：* 假设存在这样一个集合，记作 $\mathcal{R} = \{X \text{ 是一个集合} : X \notin X\}$。那么要么 $\mathcal{R} \in \mathcal{R}$，要么 $\mathcal{R} \notin \mathcal{R}$。若 $\mathcal{R} \in \mathcal{R}$，根据 $\mathcal{R}$ 的构造可知 $\mathcal{R} \notin \mathcal{R}$。若 $\mathcal{R} \notin \mathcal{R}$，根据 $\mathcal{R}$ 的构造可知 $\mathcal{R} \in \mathcal{R}$。无论哪种情况都会导致矛盾。■
+</details>

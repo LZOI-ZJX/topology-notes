@@ -1763,8 +1763,96 @@ f^{-1} \left( \prod_{j=1}^m B_j \right) = \bigcap_{j=1}^m f_j^{-1}(B_j). \tag{16
 </summary>
 针对 <span class="math inline">\(f\)</span> 的这些操作通过将 <span class="math inline">\(f\)</span> 展示为一个从其<em>定义域</em>（或称<em>源</em>）开始并终止于其<em>陪域</em>（或称<em>靶</em>）的实际态射来表示： <span class="math display">\[f: a \to b \quad \text{或} \quad a \xrightarrow{f} b。\]</span>
 </details>
+<section id="metacategories-元范畴-1" class="level4">
+<h4 class="anchored" data-anchor-id="metacategories-元范畴-1">4.1.1.2 Metacategories | 元范畴</h4>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.1.1.2 Metacategories:</strong> A <em>metacategory</em> is a metagraph with two additional operations as:</p>
+<ul>
+<li><em>Identity</em>, which assigns to each object <span class="math inline">\(a\)</span> a morphism <span class="math inline">\(\text{id}_a : a \to a\)</span>;</li>
+<li><em>Composition</em>, which assigns to each pair <span class="math inline">\((g, f)\)</span> of morphisms with <span class="math inline">\(\text{dom } g = \text{cod } f\)</span> a morphism <span class="math inline">\(g \circ f : \text{dom } f \to \text{cod } g\)</span>, called their composite.</li>
+</ul>
+<p>These operations in a metacategory are subject to the two following axioms as:</p>
+<ul>
+<li><em>Associativity.</em> For given objects and morphisms in the configuration <span class="math display">\[a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d, \quad \]</span> one always has the equality <span class="math inline">\(h \circ (g \circ f) = (h \circ g) \circ f\)</span>.</li>
+<li><em>Unit law.</em> For all morphisms <span class="math inline">\(f : a \to b\)</span> and <span class="math inline">\(g : b \to c\)</span> composition with the identity morphism <span class="math inline">\(\text{id}_b\)</span> gives <span class="math inline">\(\text{id}_b \circ f = f\)</span> and <span class="math inline">\(g \circ \text{id}_b = g\)</span>.</li>
+</ul>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.1.1.2 元范畴：</strong> 一个 <em>元范畴</em> 是一个带有如下两种额外运算的元图： * <em>恒等运算</em>：为每个对象 <span class="math inline">\(a\)</span> 指定一个态射 <span class="math inline">\(\text{id}_a : a \to a\)</span>； * <em>复合运算</em>：为每一对满足 <span class="math inline">\(\text{dom } g = \text{cod } f\)</span> 的态射 <span class="math inline">\((g, f)\)</span> 指定一个态射 <span class="math inline">\(g \circ f : \text{dom } f \to \text{cod } g\)</span>，称为它们的复合态射。</p>
+元范畴中的这些运算须满足以下两条公理： * <em>结合律</em>：对于给定配置中的对象与态射 <span class="math display">\[a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d, \quad \]</span> 恒有等式 <span class="math inline">\(h \circ (g \circ f) = (h \circ g) \circ f\)</span>。 * <em>单位律</em>：对于所有态射 <span class="math inline">\(f : a \to b\)</span> 与 <span class="math inline">\(g : b \to c\)</span>，与恒等态射 <span class="math inline">\(\text{id}_b\)</span> 的复合满足 <span class="math inline">\(\text{id}_b \circ f = f\)</span> 以及 <span class="math inline">\(g \circ \text{id}_b = g\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.1.1.3 Proposition:</strong> For any object <span class="math inline">\(a\)</span>, the identity morphism <span class="math inline">\(\text{id}_a\)</span> is unique.</p>
+<p><em>Proof:</em> If <span class="math inline">\(\text{id}'_a : a \to a\)</span> is another identity morphism, then <span class="math inline">\(\text{id}'_a = \text{id}_a \circ \text{id}'_a = \text{id}_a\)</span>. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.1.1.3 命题：</strong> 对于任何对象 <span class="math inline">\(a\)</span>，恒等态射 <span class="math inline">\(\text{id}_a\)</span> 是唯一的。</p>
+<em>证明：</em> 若 <span class="math inline">\(\text{id}'_a : a \to a\)</span> 是另一个恒等态射，则有 <span class="math inline">\(\text{id}'_a = \text{id}_a \circ \text{id}'_a = \text{id}_a\)</span>。■
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.1.1.4 The metacategory of sets:</strong> The metacategory of sets has all sets as objects and all maps between sets as morphisms. The identity takes the <em>identity map</em> <span class="math inline">\(\text{id}_X : X \to X, p \mapsto p\)</span> at each set <span class="math inline">\(X\)</span>, and the composition is the composition of maps.</p>
+<details>
+<summary style="color: gray; pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.1.1.4 集合元范畴：</strong> 集合元范畴以所有集合为对象，以集合之间的所有映射为态射。恒等运算在每个集合 <span class="math inline">\(X\)</span> 上取 <em>恒等映射</em> <span class="math inline">\(\text{id}_X : X \to X, p \mapsto p\)</span>，而复合运算即映射的复合。
+</details>
+</div>
+</div>
+</div>
+<p>Note that, in any compatible set theory, such as Zermelo–Fraenkel set theory, there is no set of all sets, to avoid the Russell’s paradox. Russell found in Frege’s earlier axiomatic system of set theory a paradox that demonstrated an inconsistency in it. In Frege’s system there is an unrestricted comprehension principle that, given any condition expressible by a predicate <span class="math inline">\(P(X)\)</span> on any set <span class="math inline">\(X\)</span>, there is a set of all sets meeting that condition, denoted by <span class="math inline">\(\{X : P(X)\}\)</span>. This principle is the cause of the inconsistency. Instead, we shall call the <em>class</em> of all sets instead. In general, a metacategory has a class of objects and a class of morphisms, not sets.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+请注意，在任何相容的集合论（如 Zermelo–Fraenkel 集合论）中，为了避免罗素悖论，并不存在“所有集合的集合”。罗素在弗雷格早期的集合论公理体系中发现了一个悖论，证明了该体系的不自洽性。在弗雷格的体系中存在一个无限制概括原则，即给定任何可在集合 <span class="math inline">\(X\)</span> 上由谓词 <span class="math inline">\(P(X)\)</span> 表达的条件，都存在一个由满足该条件的所有集合组成的集合，记作 <span class="math inline">\(\{X : P(X)\}\)</span>。这一原则是不自洽性的根源。相反，我们应将其称为所有集合的 <em>类 (class)</em>。通常情况下，一个元范畴拥有一类对象和一类态射，而非集合。
+</details>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.1.1.5 Russell’s paradox:</strong> There is no set of all non-self-membered sets.</p>
+<p><em>Proof:</em> Suppose there is one, denoted by <span class="math inline">\(\mathcal{R} = \{X \text{ is a set} : X \notin X\}\)</span>. Then either <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span> or <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span>. If <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span>, then by the construction of <span class="math inline">\(\mathcal{R}\)</span> we have <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span>. If <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span> , then by the construction of <span class="math inline">\(\mathcal{R}\)</span> we have <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span>. Either way leads to a contradiction. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.1.1.5 罗素悖论：</strong> 不存在由所有不属于自身的集合构成的集合。</p>
+<em>证明：</em> 假设存在这样一个集合，记作 <span class="math inline">\(\mathcal{R} = \{X \text{ 是一个集合} : X \notin X\}\)</span>。那么要么 <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span>，要么 <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span>。若 <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span>，根据 <span class="math inline">\(\mathcal{R}\)</span> 的构造可知 <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span>。若 <span class="math inline">\(\mathcal{R} \notin \mathcal{R}\)</span>，根据 <span class="math inline">\(\mathcal{R}\)</span> 的构造可知 <span class="math inline">\(\mathcal{R} \in \mathcal{R}\)</span>。无论哪种情况都会导致矛盾。■
+</details>
 
 
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 </section>
