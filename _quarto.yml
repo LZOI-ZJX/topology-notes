@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "拓扑学讲义翻译"
+  sidebar:
+    style: "floating"
+    contents:
+      - Trans_ver1.qmd  # 确保这里的文件名和你的 qmd 文件名完全一致
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false
+    css: custom.css
