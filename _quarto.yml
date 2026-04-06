@@ -8,12 +8,14 @@ website:
     style: "floating"
     collapse-level: 2
     contents:
-      - text: "首页"
+      - text: "BASIC TOPOLOGY"
         href: index.qmd
       - text: "4. CATEGORY THEORY"
         href: sec4.qmd
       - text: "5. MAPS BETWEEN AND SUBSETS OF TOPOLOGICAL SPACES"
         href: sec5.qmd
+      - text: "6. TOPOLOGICAL SUBSPACES"
+        herf: sec6.qmd
 
 format:
   html:
