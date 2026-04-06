@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-05">
+<meta name="dcterms.date" content="2026-04-06">
 
 <title>拓扑学讲义 – 拓扑学讲义翻译</title>
 <style>
@@ -114,7 +114,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">拓扑学讲义</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      拓扑学讲义翻译
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,16 +139,6 @@ window.Quarto = {
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">拓扑学讲义</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -195,6 +187,13 @@ window.Quarto = {
   <li><a href="#examples-of-categories-范畴示例" id="toc-examples-of-categories-范畴示例" class="nav-link" data-scroll-target="#examples-of-categories-范畴示例">4.1.4 Examples of categories | 范畴示例</a></li>
   </ul></li>
   <li><a href="#morphisms-态射" id="toc-morphisms-态射" class="nav-link" data-scroll-target="#morphisms-态射">4.2 Morphisms | 态射</a></li>
+  <li><a href="#the-category-of-sets-集合范畴" id="toc-the-category-of-sets-集合范畴" class="nav-link" data-scroll-target="#the-category-of-sets-集合范畴">4.3 The category of sets | 集合范畴</a></li>
+  <li><a href="#the-category-of-groups-群范畴" id="toc-the-category-of-groups-群范畴" class="nav-link" data-scroll-target="#the-category-of-groups-群范畴">4.4 The category of groups | 群范畴</a>
+  <ul class="collapse">
+  <li><a href="#the-category-mathsfgrp-mathsfgrp-范畴" id="toc-the-category-mathsfgrp-mathsfgrp-范畴" class="nav-link" data-scroll-target="#the-category-mathsfgrp-mathsfgrp-范畴">4.4.1 The category <span class="math inline">\(\mathsf{Grp}\)</span> | <span class="math inline">\(\mathsf{Grp}\)</span> 范畴</a></li>
+  <li><a href="#the-category-mathsfmon-幺半群范畴-mathsfmon" id="toc-the-category-mathsfmon-幺半群范畴-mathsfmon" class="nav-link" data-scroll-target="#the-category-mathsfmon-幺半群范畴-mathsfmon">4.4.2 The category <span class="math inline">\(\mathsf{Mon}\)</span> | 幺半群范畴 <span class="math inline">\(\mathsf{Mon}\)</span></a></li>
+  <li><a href="#the-category-mathsfab-阿贝尔群范畴-mathsfab" id="toc-the-category-mathsfab-阿贝尔群范畴-mathsfab" class="nav-link" data-scroll-target="#the-category-mathsfab-阿贝尔群范畴-mathsfab">4.4.3 The category <span class="math inline">\(\mathsf{Ab}\)</span> | 阿贝尔群范畴 <span class="math inline">\(\mathsf{Ab}\)</span></a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -215,7 +214,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 5, 2026</p>
+      <p class="date">April 6, 2026</p>
     </div>
   </div>
   
@@ -2257,8 +2256,586 @@ In categorical treatments many properties ordinarily formulated by means of elem
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.8 Proposition:</strong> Let <span class="math inline">\(f: a \to b\)</span> be a morphism in a category <span class="math inline">\(\mathsf{C}\)</span>. Then the following are equivalent:</p>
+<ol type="1">
+<li><p><span class="math inline">\(f\)</span> is a monomorphism and a retraction;</p></li>
+<li><p><span class="math inline">\(f\)</span> is an epimorphism and a section; and</p></li>
+<li><p><span class="math inline">\(f\)</span> is an isomorphism.</p></li>
+</ol>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.2.0.8 命题：</strong> 设 <span class="math inline">\(f: a \to b\)</span> 为范畴 <span class="math inline">\(\mathsf{C}\)</span> 中的一个态射。则以下各项等价：</p>
+<ol type="1">
+<li><p><span class="math inline">\(f\)</span> 是单态射且是收缩；</p></li>
+<li><p><span class="math inline">\(f\)</span> 是满态射且是截面；</p></li>
+<li><p><span class="math inline">\(f\)</span> 是同构。</p></li>
+</ol>
+</details>
+<p><em>Proof:</em> An isomorphism is a monomorphism, an epimorphism, a section, and a retraction. If <span class="math inline">\(f: a \to b\)</span> is a monomorphism and a retraction, then there is a morphism <span class="math inline">\(g: b \to a\)</span> such that <span class="math inline">\(f \circ g = \text{id}_b\)</span>. Composing <span class="math inline">\(f\)</span> on the right, we have <span class="math inline">\(f \circ g \circ f = \text{id}_b \circ f = f = f \circ \text{id}_a\)</span>. Since <span class="math inline">\(f\)</span> is left-cancellable, we have <span class="math inline">\(g \circ f = \text{id}_a\)</span>, and then <span class="math inline">\(g\)</span> is the inverse of <span class="math inline">\(f\)</span>. If <span class="math inline">\(f: a \to b\)</span> is an epimorphism and a section, then there is a morphism <span class="math inline">\(g: b \to a\)</span> such that <span class="math inline">\(g \circ f = \text{id}_a\)</span>. Composing <span class="math inline">\(f\)</span> on the left, we have <span class="math inline">\(f \circ g \circ f = f \circ \text{id}_a = f = \text{id}_b \circ f\)</span>. Since <span class="math inline">\(f\)</span> is right-cancellable, we have <span class="math inline">\(f \circ g = \text{id}_b\)</span>, and then <span class="math inline">\(g\)</span> is the inverse of <span class="math inline">\(f\)</span>. ■</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.9 Extremal monomorphisms and epimorphisms:</strong> Let <span class="math inline">\(f: a \to b\)</span> be a morphism in a category <span class="math inline">\(\mathsf{C}\)</span>; it is called</p>
+<ol type="1">
+<li><p>an <em>extremal monomorphism</em> if <span class="math inline">\(f\)</span> is monic and for every morphism <span class="math inline">\(g: c \to b\)</span> and every epimorphism <span class="math inline">\(h: a \to c\)</span> if <span class="math inline">\(f = g \circ h\)</span> then <span class="math inline">\(h\)</span> is an isomorphism;</p></li>
+<li><p>an <em>extremal epimorphism</em> if <span class="math inline">\(f\)</span> is epic and for every morphism <span class="math inline">\(h: a \to c\)</span> and every monomorphism <span class="math inline">\(g: c \to b\)</span> if <span class="math inline">\(f = g \circ h\)</span> then <span class="math inline">\(g\)</span> is an isomorphism; or</p></li>
+<li><p>an <em>extremal bimorphism</em> if it is both an extremal monomorphism and an extremal epimorphism.</p></li>
+</ol>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.2.0.9 极大单态射与极大满态射：</strong> 设 <span class="math inline">\(f: a \to b\)</span> 为范畴 <span class="math inline">\(\mathsf{C}\)</span> 中的一个态射；它被称为：</p>
+<ol type="1">
+<li><p><strong>极大单态射 (extremal monomorphism)</strong>，如果 <span class="math inline">\(f\)</span> 是单态射，且对于每一个态射 <span class="math inline">\(g: c \to b\)</span> 和每一个满态射 <span class="math inline">\(h: a \to c\)</span>，若 <span class="math inline">\(f = g \circ h\)</span>，则 <span class="math inline">\(h\)</span> 是同构；</p></li>
+<li><p><strong>极大满态射 (extremal epimorphism)</strong>，如果 <span class="math inline">\(f\)</span> 是满态射，且对于每一个态射 <span class="math inline">\(h: a \to c\)</span> 和每一个单态射 <span class="math inline">\(g: c \to b\)</span>，若 <span class="math inline">\(f = g \circ h\)</span>，则 <span class="math inline">\(g\)</span> 是同构；或</p></li>
+<li><p><strong>极大双态射 (extremal bimorphism)</strong>，如果它既是极大单态射又是极大满态射。</p></li>
+</ol>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.10 Compositions of extremal monomorphisms and epimorphisms:</strong> The composition of extremal monomorphisms is an extremal monomorphism. The composition of extremal epimorphisms is an extremal epimorphism. The composition of extremal bimorphisms is an extremal bimorphism.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.10 极大单态射与极大满态射的复合：</strong> 极大单态射的复合是极大单态射。极大满态射的复合是极大满态射。极大双态射的复合是极大双态射。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.11 Split monomorphisms and epimorphisms are extremal:</strong> A section is an extremal monomorphism. A retraction is an extremal epimorphism.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.11 分裂单态射与分裂满态射是极大的：</strong> 截面是极大单态射。收缩是极大满态射。
+</details>
+</div>
+</div>
+</div>
+<p><em>Proof:</em> Let <span class="math inline">\(f: a \to b\)</span> be a section in <span class="math inline">\(\mathsf{C}\)</span>; then it has a left inverse <span class="math inline">\(g: b \to a\)</span>. Suppose that <span class="math inline">\(f = h \circ k\)</span> and <span class="math inline">\(k\)</span> is epic. <span class="math display">\[\text{id}_a = g \circ f = g \circ h \circ k \tag{30}\]</span> Since <span class="math inline">\(k\)</span> has a left inverse, it is a section, but since it is epic, it is an isomorphism. We conclude that <span class="math inline">\(f\)</span> is an extremal monomorphism. Let <span class="math inline">\(f: a \to b\)</span> be a retraction in <span class="math inline">\(\mathsf{C}\)</span>; then it has a right inverse <span class="math inline">\(g: b \to a\)</span>. Suppose that <span class="math inline">\(f = h \circ k\)</span> and <span class="math inline">\(g\)</span> is monic. <span class="math display">\[\text{id}_b = f \circ g = h \circ k \circ g \tag{31}\]</span> Since <span class="math inline">\(h\)</span> has a right inverse, it is a retraction, but since it is monic, it is an isomorphism. We conclude that <span class="math inline">\(f\)</span> is an extremal epimorphism. ■</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.12 Endomorphisms:</strong> An <em>endomorphism</em> of <span class="math inline">\(a \in \mathsf{C}\)</span> in a category <span class="math inline">\(\mathsf{C}\)</span> is a morphism <span class="math inline">\(f: a \to a\)</span>. The class of endomorphisms of <span class="math inline">\(a\)</span> is denoted by <span class="math inline">\(\text{End}(a)\)</span>. An endomorphism <span class="math inline">\(f: a \to a\)</span> is called</p>
+<ol type="1">
+<li><p>an <em>idempotent</em> if <span class="math inline">\(f^2 = f\)</span>; it is <em>split</em> if there are morphisms <span class="math inline">\(g: a \to b\)</span> and <span class="math inline">\(h: b \to a\)</span> such that <span class="math inline">\(f = h \circ g\)</span> and <span class="math inline">\(g \circ h = \text{id}_b\)</span>; or</p></li>
+<li><p>an <em>automorphism</em> if it is also an isomorphism; the class of automorphisms of <span class="math inline">\(a\)</span> is denoted <span class="math inline">\(\text{Aut}(a)\)</span>.</p></li>
+</ol>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>4.2.0.12 自态射：</strong> 范畴 <span class="math inline">\(\mathsf{C}\)</span> 中对象 <span class="math inline">\(a \in \mathsf{C}\)</span> 的一个<strong>自态射 (endomorphism)</strong> 是指态射 <span class="math inline">\(f: a \to a\)</span>。<span class="math inline">\(a\)</span> 的自态射类记作 <span class="math inline">\(\text{End}(a)\)</span>。一个自态射 <span class="math inline">\(f: a \to a\)</span> 被称为：</p>
+<ol type="1">
+<li><p><strong>幂等态射 (idempotent)</strong>，如果 <span class="math inline">\(f^2 = f\)</span>；它是<strong>分裂的 (split)</strong>，如果存在态射 <span class="math inline">\(g: a \to b\)</span> 和 <span class="math inline">\(h: b \to a\)</span> 使得 <span class="math inline">\(f = h \circ g\)</span> 且 <span class="math inline">\(g \circ h = \text{id}_b\)</span>；或</p></li>
+<li><p><strong>自同构 (automorphism)</strong>，如果它同时也是一个同构；<span class="math inline">\(a\)</span> 的自同构类记作 <span class="math inline">\(\text{Aut}(a)\)</span>。</p></li>
+</ol>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.13 Endomorphism monoids and automorphism groups:</strong> For locally small categories, <span class="math inline">\(\text{End}(a)\)</span> is a set and forms a monoid under morphism composition, while <span class="math inline">\(\text{Aut}(a)\)</span> forms a group under morphism composition called the <em>automorphism group</em> of <span class="math inline">\(a\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.13 自态射幺半群与自同构群：</strong> 对于局部小范畴，<span class="math inline">\(\text{End}(a)\)</span> 是一个集合，并在态射复合下构成一个幺半群；而 <span class="math inline">\(\text{Aut}(a)\)</span> 在态射复合下构成一个群，称为 <span class="math inline">\(a\)</span> 的<strong>自同构群</strong>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.14 Definition:</strong> Two objects <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <em>isomorphic</em> in the category <span class="math inline">\(\mathsf{C}\)</span> if there is an isomorphism <span class="math inline">\(f: a \to b\)</span>, denoted <span class="math inline">\(a \simeq^f b\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.14 定义：</strong> 如果范畴 <span class="math inline">\(\mathsf{C}\)</span> 中存在同构 <span class="math inline">\(f: a \to b\)</span>，则称两个对象 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> 是<strong>同构的 (isomorphic)</strong>，记作 <span class="math inline">\(a \simeq^f b\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.15 Proposition:</strong> The relation of isomorphism of objects is an equivalence relation.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.15 命题：</strong> 对象间的同构关系是一种等价关系。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.16 Initial and terminal objects:</strong> An object <span class="math inline">\(s\)</span> in a category <span class="math inline">\(\mathsf{C}\)</span> is <em>initial</em> if for each object <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathsf{C}\)</span> there is exactly one morphism <span class="math inline">\(s \to a\)</span>. An object <span class="math inline">\(t\)</span> in a category <span class="math inline">\(\mathsf{C}\)</span> is <em>terminal</em> if from each object <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathsf{C}\)</span> there is exactly one morphism <span class="math inline">\(a \to t\)</span>. An object <span class="math inline">\(z\)</span> in a category <span class="math inline">\(\mathsf{C}\)</span> is <em>zero</em> if it is both initial and terminal; for any two objects <span class="math inline">\(a, b \in \mathsf{C}\)</span> there is a unique morphism <span class="math inline">\(a \to z \to b\)</span>, called the <em>zero morphism</em> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.16 始对象与终对象：</strong> 范畴 <span class="math inline">\(\mathsf{C}\)</span> 中的对象 <span class="math inline">\(s\)</span> 被称为<strong>始对象 (initial)</strong>，如果对于 <span class="math inline">\(\mathsf{C}\)</span> 中的每个对象 <span class="math inline">\(a\)</span>，都恰好存在一个态射 <span class="math inline">\(s \to a\)</span>。对象 <span class="math inline">\(t\)</span> 被称为<strong>终对象 (terminal)</strong>，如果对于 <span class="math inline">\(\mathsf{C}\)</span> 中的每个对象 <span class="math inline">\(a\)</span>，都恰好存在一个态射 <span class="math inline">\(a \to t\)</span>。对象 <span class="math inline">\(z\)</span> 被称为<strong>零对象 (zero)</strong>，如果它既是始对象又是终对象；对于任意两个对象 <span class="math inline">\(a, b \in \mathsf{C}\)</span>，存在唯一的态射 <span class="math inline">\(a \to z \to b\)</span>，称为从 <span class="math inline">\(a\)</span> 到 <span class="math inline">\(b\)</span> 的<strong>零态射 (zero morphism)</strong>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.17 Proposition:</strong> In a category <span class="math inline">\(\mathsf{C}\)</span> a initial or terminal object, if exists, is unique up to isomorphisms.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.17 命题：</strong> 在范畴 <span class="math inline">\(\mathsf{C}\)</span> 中，始对象或终对象（如果存在）在同构意义下是唯一的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.2.0.18 Proposition:</strong> Any composition with a zero morphism is a zero morphism.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.2.0.18 命题：</strong> 与零态射的任何复合仍为零态射。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="the-category-of-sets-集合范畴" class="level2">
+<h2 class="anchored" data-anchor-id="the-category-of-sets-集合范畴">4.3 The category of sets | 集合范畴</h2>
+<strong>The category of sets.</strong> In any compatible set theory, such as ZFC, there is no set of all sets to avoid the Russel’s paradox. Therefore, there is only the metacategory of all sets, not a category. To avoid the foundational problems in set theory, we shall assume that there is a big enough set <span class="math inline">\(U\)</span>, the <em>universe</em>, then describe a set <span class="math inline">\(x\)</span> as <em>small</em> if it is a member of the universe. Then we have an actual category <span class="math inline">\(\mathsf{Set}\)</span>, the category of all small sets, which is itself a <em>large</em> category.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>集合范畴。</strong> 在任何相容的集合论（如 ZFC）中，为了避免罗素悖论，不存在“所有集合的集合”。因此，只存在所有集合的元范畴（metacategory），而非范畴。 为了避免集合论中的基础性问题，我们假设存在一个足够大的集合 <span class="math inline">\(U\)</span>，即<strong>全集 (universe)</strong>，然后当一个集合 <span class="math inline">\(x\)</span> 是全集的成员时，将其描述为<strong>小的 (small)</strong>。于是我们得到了一个实际的范畴 <span class="math inline">\(\mathsf{Set}\)</span>，即所有小集合构成的范畴，其本身是一个<strong>大 (large)</strong> 范畴。
+</details>
+<section id="the-category-mathsfset-mathsfset-范畴" class="level4">
+<h4 class="anchored" data-anchor-id="the-category-mathsfset-mathsfset-范畴">4.3.1 The category <span class="math inline">\(\mathsf{Set}\)</span> | <span class="math inline">\(\mathsf{Set}\)</span> 范畴</h4>
+Recall that <span class="math inline">\(f: X \to Y\)</span> denotes a <em>map</em> from the <em>domain</em> <span class="math inline">\(X\)</span> to the <em>target</em> <span class="math inline">\(Y\)</span>.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+回想一下，<span class="math inline">\(f: X \to Y\)</span> 表示从<strong>定义域 (domain)</strong> <span class="math inline">\(X\)</span> 到<strong>靶 (target)</strong> <span class="math inline">\(Y\)</span> 的一个<strong>映射 (map)</strong>。
+</details>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.1 The category of small sets:</strong> The category <span class="math inline">\(\mathsf{Set}\)</span> is the category of small sets and maps between them as morphisms. The identity takes the <em>identity map</em> <span class="math inline">\(\text{id}_X: X \to X, p \mapsto p\)</span> at each small set <span class="math inline">\(X\)</span>, and the composition is the composition of maps.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.1 小集合范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Set}\)</span> 是以小集合为对象、以它们之间的映射为态射的范畴。恒等态射在每个小集合 <span class="math inline">\(X\)</span> 上取<strong>恒等映射 (identity map)</strong> <span class="math inline">\(\text{id}_X: X \to X, p \mapsto p\)</span>，而复合运算即映射的复合。
+</details>
+</div>
+</div>
+</div>
+The category <span class="math inline">\(\mathsf{Set}\)</span> is a large but locally small category.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+范畴 <span class="math inline">\(\mathsf{Set}\)</span> 是一个大的但局部小的范畴。
+</details>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.2 Remark:</strong> For <span class="math inline">\(X, Y \in \mathsf{Set}\)</span>, the hom-set <span class="math inline">\(\mathsf{Set}(X, Y)\)</span> is denoted by <span class="math inline">\(\text{Map}(X; Y)\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.2 备注：</strong> 对于 <span class="math inline">\(X, Y \in \mathsf{Set}\)</span>，态射集 (hom-set) <span class="math inline">\(\mathsf{Set}(X, Y)\)</span> 记作 <span class="math inline">\(\text{Map}(X; Y)\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.3 Definition:</strong> Let <span class="math inline">\(f: X \to Y\)</span> be a map between sets and <span class="math inline">\(A \subseteq X, f(A) \subseteq B \subseteq Y\)</span>. The <em>submap</em> of <span class="math inline">\(f\)</span> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is defined by <span class="math display">\[f|_{A,B}: A \to B, \quad p \mapsto f(p). \tag{32}\]</span> The <em>restriction</em> of <span class="math inline">\(f\)</span> on <span class="math inline">\(A\)</span> is the map <span class="math inline">\(f|_A = f|_{A,Y}: A \to Y\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.3 定义：</strong> 设 <span class="math inline">\(f: X \to Y\)</span> 为集合间的映射，且 <span class="math inline">\(A \subseteq X, f(A) \subseteq B \subseteq Y\)</span>。<span class="math inline">\(f\)</span> 从 <span class="math inline">\(A\)</span> 到 <span class="math inline">\(B\)</span> 的<strong>子映射 (submap)</strong> 定义为： <span class="math display">\[f|_{A,B}: A \to B, \quad p \mapsto f(p). \tag{32}\]</span> <span class="math inline">\(f\)</span> 在 <span class="math inline">\(A\)</span> 上的<strong>限制 (restriction)</strong> 是映射 <span class="math inline">\(f|_A = f|_{A,Y}: A \to Y\)</span>。
+</details>
+</div>
+</div>
+</div>
+Recall the definition of injective, surjective, and bijective maps.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+回想单射、满射和双射映射的定义。
+</details>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.4 Proposition:</strong> In <span class="math inline">\(\mathsf{Set}\)</span> the monomorphisms are the <em>injections</em>, and the epimorphisms are the <em>surjections</em>, which are all split, and hence extremal. The bimorphisms are <em>bijections</em>, which are also isomorphisms.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.4 命题：</strong> 在 <span class="math inline">\(\mathsf{Set}\)</span> 中，单态射是<strong>单射 (injections)</strong>，满态射是<strong>满射 (surjections)</strong>，它们都是分裂的，因此也是极大的。双态射是<strong>双射 (bijections)</strong>，它们同时也是同构。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.5 Proposition:</strong> In <span class="math inline">\(\mathsf{Set}\)</span> all monomorphisms and epimorphisms are extremal.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.5 命题：</strong> 在 <span class="math inline">\(\mathsf{Set}\)</span> 中，所有单态射和满态射都是极大的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.6 Proposition:</strong> In <span class="math inline">\(\mathsf{Set}\)</span> the endomorphisms are maps <span class="math inline">\(f: X \to X\)</span> for some <span class="math inline">\(X \in \mathsf{Set}\)</span>; the class of endomorphisms of <span class="math inline">\(a\)</span> is denoted <span class="math inline">\(\text{Map}(X; X)\)</span>; the idempotents are <em>projections</em> the automorphisms are bijections <span class="math inline">\(f: X \to X\)</span>. The automorphism group of <span class="math inline">\(X \in \mathsf{Set}\)</span> is its <em>permutation group</em> <span class="math inline">\(S_X\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.6 命题：</strong> 在 <span class="math inline">\(\mathsf{Set}\)</span> 中，自态射是某些 <span class="math inline">\(X \in \mathsf{Set}\)</span> 的映射 <span class="math inline">\(f: X \to X\)</span>；<span class="math inline">\(a\)</span> 的自态射类记作 <span class="math inline">\(\text{Map}(X; X)\)</span>；幂等态射是<strong>投影 (projections)</strong>，自同构是双射 <span class="math inline">\(f: X \to X\)</span>。<span class="math inline">\(X \in \mathsf{Set}\)</span> 的自同构群是它的<strong>置换群 (permutation group)</strong> <span class="math inline">\(S_X\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.1.7 Proposition:</strong> In <span class="math inline">\(\mathsf{Set}\)</span> the empty set <span class="math inline">\(\emptyset\)</span> is an initial object and any singleton is a terminal object, the isomorphism class of which denoted by <span class="math inline">\(*\)</span>. There is no zero object or morphism in <span class="math inline">\(\mathsf{Set}\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.1.7 命题：</strong> 在 <span class="math inline">\(\mathsf{Set}\)</span> 中，空集 <span class="math inline">\(\emptyset\)</span> 是始对象，任何单元素集是终对象，其同构类记为 <span class="math inline">\(*\)</span>。在 <span class="math inline">\(\mathsf{Set}\)</span> 中不存在零对象或零态射。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="the-category-mathsfset_-带基点集合范畴-mathsfset_" class="level4">
+<h4 class="anchored" data-anchor-id="the-category-mathsfset_-带基点集合范畴-mathsfset_">4.3.2 The category <span class="math inline">\(\mathsf{Set}_*\)</span> | 带基点集合范畴 <span class="math inline">\(\mathsf{Set}_*\)</span></h4>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.2.1 Definition:</strong> A <em>pointed set</em> is an ordered pair <span class="math inline">\((X, p)\)</span>, where <span class="math inline">\(X\)</span> is a set and <span class="math inline">\(p\)</span> is an element of <span class="math inline">\(X\)</span>. A <em>pointed map</em> between pointed sets <span class="math inline">\((X, p)\)</span> and <span class="math inline">\((Y, q)\)</span> is a map <span class="math inline">\(f: X \to Y\)</span> with <span class="math inline">\(f(p) = q\)</span>, and we write <span class="math inline">\(F: (X, p) \to (Y, q)\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.2.1 定义：</strong> <strong>带基点集合 (pointed set)</strong> 是一个有序对 <span class="math inline">\((X, p)\)</span>，其中 <span class="math inline">\(X\)</span> 是一个集合且 <span class="math inline">\(p\)</span> 是 <span class="math inline">\(X\)</span> 中的一个元素。带基点集合 <span class="math inline">\((X, p)\)</span> 与 <span class="math inline">\((Y, q)\)</span> 之间的<strong>带基点映射 (pointed map)</strong> 是满足 <span class="math inline">\(f(p) = q\)</span> 的映射 <span class="math inline">\(f: X \to Y\)</span>，我们记作 <span class="math inline">\(F: (X, p) \to (Y, q)\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.2.2 The category of small pointed sets:</strong> The category <span class="math inline">\(\mathsf{Set}_*\)</span> is the category of small pointed sets and pointed maps between them as morphisms. The identity takes the identity map at each small pointed set, and the composition is the composition of pointed maps.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.2.2 小带基点集合范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Set}_*\)</span> 是以小带基点集合为对象、以它们之间的带基点映射为态射的范畴。恒等态射在每个小带基点集合上取恒等映射，复合运算即带基点映射的复合。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.2.3 Proposition:</strong> In <span class="math inline">\(\mathsf{Set}_*\)</span> any singleton is a zero object, the isomorphism class of which also denoted by <span class="math inline">\(*\)</span>. For any <span class="math inline">\((X, p), (Y, q) \in \mathsf{Set}_*\)</span> the zero morphism is the constant map sending everything in <span class="math inline">\(X\)</span> to <span class="math inline">\(q\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.2.3 命题：</strong> 在 <span class="math inline">\(\mathsf{Set}_*\)</span> 中，任何单元素集都是零对象，其同构类也记作 <span class="math inline">\(*\)</span>。对于任何 <span class="math inline">\((X, p), (Y, q) \in \mathsf{Set}_*\)</span>，零态射是将 <span class="math inline">\(X\)</span> 中的所有元素都映射到 <span class="math inline">\(q\)</span> 的常数映射。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="the-category-mathsfrel-关系范畴-mathsfrel" class="level4">
+<h4 class="anchored" data-anchor-id="the-category-mathsfrel-关系范畴-mathsfrel">4.3.3 The category <span class="math inline">\(\mathsf{Rel}\)</span> | 关系范畴 <span class="math inline">\(\mathsf{Rel}\)</span></h4>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.3.1 Binary relations:</strong> Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be sets. A <em>binary relation</em> <span class="math inline">\(R\)</span> from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> is a subset of <span class="math inline">\(X \times Y\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.3.1 二元关系：</strong> 设 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 为集合。从 <span class="math inline">\(X\)</span> 到 <span class="math inline">\(Y\)</span> 的<strong>二元关系 (binary relation)</strong> <span class="math inline">\(R\)</span> 是 <span class="math inline">\(X \times Y\)</span> 的一个子集。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.3.2 Identity and composite relations:</strong> The <em>identity relation</em> on a set <span class="math inline">\(X\)</span> is the diagonal <span class="math inline">\(\{(x, x) \in X \times X : x \in X\}\)</span>. If <span class="math inline">\(X, Y, Z\)</span> are sets, <span class="math inline">\(R\)</span> is a binary relation from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span>, and <span class="math inline">\(S\)</span> is a binary relation from <span class="math inline">\(Y\)</span> to <span class="math inline">\(Z\)</span>, their <em>composite relation</em> of <span class="math inline">\(S \circ R\)</span> is a binary relation from <span class="math inline">\(X\)</span> to <span class="math inline">\(Z\)</span>, defined as the <em>relative product</em> <span class="math display">\[S \circ R = \{(x, z) \in X \times Z : (\exists y \in Y)((x, y) \in R \wedge (y, z) \in S)\}. \tag{33}\]</span></p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.3.2 恒等关系与复合关系：</strong> 集合 <span class="math inline">\(X\)</span> 上的<strong>恒等关系 (identity relation)</strong> 是对角集 <span class="math inline">\(\{(x, x) \in X \times X : x \in X\}\)</span>。若 <span class="math inline">\(X, Y, Z\)</span> 是集合，<span class="math inline">\(R\)</span> 是从 <span class="math inline">\(X\)</span> 到 <span class="math inline">\(Y\)</span> 的二元关系，<span class="math inline">\(S\)</span> 是从 <span class="math inline">\(Y\)</span> 到 <span class="math inline">\(Z\)</span> 的二元关系，它们的<strong>复合关系 (composite relation)</strong> <span class="math inline">\(S \circ R\)</span> 是从 <span class="math inline">\(X\)</span> 到 <span class="math inline">\(Z\)</span> 的二元关系，定义为如下<strong>相对乘积 (relative product)</strong>： <span class="math display">\[S \circ R = \{(x, z) \in X \times Z : (\exists y \in Y)((x, y) \in R \wedge (y, z) \in S)\}. \tag{33}\]</span>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.3.3 The category of small sets with binary relations:</strong> The category <span class="math inline">\(\mathsf{Rel}\)</span> is the category of small sets and binary relations between them as morphisms. The identity takes the identity map at each small pointed set, and the composition is the composition of pointed maps. The identity morphism <span class="math inline">\(X \to X\)</span> is the identity relation on <span class="math inline">\(X\)</span>, consisting of all <span class="math inline">\((x, x)\)</span> for <span class="math inline">\(x \in X\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.3.3 具有二元关系的小集合范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Rel}\)</span> 是以小集合为对象、以它们之间的二元关系为态射的范畴。恒等态射在每个小集合上取恒等映射，复合运算即映射的复合。<span class="math inline">\(X \to X\)</span> 的恒等态射是 <span class="math inline">\(X\)</span> 上的恒等关系，由所有满足 <span class="math inline">\(x \in X\)</span> 的 <span class="math inline">\((x, x)\)</span> 组成。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.3.3.4 Remark:</strong> This category <span class="math inline">\(\mathsf{Rel}\)</span> contains <span class="math inline">\(\mathsf{Set}\)</span> as a subcategory (Definition 4.6.2.1) on the same objects, where each function <span class="math inline">\(f: X \to Y\)</span> is interpreted as the binary relation given by the graph <span class="math display">\[\Gamma(f) = \{(x, fx) \in X \times Y : x \in X\}. \tag{34}\]</span> But <span class="math inline">\(\mathsf{Rel}\)</span> has added structure. For each <span class="math inline">\(R: X \to Y\)</span> there is a <em>converse relation</em> <span class="math inline">\(R^*: Y \to X\)</span> given by <span class="math display">\[R^* = \{(y, x) \in Y \times X : (x, y) \in R\}. \tag{35}\]</span></p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.3.3.4 备注：</strong> 范畴 <span class="math inline">\(\mathsf{Rel}\)</span> 在相同对象上包含 <span class="math inline">\(\mathsf{Set}\)</span> 作为一个子范畴（定义 4.6.2.1），其中每个函数 <span class="math inline">\(f: X \to Y\)</span> 被解释为由其图像给出的二元关系： <span class="math display">\[\Gamma(f) = \{(x, fx) \in X \times Y : x \in X\}. \tag{34}\]</span> 但 <span class="math inline">\(\mathsf{Rel}\)</span> 具有额外的结构。对于每个 <span class="math inline">\(R: X \to Y\)</span>，存在一个<strong>逆关系 (converse relation)</strong> <span class="math inline">\(R^*: Y \to X\)</span>，由下式给出： <span class="math display">\[R^* = \{(y, x) \in Y \times X : (x, y) \in R\}. \tag{35}\]</span>
+</details>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-category-of-groups-群范畴" class="level2">
+<h2 class="anchored" data-anchor-id="the-category-of-groups-群范畴">4.4 The category of groups | 群范畴</h2>
+<section id="the-category-mathsfgrp-mathsfgrp-范畴" class="level3">
+<h3 class="anchored" data-anchor-id="the-category-mathsfgrp-mathsfgrp-范畴">4.4.1 The category <span class="math inline">\(\mathsf{Grp}\)</span> | <span class="math inline">\(\mathsf{Grp}\)</span> 范畴</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.1.1 The category of small groups:</strong> The category <span class="math inline">\(\mathsf{Grp}\)</span> is the category of small groups and group homomorphisms between them as morphisms. The identity takes the identity map at each small group, and the composition is the composition of group homomorphisms.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.1.1 小群范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Grp}\)</span> 是以小群为对象、以它们之间的群同态为态射的范畴。恒等态射在每个小群上取恒等映射，复合运算即群同态的复合。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.1.2 Proposition:</strong> In <span class="math inline">\(\mathsf{Grp}\)</span> the monomorphisms are the injective homomorphisms, but not all of them are sections; the epimorphisms are surjective homomorphisms, but not all of them are retractions.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.1.2 命题：</strong> 在 <span class="math inline">\(\mathsf{Grp}\)</span> 中，单态射是单同态，但并非所有单同态都是截面；满态射是满同态，但并非所有满同态都是收缩。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.1.3 Proposition:</strong> In <span class="math inline">\(\mathsf{Grp}\)</span> the group <span class="math inline">\(\{1\}\)</span> with one element is a zero object.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.1.3 命题：</strong> 在 <span class="math inline">\(\mathsf{Grp}\)</span> 中，仅含一个元素的群 <span class="math inline">\(\{1\}\)</span> 是零对象。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="the-category-mathsfmon-幺半群范畴-mathsfmon" class="level3">
+<h3 class="anchored" data-anchor-id="the-category-mathsfmon-幺半群范畴-mathsfmon">4.4.2 The category <span class="math inline">\(\mathsf{Mon}\)</span> | 幺半群范畴 <span class="math inline">\(\mathsf{Mon}\)</span></h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.2.1 The category of small monoids:</strong> The category <span class="math inline">\(\mathsf{Mon}\)</span> is the category of small monoids and morphisms of monoids as morphisms. The identity takes the identity map at each small monoid, and the composition is the composition of morphisms.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.2.1 小幺半群范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Mon}\)</span> 是以小幺半群为对象、以幺半群态射为态射的范畴。恒等态射在每个小幺半群上取恒等映射，复合运算即态射的复合。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="the-category-mathsfab-阿贝尔群范畴-mathsfab" class="level3">
+<h3 class="anchored" data-anchor-id="the-category-mathsfab-阿贝尔群范畴-mathsfab">4.4.3 The category <span class="math inline">\(\mathsf{Ab}\)</span> | 阿贝尔群范畴 <span class="math inline">\(\mathsf{Ab}\)</span></h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.3.1 The category of small abelian groups:</strong> The category <span class="math inline">\(\mathsf{Ab}\)</span> is the category of abelian groups and group homomorphisms between them as morphisms. The identity takes the identity map at each small abelian group, and the composition is the composition of group homomorphisms.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.3.1 小阿贝尔群范畴：</strong> 范畴 <span class="math inline">\(\mathsf{Ab}\)</span> 是以阿贝尔群为对象、以它们之间的群同态为态射的范畴。恒等态射在每个小阿贝尔群上取恒等映射，复合运算即群同态的复合。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>4.4.3.2 Proposition:</strong> In <span class="math inline">\(\mathsf{Ab}\)</span> the zero object is the abelian group with one element, denoted by 0.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>4.4.3.2 命题：</strong> 在 <span class="math inline">\(\mathsf{Ab}\)</span> 中，零对象是仅含一个元素的阿贝尔群，记作 0。
+</details>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
