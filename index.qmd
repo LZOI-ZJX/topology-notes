@@ -1,6 +1,6 @@
 ---
 title: "拓扑学讲义"
-date: "2026-04-05"
+date: "2026-04-06"
 format:
   html:
     toc: true
@@ -1295,4 +1295,345 @@ $$g_0 = g_0 \circ f \circ h = g_1 \circ f \circ h = g_1, \tag{29}$$
 and $f$ is right-cancellable and epic.
 
 An isomorphism has both left and right inverses and is both left-cancellable and right-cancellable, and so is a bimorphism. ■
+:::
+
+
+::: {.callout-important appearance="simple"}
+**4.2.0.8 Proposition:** Let $f: a \to b$ be a morphism in a category $\mathsf{C}$. Then the following are equivalent:
+
+(1) $f$ is a monomorphism and a retraction;
+
+(2) $f$ is an epimorphism and a section; and
+
+(3) $f$ is an isomorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.8 命题：** 设 $f: a \to b$ 为范畴 $\mathsf{C}$ 中的一个态射。则以下各项等价：
+
+(1) $f$ 是单态射且是收缩；
+
+(2) $f$ 是满态射且是截面；
+
+(3) $f$ 是同构。
+</details>
+
+*Proof:* An isomorphism is a monomorphism, an epimorphism, a section, and a retraction.
+If $f: a \to b$ is a monomorphism and a retraction, then there is a morphism $g: b \to a$ such that $f \circ g = \text{id}_b$. Composing $f$ on the right, we have $f \circ g \circ f = \text{id}_b \circ f = f = f \circ \text{id}_a$. Since $f$ is left-cancellable, we have $g \circ f = \text{id}_a$, and then $g$ is the inverse of $f$.
+If $f: a \to b$ is an epimorphism and a section, then there is a morphism $g: b \to a$ such that $g \circ f = \text{id}_a$. Composing $f$ on the left, we have $f \circ g \circ f = f \circ \text{id}_a = f = \text{id}_b \circ f$. Since $f$ is right-cancellable, we have $f \circ g = \text{id}_b$, and then $g$ is the inverse of $f$. ■
+:::
+
+::: {.callout-note appearance="simple"}
+**4.2.0.9 Extremal monomorphisms and epimorphisms:** Let $f: a \to b$ be a morphism in a category $\mathsf{C}$; it is called
+
+(1) an *extremal monomorphism* if $f$ is monic and for every morphism $g: c \to b$ and every epimorphism $h: a \to c$ if $f = g \circ h$ then $h$ is an isomorphism;
+
+(2) an *extremal epimorphism* if $f$ is epic and for every morphism $h: a \to c$ and every monomorphism $g: c \to b$ if $f = g \circ h$ then $g$ is an isomorphism; or
+
+(3) an *extremal bimorphism* if it is both an extremal monomorphism and an extremal epimorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.9 极大单态射与极大满态射：** 设 $f: a \to b$ 为范畴 $\mathsf{C}$ 中的一个态射；它被称为：
+
+(1) **极大单态射 (extremal monomorphism)**，如果 $f$ 是单态射，且对于每一个态射 $g: c \to b$ 和每一个满态射 $h: a \to c$，若 $f = g \circ h$，则 $h$ 是同构；
+
+(2) **极大满态射 (extremal epimorphism)**，如果 $f$ 是满态射，且对于每一个态射 $h: a \to c$ 和每一个单态射 $g: c \to b$，若 $f = g \circ h$，则 $g$ 是同构；或
+
+(3) **极大双态射 (extremal bimorphism)**，如果它既是极大单态射又是极大满态射。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.10 Compositions of extremal monomorphisms and epimorphisms:** The composition of extremal monomorphisms is an extremal monomorphism. The composition of extremal epimorphisms is an extremal epimorphism. The composition of extremal bimorphisms is an extremal bimorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.10 极大单态射与极大满态射的复合：** 极大单态射的复合是极大单态射。极大满态射的复合是极大满态射。极大双态射的复合是极大双态射。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.11 Split monomorphisms and epimorphisms are extremal:** A section is an extremal monomorphism. A retraction is an extremal epimorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.11 分裂单态射与分裂满态射是极大的：** 截面是极大单态射。收缩是极大满态射。
+</details>
+:::
+
+*Proof:* Let $f: a \to b$ be a section in $\mathsf{C}$; then it has a left inverse $g: b \to a$. Suppose that $f = h \circ k$ and $k$ is epic.
+$$\text{id}_a = g \circ f = g \circ h \circ k \tag{30}$$
+Since $k$ has a left inverse, it is a section, but since it is epic, it is an isomorphism. We conclude that $f$ is an extremal monomorphism.
+Let $f: a \to b$ be a retraction in $\mathsf{C}$; then it has a right inverse $g: b \to a$. Suppose that $f = h \circ k$ and $g$ is monic.
+$$\text{id}_b = f \circ g = h \circ k \circ g \tag{31}$$
+Since $h$ has a right inverse, it is a retraction, but since it is monic, it is an isomorphism. We conclude that $f$ is an extremal epimorphism. ■
+
+::: {.callout-note appearance="simple"}
+**4.2.0.12 Endomorphisms:** An *endomorphism* of $a \in \mathsf{C}$ in a category $\mathsf{C}$ is a morphism $f: a \to a$. The class of endomorphisms of $a$ is denoted by $\text{End}(a)$. An endomorphism $f: a \to a$ is called
+
+(1) an *idempotent* if $f^2 = f$; it is *split* if there are morphisms $g: a \to b$ and $h: b \to a$ such that $f = h \circ g$ and $g \circ h = \text{id}_b$; or
+
+(2) an *automorphism* if it is also an isomorphism; the class of automorphisms of $a$ is denoted $\text{Aut}(a)$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.12 自态射：** 范畴 $\mathsf{C}$ 中对象 $a \in \mathsf{C}$ 的一个**自态射 (endomorphism)** 是指态射 $f: a \to a$。$a$ 的自态射类记作 $\text{End}(a)$。一个自态射 $f: a \to a$ 被称为：
+
+(1) **幂等态射 (idempotent)**，如果 $f^2 = f$；它是**分裂的 (split)**，如果存在态射 $g: a \to b$ 和 $h: b \to a$ 使得 $f = h \circ g$ 且 $g \circ h = \text{id}_b$；或
+
+(2) **自同构 (automorphism)**，如果它同时也是一个同构；$a$ 的自同构类记作 $\text{Aut}(a)$。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.13 Endomorphism monoids and automorphism groups:** For locally small categories, $\text{End}(a)$ is a set and forms a monoid under morphism composition, while $\text{Aut}(a)$ forms a group under morphism composition called the *automorphism group* of $a$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.13 自态射幺半群与自同构群：** 对于局部小范畴，$\text{End}(a)$ 是一个集合，并在态射复合下构成一个幺半群；而 $\text{Aut}(a)$ 在态射复合下构成一个群，称为 $a$ 的**自同构群**。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.2.0.14 Definition:** Two objects $a$ and $b$ are *isomorphic* in the category $\mathsf{C}$ if there is an isomorphism $f: a \to b$, denoted $a \simeq^f b$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.14 定义：** 如果范畴 $\mathsf{C}$ 中存在同构 $f: a \to b$，则称两个对象 $a$ 和 $b$ 是**同构的 (isomorphic)**，记作 $a \simeq^f b$。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.15 Proposition:** The relation of isomorphism of objects is an equivalence relation.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.15 命题：** 对象间的同构关系是一种等价关系。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.2.0.16 Initial and terminal objects:** An object $s$ in a category $\mathsf{C}$ is *initial* if for each object $a$ in $\mathsf{C}$ there is exactly one morphism $s \to a$. An object $t$ in a category $\mathsf{C}$ is *terminal* if from each object $a$ in $\mathsf{C}$ there is exactly one morphism $a \to t$. An object $z$ in a category $\mathsf{C}$ is *zero* if it is both initial and terminal; for any two objects $a, b \in \mathsf{C}$ there is a unique morphism $a \to z \to b$, called the *zero morphism* from $a$ to $b$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.16 始对象与终对象：** 范畴 $\mathsf{C}$ 中的对象 $s$ 被称为**始对象 (initial)**，如果对于 $\mathsf{C}$ 中的每个对象 $a$，都恰好存在一个态射 $s \to a$。对象 $t$ 被称为**终对象 (terminal)**，如果对于 $\mathsf{C}$ 中的每个对象 $a$，都恰好存在一个态射 $a \to t$。对象 $z$ 被称为**零对象 (zero)**，如果它既是始对象又是终对象；对于任意两个对象 $a, b \in \mathsf{C}$，存在唯一的态射 $a \to z \to b$，称为从 $a$ 到 $b$ 的**零态射 (zero morphism)**。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.17 Proposition:** In a category $\mathsf{C}$ a initial or terminal object, if exists, is unique up to isomorphisms.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.17 命题：** 在范畴 $\mathsf{C}$ 中，始对象或终对象（如果存在）在同构意义下是唯一的。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.18 Proposition:** Any composition with a zero morphism is a zero morphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.18 命题：** 与零态射的任何复合仍为零态射。
+</details>
+:::
+
+## 4.3 The category of sets | 集合范畴
+
+**The category of sets.**
+In any compatible set theory, such as ZFC, there is no set of all sets to avoid the Russel's paradox. Therefore, there is only the metacategory of all sets, not a category.
+To avoid the foundational problems in set theory, we shall assume that there is a big enough set $U$, the *universe*, then describe a set $x$ as *small* if it is a member of the universe. Then we have an actual category $\mathsf{Set}$, the category of all small sets, which is itself a *large* category.
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**集合范畴。**
+在任何相容的集合论（如 ZFC）中，为了避免罗素悖论，不存在“所有集合的集合”。因此，只存在所有集合的元范畴（metacategory），而非范畴。
+为了避免集合论中的基础性问题，我们假设存在一个足够大的集合 $U$，即**全集 (universe)**，然后当一个集合 $x$ 是全集的成员时，将其描述为**小的 (small)**。于是我们得到了一个实际的范畴 $\mathsf{Set}$，即所有小集合构成的范畴，其本身是一个**大 (large)** 范畴。
+</details>
+
+#### 4.3.1 The category $\mathsf{Set}$ | $\mathsf{Set}$ 范畴
+
+Recall that $f: X \to Y$ denotes a *map* from the *domain* $X$ to the *target* $Y$.
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>回想一下，$f: X \to Y$ 表示从**定义域 (domain)** $X$ 到**靶 (target)** $Y$ 的一个**映射 (map)**。</details>
+
+::: {.callout-note appearance="simple"}
+**4.3.1.1 The category of small sets:** The category $\mathsf{Set}$ is the category of small sets and maps between them as morphisms. The identity takes the *identity map* $\text{id}_X: X \to X, p \mapsto p$ at each small set $X$, and the composition is the composition of maps.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.1 小集合范畴：** 范畴 $\mathsf{Set}$ 是以小集合为对象、以它们之间的映射为态射的范畴。恒等态射在每个小集合 $X$ 上取**恒等映射 (identity map)** $\text{id}_X: X \to X, p \mapsto p$，而复合运算即映射的复合。
+</details>
+:::
+
+The category $\mathsf{Set}$ is a large but locally small category.
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>范畴 $\mathsf{Set}$ 是一个大的但局部小的范畴。</details>
+
+::: {.callout-caution appearance="simple"}
+**4.3.1.2 Remark:** For $X, Y \in \mathsf{Set}$, the hom-set $\mathsf{Set}(X, Y)$ is denoted by $\text{Map}(X; Y)$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.2 备注：** 对于 $X, Y \in \mathsf{Set}$，态射集 (hom-set) $\mathsf{Set}(X, Y)$ 记作 $\text{Map}(X; Y)$。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.3.1.3 Definition:** Let $f: X \to Y$ be a map between sets and $A \subseteq X, f(A) \subseteq B \subseteq Y$. The *submap* of $f$ from $A$ to $B$ is defined by
+$$f|_{A,B}: A \to B, \quad p \mapsto f(p). \tag{32}$$
+The *restriction* of $f$ on $A$ is the map $f|_A = f|_{A,Y}: A \to Y$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.3 定义：** 设 $f: X \to Y$ 为集合间的映射，且 $A \subseteq X, f(A) \subseteq B \subseteq Y$。$f$ 从 $A$ 到 $B$ 的**子映射 (submap)** 定义为：
+$$f|_{A,B}: A \to B, \quad p \mapsto f(p). \tag{32}$$
+$f$ 在 $A$ 上的**限制 (restriction)** 是映射 $f|_A = f|_{A,Y}: A \to Y$。
+</details>
+:::
+
+Recall the definition of injective, surjective, and bijective maps.
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>回想单射、满射和双射映射的定义。</details>
+
+::: {.callout-important appearance="simple"}
+**4.3.1.4 Proposition:** In $\mathsf{Set}$ the monomorphisms are the *injections*, and the epimorphisms are the *surjections*, which are all split, and hence extremal. The bimorphisms are *bijections*, which are also isomorphisms.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.4 命题：** 在 $\mathsf{Set}$ 中，单态射是**单射 (injections)**，满态射是**满射 (surjections)**，它们都是分裂的，因此也是极大的。双态射是**双射 (bijections)**，它们同时也是同构。
+</details>
+:::
+
+
+::: {.callout-important appearance="simple"}
+**4.3.1.5 Proposition:** In $\mathsf{Set}$ all monomorphisms and epimorphisms are extremal.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.5 命题：** 在 $\mathsf{Set}$ 中，所有单态射和满态射都是极大的。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.3.1.6 Proposition:** In $\mathsf{Set}$ the endomorphisms are maps $f: X \to X$ for some $X \in \mathsf{Set}$; the class of endomorphisms of $a$ is denoted $\text{Map}(X; X)$; the idempotents are *projections* the automorphisms are bijections $f: X \to X$. The automorphism group of $X \in \mathsf{Set}$ is its *permutation group* $S_X$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.6 命题：** 在 $\mathsf{Set}$ 中，自态射是某些 $X \in \mathsf{Set}$ 的映射 $f: X \to X$；$a$ 的自态射类记作 $\text{Map}(X; X)$；幂等态射是**投影 (projections)**，自同构是双射 $f: X \to X$。$X \in \mathsf{Set}$ 的自同构群是它的**置换群 (permutation group)** $S_X$。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.3.1.7 Proposition:** In $\mathsf{Set}$ the empty set $\emptyset$ is an initial object and any singleton is a terminal object, the isomorphism class of which denoted by $*$. There is no zero object or morphism in $\mathsf{Set}$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.1.7 命题：** 在 $\mathsf{Set}$ 中，空集 $\emptyset$ 是始对象，任何单元素集是终对象，其同构类记为 $*$。在 $\mathsf{Set}$ 中不存在零对象或零态射。
+</details>
+:::
+
+#### 4.3.2 The category $\mathsf{Set}_*$ | 带基点集合范畴 $\mathsf{Set}_*$
+
+::: {.callout-note appearance="simple"}
+**4.3.2.1 Definition:** A *pointed set* is an ordered pair $(X, p)$, where $X$ is a set and $p$ is an element of $X$. A *pointed map* between pointed sets $(X, p)$ and $(Y, q)$ is a map $f: X \to Y$ with $f(p) = q$, and we write $F: (X, p) \to (Y, q)$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.2.1 定义：** **带基点集合 (pointed set)** 是一个有序对 $(X, p)$，其中 $X$ 是一个集合且 $p$ 是 $X$ 中的一个元素。带基点集合 $(X, p)$ 与 $(Y, q)$ 之间的**带基点映射 (pointed map)** 是满足 $f(p) = q$ 的映射 $f: X \to Y$，我们记作 $F: (X, p) \to (Y, q)$。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.3.2.2 The category of small pointed sets:** The category $\mathsf{Set}_*$ is the category of small pointed sets and pointed maps between them as morphisms. The identity takes the identity map at each small pointed set, and the composition is the composition of pointed maps.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.2.2 小带基点集合范畴：** 范畴 $\mathsf{Set}_*$ 是以小带基点集合为对象、以它们之间的带基点映射为态射的范畴。恒等态射在每个小带基点集合上取恒等映射，复合运算即带基点映射的复合。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.3.2.3 Proposition:** In $\mathsf{Set}_*$ any singleton is a zero object, the isomorphism class of which also denoted by $*$. For any $(X, p), (Y, q) \in \mathsf{Set}_*$ the zero morphism is the constant map sending everything in $X$ to $q$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.2.3 命题：** 在 $\mathsf{Set}_*$ 中，任何单元素集都是零对象，其同构类也记作 $*$。对于任何 $(X, p), (Y, q) \in \mathsf{Set}_*$，零态射是将 $X$ 中的所有元素都映射到 $q$ 的常数映射。
+</details>
+:::
+
+#### 4.3.3 The category $\mathsf{Rel}$ | 关系范畴 $\mathsf{Rel}$
+
+::: {.callout-note appearance="simple"}
+**4.3.3.1 Binary relations:** Let $X$ and $Y$ be sets. A *binary relation* $R$ from $X$ to $Y$ is a subset of $X \times Y$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.3.1 二元关系：** 设 $X$ 和 $Y$ 为集合。从 $X$ 到 $Y$ 的**二元关系 (binary relation)** $R$ 是 $X \times Y$ 的一个子集。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.3.3.2 Identity and composite relations:** The *identity relation* on a set $X$ is the diagonal $\{(x, x) \in X \times X : x \in X\}$. If $X, Y, Z$ are sets, $R$ is a binary relation from $X$ to $Y$, and $S$ is a binary relation from $Y$ to $Z$, their *composite relation* of $S \circ R$ is a binary relation from $X$ to $Z$, defined as the *relative product*
+$$S \circ R = \{(x, z) \in X \times Z : (\exists y \in Y)((x, y) \in R \wedge (y, z) \in S)\}. \tag{33}$$
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.3.2 恒等关系与复合关系：** 集合 $X$ 上的**恒等关系 (identity relation)** 是对角集 $\{(x, x) \in X \times X : x \in X\}$。若 $X, Y, Z$ 是集合，$R$ 是从 $X$ 到 $Y$ 的二元关系，$S$ 是从 $Y$ 到 $Z$ 的二元关系，它们的**复合关系 (composite relation)** $S \circ R$ 是从 $X$ 到 $Z$ 的二元关系，定义为如下**相对乘积 (relative product)**：
+$$S \circ R = \{(x, z) \in X \times Z : (\exists y \in Y)((x, y) \in R \wedge (y, z) \in S)\}. \tag{33}$$
+</details>
+:::
+
+
+::: {.callout-note appearance="simple"}
+**4.3.3.3 The category of small sets with binary relations:** The category $\mathsf{Rel}$ is the category of small sets and binary relations between them as morphisms. The identity takes the identity map at each small pointed set, and the composition is the composition of pointed maps. The identity morphism $X \to X$ is the identity relation on $X$, consisting of all $(x, x)$ for $x \in X$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.3.3 具有二元关系的小集合范畴：** 范畴 $\mathsf{Rel}$ 是以小集合为对象、以它们之间的二元关系为态射的范畴。恒等态射在每个小集合上取恒等映射，复合运算即映射的复合。$X \to X$ 的恒等态射是 $X$ 上的恒等关系，由所有满足 $x \in X$ 的 $(x, x)$ 组成。
+</details>
+:::
+
+::: {.callout-caution appearance="simple"}
+**4.3.3.4 Remark:** This category $\mathsf{Rel}$ contains $\mathsf{Set}$ as a subcategory (Definition 4.6.2.1) on the same objects, where each function $f: X \to Y$ is interpreted as the binary relation given by the graph
+$$\Gamma(f) = \{(x, fx) \in X \times Y : x \in X\}. \tag{34}$$
+But $\mathsf{Rel}$ has added structure. For each $R: X \to Y$ there is a *converse relation* $R^*: Y \to X$ given by
+$$R^* = \{(y, x) \in Y \times X : (x, y) \in R\}. \tag{35}$$
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.3.3.4 备注：** 范畴 $\mathsf{Rel}$ 在相同对象上包含 $\mathsf{Set}$ 作为一个子范畴（定义 4.6.2.1），其中每个函数 $f: X \to Y$ 被解释为由其图像给出的二元关系：
+$$\Gamma(f) = \{(x, fx) \in X \times Y : x \in X\}. \tag{34}$$
+但 $\mathsf{Rel}$ 具有额外的结构。对于每个 $R: X \to Y$，存在一个**逆关系 (converse relation)** $R^*: Y \to X$，由下式给出：
+$$R^* = \{(y, x) \in Y \times X : (x, y) \in R\}. \tag{35}$$
+</details>
+:::
+
+
+## 4.4 The category of groups | 群范畴
+
+### 4.4.1 The category $\mathsf{Grp}$ | $\mathsf{Grp}$ 范畴
+
+::: {.callout-note appearance="simple"}
+**4.4.1.1 The category of small groups:** The category $\mathsf{Grp}$ is the category of small groups and group homomorphisms between them as morphisms. The identity takes the identity map at each small group, and the composition is the composition of group homomorphisms.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.1.1 小群范畴：** 范畴 $\mathsf{Grp}$ 是以小群为对象、以它们之间的群同态为态射的范畴。恒等态射在每个小群上取恒等映射，复合运算即群同态的复合。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.4.1.2 Proposition:** In $\mathsf{Grp}$ the monomorphisms are the injective homomorphisms, but not all of them are sections; the epimorphisms are surjective homomorphisms, but not all of them are retractions.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.1.2 命题：** 在 $\mathsf{Grp}$ 中，单态射是单同态，但并非所有单同态都是截面；满态射是满同态，但并非所有满同态都是收缩。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.4.1.3 Proposition:** In $\mathsf{Grp}$ the group $\{1\}$ with one element is a zero object.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.1.3 命题：** 在 $\mathsf{Grp}$ 中，仅含一个元素的群 $\{1\}$ 是零对象。
+</details>
+:::
+
+### 4.4.2 The category $\mathsf{Mon}$ | 幺半群范畴 $\mathsf{Mon}$
+
+::: {.callout-note appearance="simple"}
+**4.4.2.1 The category of small monoids:** The category $\mathsf{Mon}$ is the category of small monoids and morphisms of monoids as morphisms. The identity takes the identity map at each small monoid, and the composition is the composition of morphisms.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.2.1 小幺半群范畴：** 范畴 $\mathsf{Mon}$ 是以小幺半群为对象、以幺半群态射为态射的范畴。恒等态射在每个小幺半群上取恒等映射，复合运算即态射的复合。
+</details>
+:::
+
+### 4.4.3 The category $\mathsf{Ab}$ | 阿贝尔群范畴 $\mathsf{Ab}$
+
+::: {.callout-note appearance="simple"}
+**4.4.3.1 The category of small abelian groups:** The category $\mathsf{Ab}$ is the category of abelian groups and group homomorphisms between them as morphisms. The identity takes the identity map at each small abelian group, and the composition is the composition of group homomorphisms.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.3.1 小阿贝尔群范畴：** 范畴 $\mathsf{Ab}$ 是以阿贝尔群为对象、以它们之间的群同态为态射的范畴。恒等态射在每个小阿贝尔群上取恒等映射，复合运算即群同态的复合。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.4.3.2 Proposition:** In $\mathsf{Ab}$ the zero object is the abelian group with one element, denoted by 0.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.4.3.2 命题：** 在 $\mathsf{Ab}$ 中，零对象是仅含一个元素的阿贝尔群，记作 0。
+</details>
 :::

@@ -6,8 +6,13 @@ website:
   title: "拓扑学讲义翻译"
   sidebar:
     style: "floating"
-    contents:
-      - index.qmd
+contents:
+      - text: "首页"
+        href: index.qmd
+      - section: "4.CATEGORY THEORY"
+        contents:
+          - text: "CATEGORY THEORY"
+            href: sec4.qmd
 
 format:
   html:
