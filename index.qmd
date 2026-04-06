@@ -1012,3 +1012,287 @@ Note that, in any compatible set theory, such as Zermelo–Fraenkel set theory, 
 
 *证明：* 假设存在这样一个集合，记作 $\mathcal{R} = \{X \text{ 是一个集合} : X \notin X\}$。那么要么 $\mathcal{R} \in \mathcal{R}$，要么 $\mathcal{R} \notin \mathcal{R}$。若 $\mathcal{R} \in \mathcal{R}$，根据 $\mathcal{R}$ 的构造可知 $\mathcal{R} \notin \mathcal{R}$。若 $\mathcal{R} \notin \mathcal{R}$，根据 $\mathcal{R}$ 的构造可知 $\mathcal{R} \in \mathcal{R}$。无论哪种情况都会导致矛盾。■
 </details>
+:::
+
+
+### 4.1.3 Categories | 范畴
+
+A category is meant by any interpretation of the category axioms within set theory, as distinguished from a metacategory. To avoid the foundational problems in set theory, we shall assume that there is a big enough set $\mathcal{U}$, called the universe satisfying certain closedness properties.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+范畴是指在集合论框架内对范畴公理的任何解释，以此与元范畴相区分。为了避免集合论中的基础性问题，我们应当假设存在一个足够大的集合 $\mathcal{U}$，称为宇宙（universe），它满足特定的封闭性性质。
+</details>
+
+::: {.callout-note appearance="simple"}
+**4.1.3.1 Universes:** A universe is a set $\mathcal{U}$ such that
+* $x \in u \in \mathcal{U}$ implies $x \in \mathcal{U}$;
+* $u \in \mathcal{U}$ and $v \in \mathcal{U}$ imply that $\{u, v\}, (u, v), u \times v \in \mathcal{U}$;
+* $x \in \mathcal{U}$ implies $\mathcal{P}x \in \mathcal{U}$ and $\bigcup x \in \mathcal{U}$;
+* $\mathbb{N}_0 \in \mathcal{U}$;
+* if $f : a \to b$ is a surjection with $a \in \mathcal{U}$ and $b \subseteq \mathcal{U}$, then $b \in \mathcal{U}$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.1 宇宙：** 宇宙是一个满足以下条件的集合 $\mathcal{U}$：
+* $x \in u \in \mathcal{U}$ 蕴含 $x \in \mathcal{U}$；
+* $u \in \mathcal{U}$ 且 $v \in \mathcal{U}$ 蕴含 $\{u, v\}, (u, v), u \times v \in \mathcal{U}$；
+* $x \in \mathcal{U}$ 蕴含 $\mathcal{P}x \in \mathcal{U}$ 且 $\bigcup x \in \mathcal{U}$；
+* $\mathbb{N}_0 \in \mathcal{U}$；
+* 若 $f : a \to b$ 是满射，且 $a \in \mathcal{U}, b \subseteq \mathcal{U}$，则 $b \in \mathcal{U}$。
+</details>
+:::
+
+In particular, if $X, Y \in \mathcal{U}$, then any relation from $X$ to $Y$, including any map $f : X \to Y$, belongs to $\mathcal{U}$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+特别地，若 $X, Y \in \mathcal{U}$，则从 $X$ 到 $Y$ 的任何关系（包括任何映射 $f : X \to Y$）都属于 $\mathcal{U}$。
+</details>
+
+::: {.callout-note appearance="simple"}
+**4.1.3.2 Small sets:** A set $X$ is *small* if it is a member of the universe $\mathcal{U}$; it is *large* if it is not a member of $\mathcal{U}$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.2 小集合：** 若集合 $X$ 是宇宙 $\mathcal{U}$ 的一个元素，则称其为 *小集合*；若它不是 $\mathcal{U}$ 的元素，则称其为 *大集合*。
+</details>
+:::
+
+We use the word class instead of set for the collections of objects and morphisms in a category because in some categories they are “too large” to be considered sets.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+我们对范畴中对象和态射的汇集使用“类（class）”而非“集合”一词，是因为在某些范畴中，它们的规模“太大”以至于不能被视为集合。
+</details>
+
+::: {.callout-note appearance="simple"}
+**4.1.3.3 Directed graphs:** A directed graph is a quadruple $\mathsf{C} = (O, A, \text{dom}, \text{cod})$ where $O$ is a set of objects, $A$ is a set of morphisms, and two functions $\text{dom}, \text{cod} : A \to O$. In this graph, the set of composable pairs of morphisms is the set
+$$A \times_O A = \{ (g, f) : g, f \in A \wedge \text{dom } g = \text{cod } f \}. \quad (24)$$
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.3 有向图：** 有向图是一个四元组 $\mathsf{C} = (O, A, \text{dom}, \text{cod})$，其中 $O$ 是对象的集合，$A$ 是态射的集合，以及两个函数 $\text{dom}, \text{cod} : A \to O$。在此图中，可复合态射对的集合为
+$$A \times_O A = \{ (g, f) : g, f \in A \wedge \text{dom } g = \text{cod } f \}。 \quad (24)$$
+</details>
+:::
+
+
+::: {.callout-note appearance="simple"}
+**4.1.3.4 Categories:** A *category* is a graph $\mathsf{C} = (O, A, \text{dom}, \text{cod})$ with two maps
+$$
+\begin{aligned}
+\text{id} : O \to A, & \quad \circ : A \times_O A \to A, \\
+c \mapsto \text{id}_c, & \quad (g, f) \mapsto g \circ f,
+\end{aligned} \quad (25)
+$$
+called the *identity* and the *composition*, such that
+$$\text{dom id}_a = \text{cod id}_a = a, \text{dom}(g \circ f) = \text{dom } f, \text{cod}(g \circ f) = \text{cod } g \quad (26)$$
+for all objects $a \in O$ and all composable pairs of morphisms $(g, f) \in A \times_O A$, and such that the associativity and unit axioms in Definition 4.1.1.2 hold.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.4 范畴：** 一个 *范畴* 是一个图 $\mathsf{C} = (O, A, \text{dom}, \text{cod})$，并带有两个映射：
+$$
+\begin{aligned}
+\text{id} : O \to A, & \quad \circ : A \times_O A \to A, \\
+c \mapsto \text{id}_c, & \quad (g, f) \mapsto g \circ f,
+\end{aligned} \quad (25)
+$$
+分别称为 *恒等* 和 *复合*，使得对于所有对象 $a \in O$ 以及所有可复合态射对 $(g, f) \in A \times_O A$，均满足：
+$$\text{dom id}_a = \text{cod id}_a = a, \text{dom}(g \circ f) = \text{dom } f, \text{cod}(g \circ f) = \text{cod } g \quad (26)$$
+且满足定义 4.1.1.2 中的结合律与单位元公理。
+</details>
+:::
+
+In treating a category $\mathsf{C}$, we usually drop the letters $A$ and $O$, and write $c \in \mathsf{C}$ for $c$ being an object of $\mathsf{C}$ and $f \in \mathsf{C}$ for $f$ being a morphism of $\mathsf{C}$. A category is distinguished from [a metacategory] in that the classes of objects and morphisms are actually **sets**.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+在处理范畴 $\mathsf{C}$ 时，我们通常省略字母 $A$ 和 $O$，用 $c \in \mathsf{C}$ 表示 $c$ 是 $\mathsf{C}$ 的一个对象，用 $f \in \mathsf{C}$ 表示 $f$ 是 $\mathsf{C}$ 的一个态射。范畴与元范畴的区别在于，前者的对象类和态射类实际上是 **集合**。
+</details>
+
+::: {.callout-note appearance="simple"}
+**4.1.3.5 Hom-sets:** For objects $a$ and $b$ in a category $\mathsf{C}$ the *hom-set*
+$$\mathsf{C}(a, b) = \{ f \in \mathsf{C} : a \to b \} \quad (27)$$
+consists of all morphisms of the category with domain $a$ and codomain $b$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.5 Hom-集：** 对于范畴 $\mathsf{C}$ 中的对象 $a$ 和 $b$，*hom-集*
+$$\mathsf{C}(a, b) = \{ f \in \mathsf{C} : a \to b \} \quad (27)$$
+由该范畴中所有以 $a$ 为定义域、以 $b$ 为陪域的态射组成。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.3.6 Small and locally small categories:** A category is *small* if it has a small set of objects and a small set of morphisms; it is *large* if the set of objects or morphisms is large. A category is *locally small* if all of its hom-sets are small.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.3.6 小范畴与局部小范畴：** 若一个范畴的对象集合和态射集合都是小集合，则称其为 *小范畴*；若对象集合或态射集合是大集合，则称其为 *大范畴*。若一个范畴的所有 hom-集都是小集合，则称其为 *局部小范畴*。
+</details>
+:::
+
+---
+
+### 4.1.4 Examples of categories | 范畴示例
+
+We list a few examples of small categories.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+我们列举一些小范畴的例子。
+</details>
+
+::: {.callout-note appearance="simple"}
+**4.1.4.1 Some finite categories:**
+
+* **0** is the empty category (no objects, no morphisms);
+* **1** is the category $\circlearrowleft$ with one object and one identity morphism;
+* **2** is the category $\circlearrowleft \to \circlearrowleft$ with two objects $a, b$, and just one morphism $a \to b$ not the identity;
+* **3** is the category with three objects whose non-identity morphisms are from one to any other;
+* $\downdownarrows$ is the category with two objects $a, b$ and just two morphisms $a \to b$ not the identity morphisms. We call two such morphisms *parallel morphisms*.
+
+In each of the cases above there is only one possible definition of composition.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.1 一些有限范畴：**
+* **0** 是空范畴（无对象，无态射）；
+* **1** 是只有一个对象和其唯一恒等态射的范畴 $\circlearrowleft$；
+* **2** 是具有两个对象 $a, b$ 且只有一个非恒等态射 $a \to b$ 的范畴 $\circlearrowleft \to \circlearrowleft$；
+* **3** 是具有三个对象的范畴，其非恒等态射是从其中任意一个指向另一个；
+* $\downdownarrows$ 是具有两个对象 $a, b$ 且只有两个非恒等态射 $a \to b$ 的范畴。我们称这两个态射为 *平行态射*。
+
+在上述每种情况下，复合运算的定义都是唯一的。
+</details>
+:::
+
+
+::: {.callout-note appearance="simple"}
+**4.1.4.2 Discrete categories:** A category is *discrete* when every morphism is an identity. Every set $X$ is the set of objects of a discrete category, and every discrete category is determined by its set of objects. Thus, discrete categories are sets.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.2 离散范畴：** 当一个范畴的每个态射都是恒等态射时，称该范畴是离散的。每个集合 $X$ 都是某个离散范畴的对象集，且每个离散范畴都由其对象集唯一确定。因此，离散范畴即是集合。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.4.3 Monoids:** A *monoid* is a category with one object. Each monoid is determined by the set of all its morphisms with the identity morphism and the composition of morphisms. Since any two morphisms have a composite, a monoid is exactly a semigroup with identity element. For any category $\mathsf{C}$ and any object $a \in \mathsf{C}$, the set $\mathsf{C}(a, a)$ of all morphisms $a \to a$ with the composition is a monoid.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.3 幺半群：** *幺半群* 是仅有一个对象的范畴。每个幺半群都由其所有态射的集合、恒等态射以及态射的复合运算所确定。由于任意两个态射都可复合，幺半群恰好是具有单位元的半群。对于任何范畴 $\mathsf{C}$ 及其中的任何对象 $a \in \mathsf{C}$，所有态射 $a \to a$ 的集合 $\mathsf{C}(a, a)$ 在复合运算下构成一个幺半群。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.4.4 Groups:** A *group* is a category with one object in which every morphism has an inverse under composition.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.4 群：** *群* 是仅有一个对象，且其中每个态射在复合运算下都具有逆态射的范畴。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.4.5 Matrices:** For each commutative ring $R$, the set $\text{Mat}_R$ of all $R$-matrices is a category; the set of objects is $\mathbb{N}_0$, and each $m \times n$ matrix $A$ is regarded as a morphism $A : n \to m$, with composition the matrix product.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.5 矩阵：** 对于每个交换环 $R$，所有 $R$-矩阵的集合 $\text{Mat}_R$ 构成一个范畴；其对象集为 $\mathbb{N}_0$，每个 $m \times n$ 矩阵 $A$ 被视为一个态射 $A : n \to m$，复合运算为矩阵乘法。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.1.4.6 Sets:** For each collection $\mathcal{V}$ of sets, denote by $\text{Ens}_{\mathcal{V}}$ the category with objects all sets $X \in \mathcal{V}$, morphisms all maps $f : X \to Y$, with the composition of maps.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.1.4.6 集合：** 对于每个集合汇集 $\mathcal{V}$，用 $\text{Ens}_{\mathcal{V}}$ 表示这样一个范畴：其对象为所有集合 $X \in \mathcal{V}$，态射为所有映射 $f : X \to Y$，复合运算为映射的复合。
+</details>
+:::
+
+## 4.2 Morphisms | 态射
+
+In categorical treatments many properties ordinarily formulated by means of element can be done without elements.
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>在范畴论的处理中，许多通常通过元素表述的性质都可以在不使用元素的情况下完成。</details>
+
+::: {.callout-note appearance="simple"}
+**4.2.0.1 Monomorphisms and epimorphisms:** Let $f: a \to b$ be a morphism in a category $\mathsf{C}$; it is called
+
+(1) *monic*, or a *monomorphism* if it is *left-cancellable*, in the sense that $f \circ g = f \circ h$ implies $g = h$ for all morphisms $g, h: d \to a$;
+
+(2) *epic*, or an *epimorphism* if it is *right-cancellable*, in the sense that $g \circ f = h \circ f$ implies $g = h$ for all morphisms $g, h: b \to c$; or
+
+(3) a *bimorphism* if it is both left-cancellable and right-cancellable.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.1 单态射与满态射：** 设 $f: a \to b$ 为范畴 $\mathsf{C}$ 中的一个态射；它被称为：
+
+(1) **单的 (monic)**，或**单态射 (monomorphism)**，如果它是**左可消的 (left-cancellable)**，即对于所有态射 $g, h: d \to a$，$f \circ g = f \circ h \implies g = h$；
+
+(2) **满的 (epic)**，或**满态射 (epimorphism)**，如果它是**右可消的 (right-cancellable)**，即对于所有态射 $g, h: b \to c$，$g \circ f = h \circ f \implies g = h$；或
+
+(3) **双态射 (bimorphism)**，如果它既是左可消的又是右可消的。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.2 Compositions of monomorphisms and epimorphisms:** The composition of monomorphisms is a monomorphism. The composition of epimorphisms is an epimorphism. The composition of bimorphism is a bimorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.2 单态射与满态射的复合：** 单态射的复合是单态射。满态射的复合是满态射。双态射的复合是双态射。
+</details>
+:::
+
+::: {.callout-note appearance="simple"}
+**4.2.0.3 Split monomorphisms and epimorphisms:** Let $f: a \to b$ be a morphism in a category $\mathsf{C}$; it is called
+
+(1) a *section*, or a *split monomorphism* if it has a left inverse $g: b \to a$, in the sense that $g \circ f = \text{id}_a$;
+
+(2) a *retraction*, or a *split epimorphism* if it has a right inverse $g: b \to a$, in the sense that $f \circ g = \text{id}_b$; or
+
+(3) an *isomorphism* if it has both left and right inverses.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.3 分裂单态射与分裂满态射：** 设 $f: a \to b$ 为范畴 $\mathsf{C}$ 中的一个态射；它被称为：
+
+(1) **截面 (section)**，或**分裂单态射 (split monomorphism)**，如果它具有左逆 $g: b \to a$，使得 $g \circ f = \text{id}_a$；
+
+(2) **收缩 (retraction)**，或**分裂满态射 (split epimorphism)**，如果它具有右逆 $g: b \to a$，使得 $f \circ g = \text{id}_b$；或
+
+(3) **同构 (isomorphism)**，如果它既有左逆又有右逆。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.4 Proposition:** Let $f: a \to b$ be a morphism in a category $\mathsf{C}$ which has a left inverse $g: b \to a$, and a right inverse $h: b \to a$, then $g = h$. Then they coincide and are unique.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.4 命题：** 设 $f: a \to b$ 是范畴 $\mathsf{C}$ 中的一个态射。若 $f$ 具有左逆 $g: b \to a$ 和右逆 $h: b \to a$，则 $g = h$。即它们重合且是唯一的。
+</details>
+
+*Proof:* Since $g$ is a left inverse of $f$ we have $g \circ f = \text{id}_a$, and since $h$ is a right inverse we have $f \circ h = \text{id}_b$. Then by the unit law and the associativity of composition of morphisms, we have $g = g \circ \text{id}_b = g \circ (f \circ h) = (g \circ f) \circ h = \text{id}_a \circ h = h$. If $g_1$ is any other left inverse of $f$, then we have $g_1 = h = g$, and so the left inverse is unique. Same for the right inverse. ■
+:::
+
+::: {.callout-note appearance="simple"}
+**4.2.0.5 Definition:** Let $f: a \to b$ be an isomorphism in a category $\mathsf{C}$, then its unique left-and-right inverse is called the *inverse* of $f$.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.5 定义：** 设 $f: a \to b$ 是范畴 $\mathsf{C}$ 中的一个同构，则其唯一的左右逆被称为 $f$ 的**逆 (inverse)**。
+</details>
+
+![](pic/4205.jpg)
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.6 Compositions of split monomorphisms and epimorphisms:** The composition of sections is a section. The composition of retractions is a retraction. The composition of isomorphism is an isomorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.6 分裂单态射与分裂满态射的复合：** 截面的复合是截面。收缩的复合是收缩。同构的复合是同构。
+</details>
+:::
+
+::: {.callout-important appearance="simple"}
+**4.2.0.7 Split monomorphisms and epimorphisms are monomorphisms and epimorphisms:** A section is a monomorphism. A retraction is an epimorphism. An isomorphism is a bimorphism.
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
+**4.2.0.7 分裂单态射与满态射是单态射与满态射：** 截面是单态射。收缩是满态射。同构是双态射。
+</details>
+
+*Proof:* Let $f: a \to b$ be a section in $\mathsf{C}$; then it has a left inverse $g: b \to a$. Suppose that $h_0, h_1: d \to a$ are morphisms in $\mathsf{C}$ such that $f \circ h_0 = f \circ h_1$, then
+$$h_0 = g \circ f \circ h_0 = g \circ f \circ h_1 = h_1, \tag{28}$$
+and $f$ is left-cancellable and monic.
+
+Let $f: a \to b$ be a retraction in $\mathsf{C}$; then it has a right inverse $h: b \to a$. Suppose that $g_0, g_1: b \to c$ are morphisms in $\mathsf{C}$ such that $g_0 \circ f = g_1 \circ f$, then
+$$g_0 = g_0 \circ f \circ h = g_1 \circ f \circ h = g_1, \tag{29}$$
+and $f$ is right-cancellable and epic.
+
+An isomorphism has both left and right inverses and is both left-cancellable and right-cancellable, and so is a bimorphism. ■
+:::
