@@ -12,6 +12,8 @@ website:
         href: index.qmd
       - text: "4. CATEGORY THEORY"
         href: sec4.qmd
+      - text: "5. MAPS BETWEEN AND SUBSETS OF TOPOLOGICAL SPACES"
+        href: sec5.qmd
 
 format:
   html:
