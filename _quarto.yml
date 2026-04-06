@@ -16,6 +16,8 @@ website:
         href: sec5.qmd
       - text: "6. TOPOLOGICAL SUBSPACES"
         herf: sec6.qmd
+      - text: "7. LIMITS AND CONVERGENCE"
+        herf: sec7.qmd
 
 format:
   html:
