@@ -18,9 +18,9 @@ website:
         href: sec6.qmd
       - text: "7. LIMITS AND CONVERGENCE"
         href: sec7.qmd
-      - text: "8. X"
+      - text: "8. INDUCED TOPOLOGIES"
         href: sec8.qmd
-      - text: "9. "
+      - text: "9. ORDERS"
         href: sec9.qmd
       - text: "10. "
         href: sec10.qmd

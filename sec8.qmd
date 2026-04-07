@@ -408,6 +408,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 ::: {.callout-important appearance="simple"}
 **8.3.1.6 Proposition:** Let $A$ and $B$ be subsets of topological spaces $X$ and $Y$; then
+
 * $A \times B$ is open if both $A$ and $B$ are open;
 * $A \times B$ is closed if both $A$ and $B$ are closed.
 
@@ -422,6 +423,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 ::: {.callout-important appearance="simple"}
 **8.3.1.7 Proposition:** Let $A$ and $B$ be subsets of topological spaces $X$ and $Y$; then
+
 * if $A \times B$ is open and $B$ (or $A$) is nonempty then $A$ (or $B$) is open;
 * if $A \times B$ is closed and $B$ (or $A$) is nonempty then $A$ (or $B$) is closed.
 
@@ -434,6 +436,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 ::: {.callout-important appearance="simple"}
 **8.3.1.8 Proposition:** Let $X$ and $Y$ be topological spaces with $X \times Y$ their product space. For any $A \subseteq X$ and $B \subseteq Y$ we have
+
 * $(A \times B)^- = A^- \times B^-$;
 * $(A \times B)^\circ = A^\circ \times B^\circ$; and
 * the Leibniz rule $(A \times B)^b = (A^b \times B) \cup (A \times B^b) \cup (A^b \times B^b)$.
