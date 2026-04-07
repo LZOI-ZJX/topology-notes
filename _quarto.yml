@@ -15,9 +15,15 @@ website:
       - text: "5. MAPS BETWEEN AND SUBSETS OF TOPOLOGICAL SPACES"
         href: sec5.qmd
       - text: "6. TOPOLOGICAL SUBSPACES"
-        herf: sec6.qmd
+        href: sec6.qmd
       - text: "7. LIMITS AND CONVERGENCE"
-        herf: sec7.qmd
+        href: sec7.qmd
+      - text: "8. X"
+        href: sec8.qmd
+      - text: "9. "
+        href: sec9.qmd
+      - text: "10. "
+        href: sec10.qmd
 
 format:
   html:
