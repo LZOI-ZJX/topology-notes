@@ -1,2 +1,3 @@
-@Copyright XIUDI TANG
-Trans by google Gemini
+@Copyright **XIUDI TANG**
+
+Trans by google **Gemini**
