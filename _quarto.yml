@@ -22,8 +22,14 @@ website:
         href: sec8.qmd
       - text: "9. ORDERS"
         href: sec9.qmd
-      - text: "10. "
+      - text: "10. IDENTIFYING AND ATTACHING SPACES"
         href: sec10.qmd
+      - text: "11. CONNECTEDNESS"
+        href: sec11.qmd
+      - text: "12. "
+        href: sec12.qmd
+      - text: "13. "
+        href: sec13.qmd
 
 format:
   html:
