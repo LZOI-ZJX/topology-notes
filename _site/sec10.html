@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-06">
+<meta name="dcterms.date" content="2026-04-14">
 
 <title>IDENTIFYING AND ATTACHING SPACES – 拓扑学讲义翻译</title>
 <style>
@@ -194,7 +194,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12.</span></a>
+ <span class="menu-text">12. SEPARATION</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,6 +219,9 @@ window.Quarto = {
   <li><a href="#products-and-coproducts-of-pointed-spaces." id="toc-products-and-coproducts-of-pointed-spaces." class="nav-link" data-scroll-target="#products-and-coproducts-of-pointed-spaces.">10.1.2 Products and coproducts of pointed spaces.</a></li>
   <li><a href="#cone-spaces-and-suspensions-锥空间与悬挂" id="toc-cone-spaces-and-suspensions-锥空间与悬挂" class="nav-link" data-scroll-target="#cone-spaces-and-suspensions-锥空间与悬挂">10.1.3 Cone spaces and suspensions | 锥空间与悬挂</a></li>
   <li><a href="#mapping-cylinders-cones-and-tori-映射柱映射锥与映射环面" id="toc-mapping-cylinders-cones-and-tori-映射柱映射锥与映射环面" class="nav-link" data-scroll-target="#mapping-cylinders-cones-and-tori-映射柱映射锥与映射环面">10.1.4 Mapping cylinders, cones and tori | 映射柱、映射锥与映射环面</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">10.2</a>
+  <ul class="collapse">
   <li><a href="#spheres-and-tori-球面与环面" id="toc-spheres-and-tori-球面与环面" class="nav-link" data-scroll-target="#spheres-and-tori-球面与环面">10.2.1 Spheres and tori | 球面与环面</a></li>
   <li><a href="#projective-spaces-射影空间" id="toc-projective-spaces-射影空间" class="nav-link" data-scroll-target="#projective-spaces-射影空间">10.2.2 Projective spaces | 射影空间</a></li>
   <li><a href="#other-surfaces-其他曲面" id="toc-other-surfaces-其他曲面" class="nav-link" data-scroll-target="#other-surfaces-其他曲面">10.2.3 Other surfaces | 其他曲面</a></li>
@@ -245,7 +248,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 6, 2026</p>
+      <p class="date">April 14, 2026</p>
     </div>
   </div>
   
@@ -488,16 +491,26 @@ X \land Y = X \times Y / X \lor Y, \quad r = X \lor Y. \quad (133)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>10.1.3.1 Definition:</strong> Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be topological spaces. Then * the <em>cone</em> of <span class="math inline">\(X\)</span> is the squeezing space <span class="math inline">\(CX = X \times [0, 1] / X \times \{0\}\)</span>; * the <em>suspension</em> of <span class="math inline">\(X\)</span> is the quotient space <span class="math inline">\(SX\)</span> of <span class="math inline">\(X \times [0, 1]\)</span> given by squeezing <span class="math inline">\(X \times \{0\}\)</span> to one point, and also squeezing all points in <span class="math inline">\(X \times \{1\}\)</span> to another point; * the <em>join</em> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the the quotient space <span class="math inline">\(X \star Y\)</span> given by <span class="math inline">\(X \times Y \times [0, 1] / \sim\)</span>, where the equivalence is <span class="math display">\[
+<p><strong>10.1.3.1 Definition:</strong> Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be topological spaces. Then</p>
+<ul>
+<li>the <em>cone</em> of <span class="math inline">\(X\)</span> is the squeezing space <span class="math inline">\(CX = X \times [0, 1] / X \times \{0\}\)</span>;</li>
+<li>the <em>suspension</em> of <span class="math inline">\(X\)</span> is the quotient space <span class="math inline">\(SX\)</span> of <span class="math inline">\(X \times [0, 1]\)</span> given by squeezing <span class="math inline">\(X \times \{0\}\)</span> to one point, and also squeezing all points in <span class="math inline">\(X \times \{1\}\)</span> to another point;</li>
+<li>the <em>join</em> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the the quotient space <span class="math inline">\(X \star Y\)</span> given by <span class="math inline">\(X \times Y \times [0, 1] / \sim\)</span>, where the equivalence is <span class="math display">\[
 (x, y_1, 0) \sim (x, y_2, 0), (x_1, y, 1) \sim (x_2, y, 1), \quad x, x_1, x_2 \in X; y, y_1, y_2 \in Y. \quad (134)
-\]</span></p>
+\]</span></li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.1.3.1 定义：</strong> 设 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 为拓扑空间。那么 * <span class="math inline">\(X\)</span> 的<em>锥</em>是压缩空间 <span class="math inline">\(CX = X \times [0, 1] / X \times \{0\}\)</span>； * <span class="math inline">\(X\)</span> 的<em>悬挂</em>是 <span class="math inline">\(X \times [0, 1]\)</span> 的商空间 <span class="math inline">\(SX\)</span>，由将 <span class="math inline">\(X \times \{0\}\)</span> 压缩为一点，同时也将 <span class="math inline">\(X \times \{1\}\)</span> 中的所有点压缩为另一点给出； * <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的<em>联接</em>是由 <span class="math inline">\(X \times Y \times [0, 1] / \sim\)</span> 给出的商空间 <span class="math inline">\(X \star Y\)</span>，其中等价关系为 <span class="math display">\[
+<p><strong>10.1.3.1 定义：</strong> 设 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 为拓扑空间。那么</p>
+<ul>
+<li><span class="math inline">\(X\)</span> 的<em>锥</em>是压缩空间 <span class="math inline">\(CX = X \times [0, 1] / X \times \{0\}\)</span>；</li>
+<li><span class="math inline">\(X\)</span> 的<em>悬挂</em>是 <span class="math inline">\(X \times [0, 1]\)</span> 的商空间 <span class="math inline">\(SX\)</span>，由将 <span class="math inline">\(X \times \{0\}\)</span> 压缩为一点，同时也将 <span class="math inline">\(X \times \{1\}\)</span> 中的所有点压缩为另一点给出；</li>
+<li><span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的<em>联接</em>是由 <span class="math inline">\(X \times Y \times [0, 1] / \sim\)</span> 给出的商空间 <span class="math inline">\(X \star Y\)</span>，其中等价关系为 <span class="math display">\[
 (x, y_1, 0) \sim (x, y_2, 0), (x_1, y, 1) \sim (x_2, y, 1), \quad x, x_1, x_2 \in X; y, y_1, y_2 \in Y. \quad (134)
-\]</span>
+\]</span></li>
+</ul>
 </details>
 </div>
 </div>
@@ -511,16 +524,26 @@ X \land Y = X \times Y / X \lor Y, \quad r = X \lor Y. \quad (133)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>10.1.4.1 Definition:</strong> Let <span class="math inline">\(f: X \to Y\)</span> be a continuous map between topological spaces. Then * the <em>mapping cylinder</em> of <span class="math inline">\(f\)</span> is the attaching space <span class="math inline">\(M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y\)</span> and <span class="math inline">\(\tilde{f}: X \times \{0\} \to Y\)</span>, <span class="math inline">\((x, 0) \mapsto f(x)\)</span>; * the <em>mapping cone</em> of <span class="math inline">\(f\)</span> is the quotient space <span class="math inline">\(C_f = M_f / \sim\)</span> where <span class="math display">\[
+<p><strong>10.1.4.1 Definition:</strong> Let <span class="math inline">\(f: X \to Y\)</span> be a continuous map between topological spaces. Then</p>
+<ul>
+<li>the <em>mapping cylinder</em> of <span class="math inline">\(f\)</span> is the attaching space <span class="math inline">\(M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y\)</span> and <span class="math inline">\(\tilde{f}: X \times \{0\} \to Y\)</span>, <span class="math inline">\((x, 0) \mapsto f(x)\)</span>;</li>
+<li>the <em>mapping cone</em> of <span class="math inline">\(f\)</span> is the quotient space <span class="math inline">\(C_f = M_f / \sim\)</span> where <span class="math display">\[
 (x_1, 1) \sim (x_2, 1), (x, 0) \sim f(x), \quad x, x_1, x_2 \in X; \quad (135)
-\]</span> * if <span class="math inline">\(f: X \to X\)</span> is a homeomorphism, the <em>mapping torus</em> of <span class="math inline">\(f\)</span> is the quotient space <span class="math inline">\(T_f = X \times [0, 1] / (1, x) \sim (0, f(x))\)</span>.</p>
+\]</span></li>
+<li>if <span class="math inline">\(f: X \to X\)</span> is a homeomorphism, the <em>mapping torus</em> of <span class="math inline">\(f\)</span> is the quotient space <span class="math inline">\(T_f = X \times [0, 1] / (1, x) \sim (0, f(x))\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.1.4.1 定义：</strong> 设 <span class="math inline">\(f: X \to Y\)</span> 是拓扑空间之间的连续映射。那么 * <span class="math inline">\(f\)</span> 的<em>映射柱</em>是附加空间 <span class="math inline">\(M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y\)</span>，且 <span class="math inline">\(\tilde{f}: X \times \{0\} \to Y\)</span>, <span class="math inline">\((x, 0) \mapsto f(x)\)</span>； * <span class="math inline">\(f\)</span> 的<em>映射锥</em>是商空间 <span class="math inline">\(C_f = M_f / \sim\)</span>，其中 <span class="math display">\[
+<p><strong>10.1.4.1 定义：</strong> 设 <span class="math inline">\(f: X \to Y\)</span> 是拓扑空间之间的连续映射。那么</p>
+<ul>
+<li><span class="math inline">\(f\)</span> 的<em>映射柱</em>是附加空间 <span class="math inline">\(M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y\)</span>，且 <span class="math inline">\(\tilde{f}: X \times \{0\} \to Y\)</span>, <span class="math inline">\((x, 0) \mapsto f(x)\)</span>；</li>
+<li><span class="math inline">\(f\)</span> 的<em>映射锥</em>是商空间 <span class="math inline">\(C_f = M_f / \sim\)</span>，其中 <span class="math display">\[
 (x_1, 1) \sim (x_2, 1), (x, 0) \sim f(x), \quad x, x_1, x_2 \in X; \quad (135)
-\]</span> * 如果 <span class="math inline">\(f: X \to X\)</span> 是一个同胚，那么 <span class="math inline">\(f\)</span> 的<em>映射环面</em>是商空间 <span class="math inline">\(T_f = X \times [0, 1] / (1, x) \sim (0, f(x))\)</span>。
+\]</span></li>
+<li>如果 <span class="math inline">\(f: X \to X\)</span> 是一个同胚，那么 <span class="math inline">\(f\)</span> 的<em>映射环面</em>是商空间 <span class="math inline">\(T_f = X \times [0, 1] / (1, x) \sim (0, f(x))\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -542,81 +565,141 @@ X \land Y = X \times Y / X \lor Y, \quad r = X \lor Y. \quad (133)
 </div>
 </div>
 </section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">10.2</h2>
 <section id="spheres-and-tori-球面与环面" class="level3">
 <h3 class="anchored" data-anchor-id="spheres-and-tori-球面与环面">10.2.1 Spheres and tori | 球面与环面</h3>
-<p><strong>10.2.1.1 Example:</strong> The circle <span class="math inline">\(\mathbb{S}^1\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\(\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}\)</span> with the subspace topology. (2) <span class="math inline">\([0, 1]/\{0, 1\}\)</span> with the quotient topology where the equivalence is <span class="math inline">\(0 \sim 1\)</span>. (3) <span class="math inline">\(\mathbb{R}/ \sim_{\mathbb{Z}}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+<p><strong>10.2.1.1 Example:</strong> The circle <span class="math inline">\(\mathbb{S}^1\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}\)</span> with the subspace topology.</p></li>
+<li><p><span class="math inline">\([0, 1]/\{0, 1\}\)</span> with the quotient topology where the equivalence is <span class="math inline">\(0 \sim 1\)</span>.</p></li>
+<li><p><span class="math inline">\(\mathbb{R}/ \sim_{\mathbb{Z}}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim_{\mathbb{Z}} y \iff x - y \in \mathbb{Z}. \quad (137)
-\]</span></p>
+\]</span></p></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.2.1.1 例：</strong> 圆 <span class="math inline">\(\mathbb{S}^1\)</span> 是以下等价描述之一： (1) 带有子空间拓扑的 <span class="math inline">\(\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}\)</span>。 (2) 带有商拓扑的 <span class="math inline">\([0, 1]/\{0, 1\}\)</span>，其中等价关系为 <span class="math inline">\(0 \sim 1\)</span>。 (3) 带有商拓扑的 <span class="math inline">\(\mathbb{R}/ \sim_{\mathbb{Z}}\)</span>，其中等价关系为 <span class="math display">\[
+<p><strong>10.2.1.1 例：</strong> 圆 <span class="math inline">\(\mathbb{S}^1\)</span> 是以下等价描述之一：</p>
+<ol type="1">
+<li><p>带有子空间拓扑的 <span class="math inline">\(\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\([0, 1]/\{0, 1\}\)</span>，其中等价关系为 <span class="math inline">\(0 \sim 1\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\(\mathbb{R}/ \sim_{\mathbb{Z}}\)</span>，其中等价关系为</p></li>
+</ol>
+<span class="math display">\[
 x \sim_{\mathbb{Z}} y \iff x - y \in \mathbb{Z}. \quad (137)
 \]</span>
 </details>
-<p><strong>10.2.1.2 Example:</strong> The <span class="math inline">\(n\)</span>-sphere <span class="math inline">\(\mathbb{S}^n\)</span> for <span class="math inline">\(n \in \mathbb{N}_0\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\(\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}\)</span> with the subspace topology. (2) <span class="math inline">\(\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}\)</span> with the quotient topology where <span class="math inline">\(\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n\)</span> is the boundary sphere.</p>
+<p><strong>10.2.1.2 Example:</strong> The <span class="math inline">\(n\)</span>-sphere <span class="math inline">\(\mathbb{S}^n\)</span> for <span class="math inline">\(n \in \mathbb{N}_0\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}\)</span> with the subspace topology.</p></li>
+<li><p><span class="math inline">\(\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}\)</span> with the quotient topology where <span class="math inline">\(\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n\)</span> is the boundary sphere.</p></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.2.1.2 例：</strong> 对于 <span class="math inline">\(n \in \mathbb{N}_0\)</span>，<span class="math inline">\(n\)</span>-球面 <span class="math inline">\(\mathbb{S}^n\)</span> 是以下等价描述之一： (1) 带有子空间拓扑的 <span class="math inline">\(\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}\)</span>。 (2) 带有商拓扑的 <span class="math inline">\(\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}\)</span>，其中 <span class="math inline">\(\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n\)</span> 是边界球面。
+<p><strong>10.2.1.2 例：</strong> 对于 <span class="math inline">\(n \in \mathbb{N}_0\)</span>，<span class="math inline">\(n\)</span>-球面 <span class="math inline">\(\mathbb{S}^n\)</span> 是以下等价描述之一：</p>
+<ol type="1">
+<li>带有子空间拓扑的 <span class="math inline">\(\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}\)</span>。</li>
+<li>带有商拓扑的 <span class="math inline">\(\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}\)</span>，其中 <span class="math inline">\(\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n\)</span> 是边界球面。</li>
+</ol>
 </details>
-<p><strong>10.2.1.3 Example:</strong> The 2-torus <span class="math inline">\(\mathbb{T}^2\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\({\mathbb{S}^1}^2\)</span> with the product topology. (2) <span class="math inline">\([0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]\)</span> with the quotient topology. (3) <span class="math inline">\(\mathbb{R}^2/ \sim_{\mathbb{Z}^2}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+<p><strong>10.2.1.3 Example:</strong> The 2-torus <span class="math inline">\(\mathbb{T}^2\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\({\mathbb{S}^1}^2\)</span> with the product topology.</p></li>
+<li><p><span class="math inline">\([0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]\)</span> with the quotient topology.</p></li>
+<li><p><span class="math inline">\(\mathbb{R}^2/ \sim_{\mathbb{Z}^2}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim_{\mathbb{Z}^2} y \iff x - y \in \mathbb{Z}^2. \quad (138)
-\]</span></p>
+\]</span></p></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.2.1.3 例：</strong> 2-环面 <span class="math inline">\(\mathbb{T}^2\)</span> 是以下等价描述之一： (1) 带有乘积拓扑的 <span class="math inline">\({\mathbb{S}^1}^2\)</span>。 (2) 带有商拓扑的 <span class="math inline">\([0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]\)</span>。 (3) 带有商拓扑的 <span class="math inline">\(\mathbb{R}^2/ \sim_{\mathbb{Z}^2}\)</span>，其中等价关系为 <span class="math display">\[
+<p><strong>10.2.1.3 例：</strong> 2-环面 <span class="math inline">\(\mathbb{T}^2\)</span> 是以下等价描述之一：</p>
+<ol type="1">
+<li><p>带有乘积拓扑的 <span class="math inline">\({\mathbb{S}^1}^2\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\([0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\(\mathbb{R}^2/ \sim_{\mathbb{Z}^2}\)</span>，其中等价关系为 <span class="math display">\[
 x \sim_{\mathbb{Z}^2} y \iff x - y \in \mathbb{Z}^2. \quad (138)
-\]</span>
+\]</span></p></li>
+</ol>
 </details>
-<p><strong>10.2.1.4 Example:</strong> The <span class="math inline">\(n\)</span>-torus <span class="math inline">\(\mathbb{T}^n\)</span> for <span class="math inline">\(n \in \mathbb{N}_0\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\((\mathbb{S}^1)^n\)</span> with the product topology. (2) <span class="math inline">\([0, 1]^n/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+<p><strong>10.2.1.4 Example:</strong> The <span class="math inline">\(n\)</span>-torus <span class="math inline">\(\mathbb{T}^n\)</span> for <span class="math inline">\(n \in \mathbb{N}_0\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\((\mathbb{S}^1)^n\)</span> with the product topology.</p></li>
+<li><p><span class="math inline">\([0, 1]^n/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 (x_0, ..., x_i, ..., x_n) \sim (x_0, ..., y_i, ..., x_n) \text{ where } x_i, y_i \in \{0, 1\}, i \in \{1, ..., n\}. \quad (139)
-\]</span> (3) <span class="math inline">\(\mathbb{R}^n/ \sim_{\mathbb{Z}^n}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\(\mathbb{R}^n/ \sim_{\mathbb{Z}^n}\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim_{\mathbb{Z}^n} y \iff x - y \in \mathbb{Z}^n. \quad (140)
-\]</span></p>
+\]</span></p></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.2.1.4 例：</strong> 对于 <span class="math inline">\(n \in \mathbb{N}_0\)</span>，<span class="math inline">\(n\)</span>-环面 <span class="math inline">\(\mathbb{T}^n\)</span> 是以下等价描述之一： (1) 带有乘积拓扑的 <span class="math inline">\((\mathbb{S}^1)^n\)</span>。 (2) 带有商拓扑的 <span class="math inline">\([0, 1]^n/ \sim\)</span>，其中等价关系为 <span class="math display">\[
+<p><strong>10.2.1.4 例：</strong> 对于 <span class="math inline">\(n \in \mathbb{N}_0\)</span>，<span class="math inline">\(n\)</span>-环面 <span class="math inline">\(\mathbb{T}^n\)</span> 是以下等价描述之一：</p>
+<ol type="1">
+<li><p>带有乘积拓扑的 <span class="math inline">\((\mathbb{S}^1)^n\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\([0, 1]^n/ \sim\)</span>，其中等价关系为 <span class="math display">\[
 (x_0, ..., x_i, ..., x_n) \sim (x_0, ..., y_i, ..., x_n) \text{ 其中 } x_i, y_i \in \{0, 1\}, i \in \{1, ..., n\}. \quad (139)
-\]</span> (3) 带有商拓扑的 <span class="math inline">\(\mathbb{R}^n/ \sim_{\mathbb{Z}^n}\)</span>，其中等价关系为 <span class="math display">\[
+\]</span></p></li>
+<li><p>带有商拓扑的 <span class="math inline">\(\mathbb{R}^n/ \sim_{\mathbb{Z}^n}\)</span>，其中等价关系为 <span class="math display">\[
 x \sim_{\mathbb{Z}^n} y \iff x - y \in \mathbb{Z}^n. \quad (140)
-\]</span>
+\]</span></p></li>
+</ol>
 </details>
 </section>
 <section id="projective-spaces-射影空间" class="level3">
 <h3 class="anchored" data-anchor-id="projective-spaces-射影空间">10.2.2 Projective spaces | 射影空间</h3>
-<p><strong>10.2.2.1 Example:</strong> The real projective plane <span class="math inline">\(\mathbb{R}P^2\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\(\mathbb{S}^2/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+<p><strong>10.2.2.1 Example:</strong> The real projective plane <span class="math inline">\(\mathbb{R}P^2\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathbb{S}^2/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff x = \pm y. \quad (141)
-\]</span> (2) <span class="math inline">\([0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]\)</span>. (3) <span class="math inline">\(\bar{\mathbb{B}}^2/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\([0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]\)</span>.</p></li>
+<li><p><span class="math inline">\(\bar{\mathbb{B}}^2/ \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^1 \land x = \pm y). \quad (142)
-\]</span> (4) <span class="math inline">\(\mathbb{R}^3 \setminus \{0\} / \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\(\mathbb{R}^3 \setminus \{0\} / \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (143)
-\]</span> Then <span class="math inline">\(\mathbb{R}P^2\)</span> is the space of lines in <span class="math inline">\(\mathbb{R}^3\)</span> passing the origin.</p>
+\]</span> Then <span class="math inline">\(\mathbb{R}P^2\)</span> is the space of lines in <span class="math inline">\(\mathbb{R}^3\)</span> passing the origin.</p></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.2.2.1 例：</strong> 实射影平面 <span class="math inline">\(\mathbb{R}P^2\)</span> 是以下等价描述之一： (1) 带有商拓扑的 <span class="math inline">\(\mathbb{S}^2/ \sim\)</span>，其中等价关系为 <span class="math display">\[
+<p><strong>10.2.2.1 例：</strong> 实射影平面 <span class="math inline">\(\mathbb{R}P^2\)</span> 是以下等价描述之一：</p>
+<ol type="1">
+<li><p>带有商拓扑的 <span class="math inline">\(\mathbb{S}^2/ \sim\)</span>，其中等价关系为 <span class="math display">\[
 x \sim y \iff x = \pm y. \quad (141)
-\]</span> (2) <span class="math inline">\([0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]\)</span>。 (3) 带有商拓扑的 <span class="math inline">\(\bar{\mathbb{B}}^2/ \sim\)</span>，其中等价关系为 <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\([0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]\)</span>。</p></li>
+<li><p>带有商拓扑的 <span class="math inline">\(\bar{\mathbb{B}}^2/ \sim\)</span>，其中等价关系为 <span class="math display">\[
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^1 \land x = \pm y). \quad (142)
-\]</span> (4) 带有商拓扑的 <span class="math inline">\(\mathbb{R}^3 \setminus \{0\} / \sim\)</span>，其中等价关系为 <span class="math display">\[
+\]</span></p></li>
+<li><p>带有商拓扑的 <span class="math inline">\(\mathbb{R}^3 \setminus \{0\} / \sim\)</span>，其中等价关系为 <span class="math display">\[
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (143)
-\]</span> 那么 <span class="math inline">\(\mathbb{R}P^2\)</span> 是 <span class="math inline">\(\mathbb{R}^3\)</span> 中过原点的直线的空间。
+\]</span> 那么 <span class="math inline">\(\mathbb{R}P^2\)</span> 是 <span class="math inline">\(\mathbb{R}^3\)</span> 中过原点的直线的空间。</p></li>
+</ol>
 </details>
-<p><strong>10.2.2.2 Example:</strong> The real projective <span class="math inline">\(n\)</span>-space <span class="math inline">\(\mathbb{R}P^n\)</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> is one of the equivalent descriptions: (1) <span class="math inline">\(\mathbb{S}^n/\sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+<p><strong>10.2.2.2 Example:</strong> The real projective <span class="math inline">\(n\)</span>-space <span class="math inline">\(\mathbb{R}P^n\)</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> is one of the equivalent descriptions:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathbb{S}^n/\sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff x = \pm y. \quad (144)
-\]</span> (2) <span class="math inline">\([0, 1]^n\)</span> identifying the antipodals on <span class="math inline">\(\partial[0, 1]^n\)</span> with the quotient topology. (3) <span class="math inline">\(\bar{\mathbb{B}}^n/\sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\([0, 1]^n\)</span> identifying the antipodals on <span class="math inline">\(\partial[0, 1]^n\)</span> with the quotient topology.</p></li>
+<li><p><span class="math inline">\(\bar{\mathbb{B}}^n/\sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^{n-1} \land x = \pm y). \quad (145)
-\]</span> (4) <span class="math inline">\(\mathbb{R}^{n+1} \setminus \{0\} / \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
+\]</span></p></li>
+<li><p><span class="math inline">\(\mathbb{R}^{n+1} \setminus \{0\} / \sim\)</span> with the quotient topology where the equivalence is <span class="math display">\[
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (146)
-\]</span> Then <span class="math inline">\(\mathbb{R}P^n\)</span> is the space of lines in <span class="math inline">\(\mathbb{R}^{n+1}\)</span> passing the origin.</p>
+\]</span> Then <span class="math inline">\(\mathbb{R}P^n\)</span> is the space of lines in <span class="math inline">\(\mathbb{R}^{n+1}\)</span> passing the origin.</p></li>
+</ol>
 <div class="callout callout-style-simple callout-caution">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -684,12 +767,22 @@ z \sim w \iff (\exists \lambda \in \mathbb{C} \setminus \{0\})(z = \lambda w). \
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>10.3.0.1 Definition:</strong> A map <span class="math inline">\(f: X \to Y\)</span> is a <em>local homeomorphism</em> iff * <span class="math inline">\(f\)</span> is continuous; * <span class="math inline">\(\mathcal{T}_X\)</span> has a basis <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(f(U)\)</span> is open for any <span class="math inline">\(U \in \mathcal{B}\)</span>, * and the submap <span class="math inline">\(f|_{U, f(U)}: U \to f(U)\)</span> is a homeomorphism.</p>
+<p><strong>10.3.0.1 Definition:</strong> A map <span class="math inline">\(f: X \to Y\)</span> is a <em>local homeomorphism</em> iff</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is continuous;</li>
+<li><span class="math inline">\(\mathcal{T}_X\)</span> has a basis <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(f(U)\)</span> is open for any <span class="math inline">\(U \in \mathcal{B}\)</span>,</li>
+<li>and the submap <span class="math inline">\(f|_{U, f(U)}: U \to f(U)\)</span> is a homeomorphism.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>10.3.0.1 定义：</strong> 映射 <span class="math inline">\(f: X \to Y\)</span> 是一个<em>局部同胚</em>当且仅当 * <span class="math inline">\(f\)</span> 是连续的； * <span class="math inline">\(\mathcal{T}_X\)</span> 具有一组基 <span class="math inline">\(\mathcal{B}\)</span> 使得对于任何 <span class="math inline">\(U \in \mathcal{B}\)</span>，<span class="math inline">\(f(U)\)</span> 是开的， * 并且子映射 <span class="math inline">\(f|_{U, f(U)}: U \to f(U)\)</span> 是一个同胚。
+<p><strong>10.3.0.1 定义：</strong> 映射 <span class="math inline">\(f: X \to Y\)</span> 是一个<em>局部同胚</em>当且仅当</p>
+<ul>
+<li><span class="math inline">\(f\)</span> 是连续的；</li>
+<li><span class="math inline">\(\mathcal{T}_X\)</span> 具有一组基 <span class="math inline">\(\mathcal{B}\)</span> 使得对于任何 <span class="math inline">\(U \in \mathcal{B}\)</span>，<span class="math inline">\(f(U)\)</span> 是开的，</li>
+<li>并且子映射 <span class="math inline">\(f|_{U, f(U)}: U \to f(U)\)</span> 是一个同胚。</li>
+</ul>
 </details>
 </div>
 </div>

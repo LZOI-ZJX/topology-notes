@@ -166,6 +166,7 @@ More generally, given a family of pointed spaces $\{(X_\alpha, p_\alpha)\}_{\alp
 
 ::: {.callout-note appearance="simple"}
 **10.1.3.1 Definition:** Let $X$ and $Y$ be topological spaces. Then
+
 * the *cone* of $X$ is the squeezing space $CX = X \times [0, 1] / X \times \{0\}$;
 * the *suspension* of $X$ is the quotient space $SX$ of $X \times [0, 1]$ given by squeezing $X \times \{0\}$ to one point, and also squeezing all points in $X \times \{1\}$ to another point;
 * the *join* of $X$ and $Y$ is the the quotient space $X \star Y$ given by $X \times Y \times [0, 1] / \sim$, where the equivalence is
@@ -175,6 +176,7 @@ $$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.1.3.1 定义：** 设 $X$ 和 $Y$ 为拓扑空间。那么
+
 * $X$ 的*锥*是压缩空间 $CX = X \times [0, 1] / X \times \{0\}$；
 * $X$ 的*悬挂*是 $X \times [0, 1]$ 的商空间 $SX$，由将 $X \times \{0\}$ 压缩为一点，同时也将 $X \times \{1\}$ 中的所有点压缩为另一点给出；
 * $X$ 和 $Y$ 的*联接*是由 $X \times Y \times [0, 1] / \sim$ 给出的商空间 $X \star Y$，其中等价关系为
@@ -188,6 +190,7 @@ $$
 
 ::: {.callout-note appearance="simple"}
 **10.1.4.1 Definition:** Let $f: X \to Y$ be a continuous map between topological spaces. Then
+
 * the *mapping cylinder* of $f$ is the attaching space $M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y$ and $\tilde{f}: X \times \{0\} \to Y$, $(x, 0) \mapsto f(x)$;
 * the *mapping cone* of $f$ is the quotient space $C_f = M_f / \sim$ where
 $$
@@ -197,6 +200,7 @@ $$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.1.4.1 定义：** 设 $f: X \to Y$ 是拓扑空间之间的连续映射。那么
+
 * $f$ 的*映射柱*是附加空间 $M_f = (X \times [0, 1]) \sqcup_{\tilde{f}} Y$，且 $\tilde{f}: X \times \{0\} \to Y$, $(x, 0) \mapsto f(x)$；
 * $f$ 的*映射锥*是商空间 $C_f = M_f / \sim$，其中
 $$
@@ -214,11 +218,16 @@ $$
 </details>
 :::
 
+## 10.2 
+
 ### 10.2.1 Spheres and tori | 球面与环面
 
 **10.2.1.1 Example:** The circle $\mathbb{S}^1$ is one of the equivalent descriptions:
+
 (1) $\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}$ with the subspace topology.
+
 (2) $[0, 1]/\{0, 1\}$ with the quotient topology where the equivalence is $0 \sim 1$.
+
 (3) $\mathbb{R}/ \sim_{\mathbb{Z}}$ with the quotient topology where the equivalence is
 $$
 x \sim_{\mathbb{Z}} y \iff x - y \in \mathbb{Z}. \quad (137)
@@ -226,27 +235,37 @@ $$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.2.1.1 例：** 圆 $\mathbb{S}^1$ 是以下等价描述之一：
+
 (1) 带有子空间拓扑的 $\{(x_0, x_1) \in \mathbb{R}^2 : x_0^2 + x_1^2 = 1\}$。
+
 (2) 带有商拓扑的 $[0, 1]/\{0, 1\}$，其中等价关系为 $0 \sim 1$。
+
 (3) 带有商拓扑的 $\mathbb{R}/ \sim_{\mathbb{Z}}$，其中等价关系为
+
 $$
 x \sim_{\mathbb{Z}} y \iff x - y \in \mathbb{Z}. \quad (137)
 $$
 </details>
 
 **10.2.1.2 Example:** The $n$-sphere $\mathbb{S}^n$ for $n \in \mathbb{N}_0$ is one of the equivalent descriptions:
+
 (1) $\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}$ with the subspace topology.
+
 (2) $\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}$ with the quotient topology where $\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n$ is the boundary sphere.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.2.1.2 例：** 对于 $n \in \mathbb{N}_0$，$n$-球面 $\mathbb{S}^n$ 是以下等价描述之一：
+
 (1) 带有子空间拓扑的 $\{(x_0, ..., x_n) \in \mathbb{R}^{n+1} : x_0^2 + \cdots + x_n^2 = 1\}$。
 (2) 带有商拓扑的 $\bar{\mathbb{B}}^n/\mathbb{S}^{n-1}$，其中 $\mathbb{S}^{n-1} = \partial\bar{\mathbb{B}}^n$ 是边界球面。
 </details>
 
 **10.2.1.3 Example:** The 2-torus $\mathbb{T}^2$ is one of the equivalent descriptions:
+
 (1) ${\mathbb{S}^1}^2$ with the product topology.
+
 (2) $[0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]$ with the quotient topology.
+
 (3) $\mathbb{R}^2/ \sim_{\mathbb{Z}^2}$ with the quotient topology where the equivalence is
 $$
 x \sim_{\mathbb{Z}^2} y \iff x - y \in \mathbb{Z}^2. \quad (138)
@@ -254,8 +273,11 @@ $$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.2.1.3 例：** 2-环面 $\mathbb{T}^2$ 是以下等价描述之一：
+
 (1) 带有乘积拓扑的 ${\mathbb{S}^1}^2$。
+
 (2) 带有商拓扑的 $[0, 1]^2/[(t, 0) \sim (t, 1), (0, t) \sim (1, t)]$。
+
 (3) 带有商拓扑的 $\mathbb{R}^2/ \sim_{\mathbb{Z}^2}$，其中等价关系为
 $$
 x \sim_{\mathbb{Z}^2} y \iff x - y \in \mathbb{Z}^2. \quad (138)
@@ -263,7 +285,9 @@ $$
 </details>
 
 **10.2.1.4 Example:** The $n$-torus $\mathbb{T}^n$ for $n \in \mathbb{N}_0$ is one of the equivalent descriptions:
+
 (1) $(\mathbb{S}^1)^n$ with the product topology.
+
 (2) $[0, 1]^n/ \sim$ with the quotient topology where the equivalence is
 $$
 (x_0, ..., x_i, ..., x_n) \sim (x_0, ..., y_i, ..., x_n) \text{ where } x_i, y_i \in \{0, 1\}, i \in \{1, ..., n\}. \quad (139)
@@ -275,11 +299,14 @@ $$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.2.1.4 例：** 对于 $n \in \mathbb{N}_0$，$n$-环面 $\mathbb{T}^n$ 是以下等价描述之一：
+
 (1) 带有乘积拓扑的 $(\mathbb{S}^1)^n$。
+
 (2) 带有商拓扑的 $[0, 1]^n/ \sim$，其中等价关系为
 $$
 (x_0, ..., x_i, ..., x_n) \sim (x_0, ..., y_i, ..., x_n) \text{ 其中 } x_i, y_i \in \{0, 1\}, i \in \{1, ..., n\}. \quad (139)
 $$
+
 (3) 带有商拓扑的 $\mathbb{R}^n/ \sim_{\mathbb{Z}^n}$，其中等价关系为
 $$
 x \sim_{\mathbb{Z}^n} y \iff x - y \in \mathbb{Z}^n. \quad (140)
@@ -289,15 +316,19 @@ $$
 ### 10.2.2 Projective spaces | 射影空间
 
 **10.2.2.1 Example:** The real projective plane $\mathbb{R}P^2$ is one of the equivalent descriptions:
+
 (1) $\mathbb{S}^2/ \sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff x = \pm y. \quad (141)
 $$
+
 (2) $[0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]$.
+
 (3) $\bar{\mathbb{B}}^2/ \sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^1 \land x = \pm y). \quad (142)
 $$
+
 (4) $\mathbb{R}^3 \setminus \{0\} / \sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (143)
@@ -306,15 +337,19 @@ Then $\mathbb{R}P^2$ is the space of lines in $\mathbb{R}^3$ passing the origin.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.2.2.1 例：** 实射影平面 $\mathbb{R}P^2$ 是以下等价描述之一：
+
 (1) 带有商拓扑的 $\mathbb{S}^2/ \sim$，其中等价关系为
 $$
 x \sim y \iff x = \pm y. \quad (141)
 $$
+
 (2) $[0, 1]^2/[(t, 0) \sim (1 - t, 1), (0, t) \sim (1, 1 - t)]$。
+
 (3) 带有商拓扑的 $\bar{\mathbb{B}}^2/ \sim$，其中等价关系为
 $$
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^1 \land x = \pm y). \quad (142)
 $$
+
 (4) 带有商拓扑的 $\mathbb{R}^3 \setminus \{0\} / \sim$，其中等价关系为
 $$
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (143)
@@ -323,15 +358,19 @@ $$
 </details>
 
 **10.2.2.2 Example:** The real projective $n$-space $\mathbb{R}P^n$ for $n \in \mathbb{N}$ is one of the equivalent descriptions:
+
 (1) $\mathbb{S}^n/\sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff x = \pm y. \quad (144)
 $$
+
 (2) $[0, 1]^n$ identifying the antipodals on $\partial[0, 1]^n$ with the quotient topology.
+
 (3) $\bar{\mathbb{B}}^n/\sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff (x = y) \lor (x, y \in \mathbb{S}^{n-1} \land x = \pm y). \quad (145)
 $$
+
 (4) $\mathbb{R}^{n+1} \setminus \{0\} / \sim$ with the quotient topology where the equivalence is
 $$
 x \sim y \iff (\exists \lambda \in \mathbb{R} \setminus \{0\})(y = \lambda x). \quad (146)
@@ -380,12 +419,14 @@ Then $\mathbb{C}P^n$ is the space of complex lines in $\mathbb{C}^{n+1}$ passing
 
 ::: {.callout-note appearance="simple"}
 **10.3.0.1 Definition:** A map $f: X \to Y$ is a *local homeomorphism* iff
+
 * $f$ is continuous;
 * $\mathcal{T}_X$ has a basis $\mathcal{B}$ such that $f(U)$ is open for any $U \in \mathcal{B}$,
 * and the submap $f|_{U, f(U)}: U \to f(U)$ is a homeomorphism.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **10.3.0.1 定义：** 映射 $f: X \to Y$ 是一个*局部同胚*当且仅当
+
 * $f$ 是连续的；
 * $\mathcal{T}_X$ 具有一组基 $\mathcal{B}$ 使得对于任何 $U \in \mathcal{B}$，$f(U)$ 是开的，
 * 并且子映射 $f|_{U, f(U)}: U \to f(U)$ 是一个同胚。
