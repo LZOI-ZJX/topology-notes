@@ -29,24 +29,27 @@ First we describe categories directly by means of axioms, without using any set 
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>首先，我们直接通过公理而不使用任何集合论来描述范畴，并称之为“元范畴”。实际上，我们从一个更简单的概念——元图（metagraph）开始。</details>
 
-::: {.callout-note appearance="simple"}
 #### 4.1.1.1 Metagraphs | 元图
 
+::: {.callout-note appearance="simple"}
 **Metagraphs:** A *metagraph* consists of *objects* $a, b, c, \dots$, *morphisms* (or *arrows*) $f, g, h, \dots$, and two operations, as follows:
 
 * *Domain*, which assigns to each morphism $f$ an object $a = \text{dom } f$;
 * *Codomain*, which assigns to each morphism $f$ an object $b = \text{cod } f$.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译 - 浅绿定义块]</summary>**元图：** 一个*元图*由*对象* $a, b, c, \dots$，*态射*（或称*箭头*） $f, g, h, \dots$ 以及以下两种操作组成：
+
 * *定义域*（Domain）：为每个态射 $f$ 指定一个对象 $a = \text{dom } f$；
-* *陪域*（Codomain）：为每个态射 $f$ 指定一个对象 $b = \text{cod } f$。</details>
+* *陪域*（Codomain）：为每个态射 $f$ 指定一个对象 $b = \text{cod } f$。
+</details>
 :::
 
 These operations on $f$ are indicated by displaying $f$ as an actual morphism starting at its *domain* (or *source*) and ending at its *codomain* (or *target*) as
 $$f: a \to b \quad \text{or} \quad a \xrightarrow{f} b.$$
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>针对 $f$ 的这些操作通过将 $f$ 展示为一个从其*定义域*（或称*源*）开始并终止于其*陪域*（或称*靶*）的实际态射来表示：
-$$f: a \to b \quad \text{或} \quad a \xrightarrow{f} b。$$</details>
+$$f: a \to b \quad \text{或} \quad a \xrightarrow{f} b。$$
+</details>
 
 #### 4.1.1.2 Metacategories | 元范畴
 
@@ -65,6 +68,7 @@ one always has the equality $h \circ (g \circ f) = (h \circ g) \circ f$.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **4.1.1.2 元范畴：** 一个 *元范畴* 是一个带有如下两种额外运算的元图：
+
 * *恒等运算*：为每个对象 $a$ 指定一个态射 $\text{id}_a : a \to a$；
 * *复合运算*：为每一对满足 $\text{dom } g = \text{cod } f$ 的态射 $(g, f)$ 指定一个态射 $g \circ f : \text{dom } f \to \text{cod } g$，称为它们的复合态射。
 
@@ -75,6 +79,7 @@ $$a \xrightarrow{f} b \xrightarrow{g} c \xrightarrow{h} d, \quad $$
 * *单位律*：对于所有态射 $f : a \to b$ 与 $g : b \to c$，与恒等态射 $\text{id}_b$ 的复合满足 $\text{id}_b \circ f = f$ 以及 $g \circ \text{id}_b = g$。
 </details>
 :::
+
 
 ::: {.callout-important appearance="simple"}
 **4.1.1.3 Proposition:** For any object $a$, the identity morphism $\text{id}_a$ is unique.
@@ -105,7 +110,9 @@ Note that, in any compatible set theory, such as Zermelo–Fraenkel set theory, 
 ::: {.callout-important appearance="simple"}
 **4.1.1.5 Russell's paradox:** There is no set of all non-self-membered sets.
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
 *Proof:* Suppose there is one, denoted by $\mathcal{R} = \{X \text{ is a set} : X \notin X\}$. Then either $\mathcal{R} \in \mathcal{R}$ or $\mathcal{R} \notin \mathcal{R}$. If $\mathcal{R} \in \mathcal{R}$, then by the construction of $\mathcal{R}$ we have $\mathcal{R} \notin \mathcal{R}$. If $\mathcal{R} \notin \mathcal{R}$ , then by the construction of $\mathcal{R}$ we have $\mathcal{R} \in \mathcal{R}$. Either way leads to a contradiction. ■
+</details>
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **4.1.1.5 罗素悖论：** 不存在由所有不属于自身的集合构成的集合。
@@ -133,6 +140,7 @@ A category is meant by any interpretation of the category axioms within set theo
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **4.1.3.1 宇宙：** 宇宙是一个满足以下条件的集合 $\mathcal{U}$：
+
 * $x \in u \in \mathcal{U}$ 蕴含 $x \in \mathcal{U}$；
 * $u \in \mathcal{U}$ 且 $v \in \mathcal{U}$ 蕴含 $\{u, v\}, (u, v), u \times v \in \mathcal{U}$；
 * $x \in \mathcal{U}$ 蕴含 $\mathcal{P}x \in \mathcal{U}$ 且 $\bigcup x \in \mathcal{U}$；
@@ -247,6 +255,7 @@ In each of the cases above there is only one possible definition of composition.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **4.1.4.1 一些有限范畴：**
+
 * **0** 是空范畴（无对象，无态射）；
 * **1** 是只有一个对象和其唯一恒等态射的范畴 $\circlearrowleft$；
 * **2** 是具有两个对象 $a, b$ 且只有一个非恒等态射 $a \to b$ 的范畴 $\circlearrowleft \to \circlearrowleft$；
@@ -358,7 +367,11 @@ In categorical treatments many properties ordinarily formulated by means of elem
 **4.2.0.4 命题：** 设 $f: a \to b$ 是范畴 $\mathsf{C}$ 中的一个态射。若 $f$ 具有左逆 $g: b \to a$ 和右逆 $h: b \to a$，则 $g = h$。即它们重合且是唯一的。
 </details>
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* Since $g$ is a left inverse of $f$ we have $g \circ f = \text{id}_a$, and since $h$ is a right inverse we have $f \circ h = \text{id}_b$. Then by the unit law and the associativity of composition of morphisms, we have $g = g \circ \text{id}_b = g \circ (f \circ h) = (g \circ f) \circ h = \text{id}_a \circ h = h$. If $g_1$ is any other left inverse of $f$, then we have $g_1 = h = g$, and so the left inverse is unique. Same for the right inverse. ■
+</details>
+
 :::
 
 ::: {.callout-note appearance="simple"}
@@ -386,6 +399,8 @@ In categorical treatments many properties ordinarily formulated by means of elem
 **4.2.0.7 分裂单态射与满态射是单态射与满态射：** 截面是单态射。收缩是满态射。同构是双态射。
 </details>
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* Let $f: a \to b$ be a section in $\mathsf{C}$; then it has a left inverse $g: b \to a$. Suppose that $h_0, h_1: d \to a$ are morphisms in $\mathsf{C}$ such that $f \circ h_0 = f \circ h_1$, then
 $$h_0 = g \circ f \circ h_0 = g \circ f \circ h_1 = h_1, \tag{28}$$
 and $f$ is left-cancellable and monic.
@@ -395,6 +410,8 @@ $$g_0 = g_0 \circ f \circ h = g_1 \circ f \circ h = g_1, \tag{29}$$
 and $f$ is right-cancellable and epic.
 
 An isomorphism has both left and right inverses and is both left-cancellable and right-cancellable, and so is a bimorphism. ■
+</details>
+
 :::
 
 
@@ -417,9 +434,13 @@ An isomorphism has both left and right inverses and is both left-cancellable and
 (3) $f$ 是同构。
 </details>
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* An isomorphism is a monomorphism, an epimorphism, a section, and a retraction.
 If $f: a \to b$ is a monomorphism and a retraction, then there is a morphism $g: b \to a$ such that $f \circ g = \text{id}_b$. Composing $f$ on the right, we have $f \circ g \circ f = \text{id}_b \circ f = f = f \circ \text{id}_a$. Since $f$ is left-cancellable, we have $g \circ f = \text{id}_a$, and then $g$ is the inverse of $f$.
 If $f: a \to b$ is an epimorphism and a section, then there is a morphism $g: b \to a$ such that $g \circ f = \text{id}_a$. Composing $f$ on the left, we have $f \circ g \circ f = f \circ \text{id}_a = f = \text{id}_b \circ f$. Since $f$ is right-cancellable, we have $f \circ g = \text{id}_b$, and then $g$ is the inverse of $f$. ■
+</details>
+
 :::
 
 ::: {.callout-note appearance="simple"}
@@ -457,6 +478,8 @@ If $f: a \to b$ is an epimorphism and a section, then there is a morphism $g: b 
 **4.2.0.11 分裂单态射与分裂满态射是极大的：** 截面是极大单态射。收缩是极大满态射。
 </details>
 :::
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
 
 *Proof:* Let $f: a \to b$ be a section in $\mathsf{C}$; then it has a left inverse $g: b \to a$. Suppose that $f = h \circ k$ and $k$ is epic.
 $$\text{id}_a = g \circ f = g \circ h \circ k \tag{30}$$

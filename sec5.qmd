@@ -41,10 +41,13 @@ The category $\mathsf{Top}$ is a large but locally small category.
 </details>
 :::
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* Let $f: X \to Y$ be a morphism in $\mathsf{Top}$, namely a continuous map.
 If $f$ is monic, then it is left-cancellable. For any $p_0, p_1 \in X$ with $f(p_0) = f(p_1)$, we consider the constant maps $c_{p_0} : * \to X$ and $c_{p_1} : * \to X$ sending the singleton to $p_0$ and $p_1$, respectively; then we have $f \circ c_{p_0} = f \circ c_{p_1} : X \to Y$. Cancelling $f$ on the left we have $c_{p_0} = c_{p_1}$, which implies that $p_0 = p_1$ and $f$ is an injection. If $f$ is injective, then let $h_0, h_1 : Z \to X$ be continuous maps such that $f \circ h_0 = f \circ h_1$. For any $r \in Z$, we have $f(h_0(r)) = f(h_1(r))$, and by injectivity we have $h_0(r) = h_1(r)$, this implies that $h_0 = h_1$. Then, $f$ is left-cancellable and is a monomorphism.
 
 If $f$ is epic, then it is right-cancellable. Let $g_0: Y \to 2_{\text{triv}} = (\{0, 1\}, \mathcal{T}_{\text{triv}})$ be the constant map with value 0. Let $g_1: Y \to 2_{\text{triv}}$ send all members of $f(X)$ to 0 and other ones to 1. Then, $g_0 \circ f = g_1 \circ f : X \to 2_{\text{triv}}$ is the constant map with value 0, but $g_0 = g_1$ only when $f(X) = Y$ and $f$ is a surjection. If $f$ is surjective, then let $g_0, g_1 : Y \to Z$ be continuous maps such that $g_0 \circ f = g_1 \circ f$. For any $q \in Y$, by surjectivity there is $p \in f^{-1}(q)$, and we have $g_0(q) = g_0(f(p)) = g_1(f(p)) = g_1(q)$, this implies that $g_0 = g_1$. Then, $f$ is right-cancellable and is an epimorphism. ■
+</details>
 
 ::: {.callout-important appearance="simple"}
 **5.1.1.4 Proposition:** In $\mathsf{Top}$ the empty space $\emptyset$ (Example 3.1.3.1) is the initial object and the point spaces (as representatives of) $*$ (Example 3.1.3.2) are the terminal objects.
@@ -142,11 +145,14 @@ in which case the map $g$ is unique.
 </details>
 :::
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* For the necessary condition, chase the diagram
 
 ![](pic\5226proof.jpg){fig-align="center" width="40%"}
 
 For the sufficient condition, for the diagram on the left, choose $f = \mathrm{id}_X$ and then $g$ is a retraction; for the diagram on the right, this is an exercise. ■
+</details>
 
 ### 5.2.3 Embeddings and quotient maps.
 
@@ -339,6 +345,8 @@ From Proposition 5.3.2.5 one observe that the interior and exterior of a subset 
 </details>
 :::
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* We prove the equivalence of (2), (5), and (6) as an example, and uses the fact for any $A \subseteq X$ and $B \subseteq Y$,
 $$A \subseteq f^{-1}(f(A)), \quad B \supseteq f(f^{-1}(B)). \tag{44}$$
 If (2) is given, then for any $A \subseteq X$, the preimage $f^{-1}(f(A)^-)$ is closed in $X$ and contains $A$, then $f^{-1}(f(A)^-) \supseteq A^-$. By taking the image, we obtain
@@ -349,6 +357,7 @@ which implies $f^{-1}(B)^-) \subseteq f^{-1}(f(f^{-1}(B)^-)) \subseteq f^{-1}(B^
 If (6) is given, then for any closed $B \subseteq Y$, we have
 $$f^{-1}(B) \subseteq f^{-1}(B)^- \subseteq f^{-1}(B^-) = f^{-1}(B), \tag{47}$$
 which implies that $f^{-1}(B)$ is closed in $X$ and (2) holds. ■
+</details>
 
 ::: {.callout-important appearance="simple"}
 **5.3.2.7 Proposition:** If $f: X \to Y$ be a continuous map between topological spaces, then for any $A \subseteq X$ and $B \subseteq Y$ with $B \supseteq f(A)$, the submap $f|_{A,B}: A \to B$ is continuous.
@@ -419,6 +428,7 @@ Note that each $C_n$ Example 5.3.4.1 is the union of $2^n$ disjoint closed inter
 **5.5.0.1 Definition:** A topological space $X$ is *separable* iff it has a countable dense subset; it is *first countable* iff it has a neighborhood base for every point; and it is *second countable* iff it has a countable base.
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **5.5.0.1 定义：** 一个拓扑空间 $X$ 称为：
+
 * **可分的 (separable)**，当且仅当它有一个可数的稠密子集；
 * **第一可数的 (first countable)**，当且仅当它的每个点都有一个可数邻域基；
 * **第二可数的 (second countable)**，当且仅当它有一个可数基。
@@ -440,10 +450,9 @@ The base in Example 3.2.1.3 and neighborhood base in Example 3.2.2.5 can be dist
 **5.6.0.1 Definition:** An (elementary) *topos* is defined to be a category $\mathsf{E}$ with the following properties:
 
 (1) $\mathsf{E}$ has all finite limits;
-
 (2) $\mathsf{E}$ has a subobject classifier;
-
 (3) $\mathsf{E}$ is cartesian closed.
+
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **5.6.0.1 定义：** 一个（初等）**Topos** 被定义为满足以下性质的范畴 $\mathsf{E}$：
 

@@ -24,6 +24,7 @@ $$(\forall V \in \mathcal{B}_{\mathbb{R}, x_0})(\exists U \in \mathcal{F}_{\math
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.1.0.4 命题：** 设
+
 * $\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n > N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})$ 以及
 * $\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| < \epsilon\} : \epsilon \in \mathbb{R}, \epsilon > 0 \} \subseteq \mathcal{P}(\mathbb{R})$。
 则 $\lim_{n \to \infty} x_n = L$ 当且仅当
@@ -42,14 +43,18 @@ The collections $\mathcal{B}_{\mathbb{N}}$ and $\mathcal{B}_{\mathbb{R}, x_0}$ i
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.1.0.5 定理：** 若 $\lim_{n \to \infty} a_n = a_0$ 且 $\lim_{n \to \infty} b_n = b_0$，则
+
 * $\lim_{n \to \infty} a_n + b_n = a_0 + b_0$。
 </details>
+
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
 
 *Proof:* Let $V_a \in \mathcal{F}_{\mathbb{R}, a_0}$ and $V_b \in \mathcal{F}_{\mathbb{R}, b_0}$ then by $\lim_{n \to \infty} a_n = a_0$ and $\lim_{n \to \infty} b_n = b_0$ there are $U_a, U_b \in \mathcal{F}_{\mathbb{N}}$ such that $n \in U_a \implies a_n \in V_a$ and $n \in U_b \implies b_n \in V_b$. Therefore,
 $$n \in U_a \cap U_b \implies (a_n \in V_a) \wedge (b_n \in V_b). \tag{60}$$
 Let $c_0 = a_0 + b_0$. Now, given $V_c \in \mathcal{F}_{\mathbb{R}, c_0}$. If $V_c = \{x \in \mathbb{R} : |x - c_0| < \epsilon\}$ then let $V_a = \{x \in \mathbb{R} : |x - a_0| < \frac{\epsilon}{2}\}$ and $V_b = \{x \in \mathbb{R} : |x - b_0| < \frac{\epsilon}{2}\}$ we obtain that $(a_n \in V_a) \wedge (b_n \in V_b)$ implies that $a_n + b_n \in V_c$. We are left to show that
 $$(\exists U_c \in \mathcal{F}_{\mathbb{N}})(U_c \subseteq U_a \cap U_b). \tag{61}$$
 which is true by letting $U_c = U_a \cap U_b$. In this case, if $U_a = ]N_a, \infty[ \cap \mathbb{N}$ and $U_b = ]N_b, \infty[ \cap \mathbb{N}$ then $U_c = ]N_c, \infty[ \cap \mathbb{N}$ with $N_c = \max\{N_a, N_b\}$. ■
+</details>
 :::
 
 Here we have the definition.
@@ -62,6 +67,7 @@ Here we have the definition.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.1.0.6 定义：** 集合 $X$ 中的**前滤子 (prefilter)** 是满足以下条件的集合族 $\mathcal{B} \subseteq \mathcal{P}(X)$：
+
 * **非空性：** $\mathcal{B} \neq \emptyset$。
 * **向下有向性：** 对于任意 $A, B \in \mathcal{B}$，存在 $C \in \mathcal{B}$ 使得 $C \subseteq A \cap B$。
 </details>
@@ -82,6 +88,7 @@ Next we show how various types of limits encountered in analysis can be defined 
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.1.0.7 示例：**
+
 * $\mathcal{B}_{\mathbb{N}}$ 是 $\mathbb{N}$ 中的一个前滤子；
 * $\mathcal{B}_{\mathbb{R}, x_0}$ 是 $\mathbb{R}$ 中的一个前滤子；
 * $\mathcal{B}_{\mathbb{R}, x_0^\circ}$（去心邻域族）是 $\mathbb{R}$ 中的一个前滤子；
@@ -113,6 +120,7 @@ $$(\forall V \in \mathcal{B}_{\mathbb{R}, \infty})(\exists U \in \mathcal{B}_{\m
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.1 定义：** 集合 $X$ 中的一个**滤子 (filter)** 是一个满足以下条件的集合族 $\mathcal{F} \subseteq \mathcal{P}(X)$：
+
 * **非空性：** $\mathcal{F} \neq \emptyset$。
 * **有限交封闭性：** 对于任意 $A, B \in \mathcal{F}$，其交集 $A \cap B \in \mathcal{F}$。
 * **等张性 (Isotony)：** 对于任意 $A \in \mathcal{F}$ 且 $B \in \mathcal{P}(X)$，若 $A \subseteq B$，则 $B \in \mathcal{F}$。
@@ -131,6 +139,7 @@ Note that, being closed under finite intersection implies that the universe $X \
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.2 定义：** 设 $\mathcal{B} \subseteq \mathcal{P}(X)$ 为一个集合族。则
+
 * $\mathcal{B}$ 在 $X$ 中的**向上闭包 (upward closure)** $\mathcal{B}^{\uparrow X}$ 为 $\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}$；
 * $\mathcal{B}$ 的**向下闭包 (downward closure)** $\mathcal{B}^{\downarrow}$ 为 $\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}$。
 </details>
@@ -216,6 +225,7 @@ Filters can also express the idea of things happening often and things happening
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.11 示例：**
+
 * $\mathcal{F}_{\mathbb{N}}$（Fréchet 滤子）是 $\mathbb{N}$ 中的一个滤子，包含所有补集为有限集的集合。
 * $\mathcal{F}_{\mathbb{R}, x_0^+}$ 是 $\mathbb{R}$ 中的右侧邻域滤子。
 * $\mathcal{F}_{\mu, \text{ae}}$ 是几乎处处成立的滤子，其中 $\mu$ 是 $X$ 上的测度。
@@ -240,6 +250,7 @@ Filters can also express the idea of things happening often and things happening
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.13 定理：** 设 $\mathcal{B}$ 是 $X$ 中滤子 $\mathcal{F}$ 的一个基，$\mathcal{C}$ 是 $Y$ 中滤子 $\mathcal{G}$ 的一个基。对于映射 $f: X \to Y$，以下各项是等价的：
+
 * $f$ 沿 $\mathcal{B}$ 收敛于 $\mathcal{C}$；
 * $f$ 沿 $\mathcal{F}$ 收敛于 $\mathcal{C}$；
 * $f$ 沿 $\mathcal{B}$ 收敛于 $\mathcal{G}$；
@@ -255,6 +266,7 @@ Filters can also express the idea of things happening often and things happening
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.14 定义：** 设 $\mathcal{F}$ 是拓扑空间 $X$ 中的滤子，$q$ 是 $X$ 中的一点。则：
+
 * $p$ 是 $\mathcal{F}$ 的一个**极限点 (limit point)** 或称 $\mathcal{F}$ **收敛**于 $p$，当且仅当邻域系 $\mathcal{N}_{X,p} \subseteq \mathcal{F}$；
 * $p$ 是 $\mathcal{F}$ 的一个**聚点 (accumulation point)**，当且仅当对于任何邻域 $U \in \mathcal{N}_{X,q}$，存在 $A \in \mathcal{F}$ 使得 $U \cap A \neq \emptyset$。
 </details>
@@ -278,6 +290,7 @@ Filters can also express the idea of things happening often and things happening
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.2.0.16 定理：** 设 $X$ 为一拓扑空间。设 $A \subseteq X$。则：
+
 * $A$ 在 $X$ 中是开集，当且仅当只要 $p \in A$ 是滤子 $\mathcal{F}$ 的极限点，就有 $A \in \mathcal{F}$；
 * 点 $q \in X$ 是 $A$ 的累积点，当且仅当存在一个收敛于 $q$ 的滤子 $\mathcal{F}$ 满足 $A \setminus \{q\} \in \mathcal{F}$；
 * 所有收敛于 $p$ 的滤子的交集等于邻域系 $\mathcal{N}_{X,p}$；
@@ -339,6 +352,7 @@ The axiom $\mathbf{B}_2$ is equivalent to
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.3.0.5 定理：** 子族 $\mathcal{B} \subseteq \mathcal{P}(X)$ 是拓扑基当且仅当满足：
+
 * **$\mathbf{B}_1$：** $\mathcal{B}$ 中所有元素的并集等于 $X$；
 * **$\mathbf{B}_2$：** 对于 $\mathcal{B}$ 中的任意两个元素 $U_1, U_2$，存在 $\mathcal{B}$ 的子族 $\mathcal{A}$ 使得它们的交集等于 $\mathcal{A}$ 中元素的并集。
 
@@ -376,6 +390,7 @@ $$\mathcal{B}_{\text{Zar}} = \{ \{(x_1, x_2) \in \mathbb{R}^2 : f(x_1, x_2) \neq
 
 ::: {.callout-question appearance="simple"}
 **7.3.0.9 Question:** Here are some questions about bases.
+
 (1) Describe a smallest base for an indiscrete space.
 (2) Describe a smallest base for a discrete space. Is it unique?
 (3) Describe a smallest base for the standard topology on $\mathbb{R}^2$. Is it unique?
@@ -383,6 +398,7 @@ $$\mathcal{B}_{\text{Zar}} = \{ \{(x_1, x_2) \in \mathbb{R}^2 : f(x_1, x_2) \neq
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.3.0.9 问题：** 以下是关于基的一些问题：
+
 (1) 描述平凡拓扑（离散空间）的最小基。
 (2) 描述离散空间的最小基。它是唯一的吗？
 (3) 描述 $\mathbb{R}^2$ 标准拓扑的最小基。它是唯一的吗？
@@ -392,6 +408,7 @@ $$\mathcal{B}_{\text{Zar}} = \{ \{(x_1, x_2) \in \mathbb{R}^2 : f(x_1, x_2) \neq
 
 ::: {.callout-caution appearance="simple"}
 **7.3.0.10 Remark:** As an answer to Question 7.3.0.9 (3), there are different bases that generates the standard topology on $\mathbb{R}^2$.
+
 (1) the collection $\mathcal{B}_B$ of open balls (disks) $B_p^2(r)$ for $p = (x_1, x_2) \in \mathbb{R}^2, r > 0$, where $B_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} < r \}$;
 (2) the collection $\mathcal{B}_C$ of open cubes (squares) $C_p^2(r)$ for $p = (x_1, x_2) \in \mathbb{R}^2, r > 0$, where $C_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| < r, |y_2 - x_2| < r \}$;
 (3) the collection $\mathcal{B}_D$ of open diamonds $D_p^2(r)$ for $p = (x_1, x_2) \in \mathbb{R}^2, r > 0$, where $D_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| + |y_2 - x_2| < r \}$;
@@ -399,6 +416,7 @@ $$\mathcal{B}_{\text{Zar}} = \{ \{(x_1, x_2) \in \mathbb{R}^2 : f(x_1, x_2) \neq
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.3.0.10 备注：** 作为问题 7.3.0.9 (3) 的回答，有多种不同的基可以生成 $\mathbb{R}^2$ 上的标准拓扑：
+
 (1) 开球（圆盘）族 $\mathcal{B}_B$；
 (2) 开立方体（正方形）族 $\mathcal{B}_C$；
 (3) 开菱形族 $\mathcal{B}_D$；
@@ -472,9 +490,12 @@ Sometimes we want to separate local matter from global one, and we have seen thi
 **7.4.0.2 定理：** 子族 $\mathcal{B} \subseteq \mathcal{P}(X)$ 是拓扑 $\mathcal{T}$ 的基，当且仅当 $\mathcal{B} \subseteq \mathcal{T}$，且对于任何 $p \in X$ 及其任何邻域 $N \in \mathcal{N}_{X,p}$，都存在 $U \in \mathcal{B}$ 使得 $p \in U \subseteq N$。
 </details>
 
+<details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>
+
 *Proof:* If $\mathcal{B}$ is a base for $\mathcal{T}$, then $\mathcal{B} \subseteq \mathcal{T}$ and for any $p \in X$ with a neighborhood $N \in \mathcal{N}_{X,p}$, there is a $U \in \mathcal{T}$ such that $p \in U \subseteq N$. Then by Theorem 3.2.1.2, there is $W \in \mathcal{B}$ such that $p \in W \subseteq U \subseteq N$.
 
 If $\mathcal{B} \subseteq \mathcal{T}$ and $(\forall p \in X)(\forall N \in \mathcal{N}_{X,p})(\exists U \in \mathcal{B})(p \in U \subseteq N)$, since $\mathcal{T}(\mathcal{B})$ is a topology, it is sufficient to show that $\mathcal{T} \subseteq \{ \bigcup_{W \in \mathcal{A}} W : \mathcal{A} \subseteq \mathcal{B} \}$ for $\mathcal{B}$ to be a base of $\mathcal{T}$, by Definition 3.2.1.1. Let $U \in \mathcal{T}(\mathcal{B})$. For any $p \in U$, since $U \in \mathcal{N}_{X,p}$, there is $W_p \in \mathcal{B}$ such that $p \in W_p \subseteq U$. Then we have $U = \bigcup_{p \in U} W_p$. The proof is complete. ■
+</details>
 :::
 
 ::: {.callout-tip appearance="simple"}
@@ -566,6 +587,7 @@ with $\mathcal{B}_{X,p}$ a neighborhood base at any $p \in X$ of $\mathcal{T}$.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.4.1.1 定理：** 设 $X$ 为一个集合，$(\mathcal{B}_{X,p})_{p \in X}$ 是 $X$ 中的一组预滤子族。假设满足以下条件：
+
 * **$\mathbf{NB}_1$：** 每个点都在其预邻域基的每个元素中；
 * **$\mathbf{NB}_2$：** 邻域的传递性（每个邻域包含一个开邻域）；
 * **$\mathbf{NB}_3$：** 预滤子的向下定向性。
@@ -609,6 +631,7 @@ This section is devoted to the study of **Moore–Smith convergence** (nets), bu
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.5.0.1 定义：** 设 $p$ 为拓扑空间 $X$ 中的一个序列，$q$ 为 $X$ 中的一个点：
+
 * 若序列 $p$ **最终落在** $q$ 的每一个邻域内，则称 $q$ 是 $p$ 的一个**极限点**（或称 $p$ **收敛**于 $q$）；
 * 若序列 $p$ **频繁落在** $q$ 的每一个邻域内，则称 $q$ 是 $p$ 的一个**聚点**（或累积点）。
 </details>
@@ -622,6 +645,7 @@ This section is devoted to the study of **Moore–Smith convergence** (nets), bu
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **7.5.0.2 定理：** 设 $A$ 为 $\mathbb{R}$ 的子集，则：
+
 * 点 $q \in \mathbb{R}$ 是 $A$ 的**粘附点**，当且仅当存在 $A$ 中的序列 $p$ 收敛于 $q$；
 * 点 $q \in \mathbb{R}$ 是 $A$ 的**聚点**，当且仅当存在 $A \setminus \{q\}$ 中的序列 $p$ 收敛于 $q$；
 * $A$ 是**闭集**，当且仅当 $A$ 中没有序列收敛于 $A$ 之外（即 $\mathbb{R} \setminus A$ 中）的点。

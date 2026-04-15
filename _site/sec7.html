@@ -267,7 +267,11 @@ window.Quarto = {
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.1.0.4 命题：</strong> 设 * <span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})\)</span> 以及 * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \} \subseteq \mathcal{P}(\mathbb{R})\)</span>。 则 <span class="math inline">\(\lim_{n \to \infty} x_n = L\)</span> 当且仅当 <span class="math display">\[(\forall V \in \mathcal{B}_{\mathbb{R}, x_0})(\exists U \in \mathcal{F}_{\mathbb{N}})(n \in U \implies x_n \in V)。 \tag{59}\]</span>
+<p><strong>7.1.0.4 命题：</strong> 设</p>
+<ul>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})\)</span> 以及</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \} \subseteq \mathcal{P}(\mathbb{R})\)</span>。 则 <span class="math inline">\(\lim_{n \to \infty} x_n = L\)</span> 当且仅当 <span class="math display">\[(\forall V \in \mathcal{B}_{\mathbb{R}, x_0})(\exists U \in \mathcal{F}_{\mathbb{N}})(n \in U \implies x_n \in V)。 \tag{59}\]</span></li>
+</ul>
 </details>
 </div>
 </div>
@@ -290,9 +294,17 @@ The collections <span class="math inline">\(\mathcal{B}_{\mathbb{N}}\)</span> an
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.1.0.5 定理：</strong> 若 <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> 且 <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span>，则 * <span class="math inline">\(\lim_{n \to \infty} a_n + b_n = a_0 + b_0\)</span>。
+<p><strong>7.1.0.5 定理：</strong> 若 <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> 且 <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span>，则</p>
+<ul>
+<li><span class="math inline">\(\lim_{n \to \infty} a_n + b_n = a_0 + b_0\)</span>。</li>
+</ul>
 </details>
-<p><em>Proof:</em> Let <span class="math inline">\(V_a \in \mathcal{F}_{\mathbb{R}, a_0}\)</span> and <span class="math inline">\(V_b \in \mathcal{F}_{\mathbb{R}, b_0}\)</span> then by <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> and <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span> there are <span class="math inline">\(U_a, U_b \in \mathcal{F}_{\mathbb{N}}\)</span> such that <span class="math inline">\(n \in U_a \implies a_n \in V_a\)</span> and <span class="math inline">\(n \in U_b \implies b_n \in V_b\)</span>. Therefore, <span class="math display">\[n \in U_a \cap U_b \implies (a_n \in V_a) \wedge (b_n \in V_b). \tag{60}\]</span> Let <span class="math inline">\(c_0 = a_0 + b_0\)</span>. Now, given <span class="math inline">\(V_c \in \mathcal{F}_{\mathbb{R}, c_0}\)</span>. If <span class="math inline">\(V_c = \{x \in \mathbb{R} : |x - c_0| &lt; \epsilon\}\)</span> then let <span class="math inline">\(V_a = \{x \in \mathbb{R} : |x - a_0| &lt; \frac{\epsilon}{2}\}\)</span> and <span class="math inline">\(V_b = \{x \in \mathbb{R} : |x - b_0| &lt; \frac{\epsilon}{2}\}\)</span> we obtain that <span class="math inline">\((a_n \in V_a) \wedge (b_n \in V_b)\)</span> implies that <span class="math inline">\(a_n + b_n \in V_c\)</span>. We are left to show that <span class="math display">\[(\exists U_c \in \mathcal{F}_{\mathbb{N}})(U_c \subseteq U_a \cap U_b). \tag{61}\]</span> which is true by letting <span class="math inline">\(U_c = U_a \cap U_b\)</span>. In this case, if <span class="math inline">\(U_a = ]N_a, \infty[ \cap \mathbb{N}\)</span> and <span class="math inline">\(U_b = ]N_b, \infty[ \cap \mathbb{N}\)</span> then <span class="math inline">\(U_c = ]N_c, \infty[ \cap \mathbb{N}\)</span> with <span class="math inline">\(N_c = \max\{N_a, N_b\}\)</span>. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> Let <span class="math inline">\(V_a \in \mathcal{F}_{\mathbb{R}, a_0}\)</span> and <span class="math inline">\(V_b \in \mathcal{F}_{\mathbb{R}, b_0}\)</span> then by <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> and <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span> there are <span class="math inline">\(U_a, U_b \in \mathcal{F}_{\mathbb{N}}\)</span> such that <span class="math inline">\(n \in U_a \implies a_n \in V_a\)</span> and <span class="math inline">\(n \in U_b \implies b_n \in V_b\)</span>. Therefore, <span class="math display">\[n \in U_a \cap U_b \implies (a_n \in V_a) \wedge (b_n \in V_b). \tag{60}\]</span> Let <span class="math inline">\(c_0 = a_0 + b_0\)</span>. Now, given <span class="math inline">\(V_c \in \mathcal{F}_{\mathbb{R}, c_0}\)</span>. If <span class="math inline">\(V_c = \{x \in \mathbb{R} : |x - c_0| &lt; \epsilon\}\)</span> then let <span class="math inline">\(V_a = \{x \in \mathbb{R} : |x - a_0| &lt; \frac{\epsilon}{2}\}\)</span> and <span class="math inline">\(V_b = \{x \in \mathbb{R} : |x - b_0| &lt; \frac{\epsilon}{2}\}\)</span> we obtain that <span class="math inline">\((a_n \in V_a) \wedge (b_n \in V_b)\)</span> implies that <span class="math inline">\(a_n + b_n \in V_c\)</span>. We are left to show that <span class="math display">\[(\exists U_c \in \mathcal{F}_{\mathbb{N}})(U_c \subseteq U_a \cap U_b). \tag{61}\]</span> which is true by letting <span class="math inline">\(U_c = U_a \cap U_b\)</span>. In this case, if <span class="math inline">\(U_a = ]N_a, \infty[ \cap \mathbb{N}\)</span> and <span class="math inline">\(U_b = ]N_b, \infty[ \cap \mathbb{N}\)</span> then <span class="math inline">\(U_c = ]N_c, \infty[ \cap \mathbb{N}\)</span> with <span class="math inline">\(N_c = \max\{N_a, N_b\}\)</span>. ■
+</details>
 </div>
 </div>
 </div>
@@ -314,7 +326,11 @@ Here we have the definition.
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.1.0.6 定义：</strong> 集合 <span class="math inline">\(X\)</span> 中的<strong>前滤子 (prefilter)</strong> 是满足以下条件的集合族 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span>： * <strong>非空性：</strong> <span class="math inline">\(\mathcal{B} \neq \emptyset\)</span>。 * <strong>向下有向性：</strong> 对于任意 <span class="math inline">\(A, B \in \mathcal{B}\)</span>，存在 <span class="math inline">\(C \in \mathcal{B}\)</span> 使得 <span class="math inline">\(C \subseteq A \cap B\)</span>。
+<p><strong>7.1.0.6 定义：</strong> 集合 <span class="math inline">\(X\)</span> 中的<strong>前滤子 (prefilter)</strong> 是满足以下条件的集合族 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span>：</p>
+<ul>
+<li><strong>非空性：</strong> <span class="math inline">\(\mathcal{B} \neq \emptyset\)</span>。</li>
+<li><strong>向下有向性：</strong> 对于任意 <span class="math inline">\(A, B \in \mathcal{B}\)</span>，存在 <span class="math inline">\(C \in \mathcal{B}\)</span> 使得 <span class="math inline">\(C \subseteq A \cap B\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -337,7 +353,14 @@ Next we show how various types of limits encountered in analysis can be defined 
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.1.0.7 示例：</strong> * <span class="math inline">\(\mathcal{B}_{\mathbb{N}}\)</span> 是 <span class="math inline">\(\mathbb{N}\)</span> 中的一个前滤子； * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0}\)</span> 是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子； * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^\circ}\)</span>（去心邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子； * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^+}\)</span>（右邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子； * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, \infty}\)</span>（无穷远邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子。
+<p><strong>7.1.0.7 示例：</strong></p>
+<ul>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{N}}\)</span> 是 <span class="math inline">\(\mathbb{N}\)</span> 中的一个前滤子；</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0}\)</span> 是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子；</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^\circ}\)</span>（去心邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子；</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^+}\)</span>（右邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子；</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, \infty}\)</span>（无穷远邻域族）是 <span class="math inline">\(\mathbb{R}\)</span> 中的一个前滤子。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -372,7 +395,12 @@ Next we show how various types of limits encountered in analysis can be defined 
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.1 定义：</strong> 集合 <span class="math inline">\(X\)</span> 中的一个<strong>滤子 (filter)</strong> 是一个满足以下条件的集合族 <span class="math inline">\(\mathcal{F} \subseteq \mathcal{P}(X)\)</span>： * <strong>非空性：</strong> <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>。 * <strong>有限交封闭性：</strong> 对于任意 <span class="math inline">\(A, B \in \mathcal{F}\)</span>，其交集 <span class="math inline">\(A \cap B \in \mathcal{F}\)</span>。 * <strong>等张性 (Isotony)：</strong> 对于任意 <span class="math inline">\(A \in \mathcal{F}\)</span> 且 <span class="math inline">\(B \in \mathcal{P}(X)\)</span>，若 <span class="math inline">\(A \subseteq B\)</span>，则 <span class="math inline">\(B \in \mathcal{F}\)</span>。
+<p><strong>7.2.0.1 定义：</strong> 集合 <span class="math inline">\(X\)</span> 中的一个<strong>滤子 (filter)</strong> 是一个满足以下条件的集合族 <span class="math inline">\(\mathcal{F} \subseteq \mathcal{P}(X)\)</span>：</p>
+<ul>
+<li><strong>非空性：</strong> <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>。</li>
+<li><strong>有限交封闭性：</strong> 对于任意 <span class="math inline">\(A, B \in \mathcal{F}\)</span>，其交集 <span class="math inline">\(A \cap B \in \mathcal{F}\)</span>。</li>
+<li><strong>等张性 (Isotony)：</strong> 对于任意 <span class="math inline">\(A \in \mathcal{F}\)</span> 且 <span class="math inline">\(B \in \mathcal{P}(X)\)</span>，若 <span class="math inline">\(A \subseteq B\)</span>，则 <span class="math inline">\(B \in \mathcal{F}\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -395,7 +423,11 @@ Note that, being closed under finite intersection implies that the universe <spa
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.2 定义：</strong> 设 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 为一个集合族。则 * <span class="math inline">\(\mathcal{B}\)</span> 在 <span class="math inline">\(X\)</span> 中的<strong>向上闭包 (upward closure)</strong> <span class="math inline">\(\mathcal{B}^{\uparrow X}\)</span> 为 <span class="math inline">\(\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}\)</span>； * <span class="math inline">\(\mathcal{B}\)</span> 的<strong>向下闭包 (downward closure)</strong> <span class="math inline">\(\mathcal{B}^{\downarrow}\)</span> 为 <span class="math inline">\(\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}\)</span>。
+<p><strong>7.2.0.2 定义：</strong> 设 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 为一个集合族。则</p>
+<ul>
+<li><span class="math inline">\(\mathcal{B}\)</span> 在 <span class="math inline">\(X\)</span> 中的<strong>向上闭包 (upward closure)</strong> <span class="math inline">\(\mathcal{B}^{\uparrow X}\)</span> 为 <span class="math inline">\(\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}\)</span>；</li>
+<li><span class="math inline">\(\mathcal{B}\)</span> 的<strong>向下闭包 (downward closure)</strong> <span class="math inline">\(\mathcal{B}^{\downarrow}\)</span> 为 <span class="math inline">\(\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -551,7 +583,12 @@ Filters can also express the idea of things happening often and things happening
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.11 示例：</strong> * <span class="math inline">\(\mathcal{F}_{\mathbb{N}}\)</span>（Fréchet 滤子）是 <span class="math inline">\(\mathbb{N}\)</span> 中的一个滤子，包含所有补集为有限集的集合。 * <span class="math inline">\(\mathcal{F}_{\mathbb{R}, x_0^+}\)</span> 是 <span class="math inline">\(\mathbb{R}\)</span> 中的右侧邻域滤子。 * <span class="math inline">\(\mathcal{F}_{\mu, \text{ae}}\)</span> 是几乎处处成立的滤子，其中 <span class="math inline">\(\mu\)</span> 是 <span class="math inline">\(X\)</span> 上的测度。
+<p><strong>7.2.0.11 示例：</strong></p>
+<ul>
+<li><span class="math inline">\(\mathcal{F}_{\mathbb{N}}\)</span>（Fréchet 滤子）是 <span class="math inline">\(\mathbb{N}\)</span> 中的一个滤子，包含所有补集为有限集的集合。</li>
+<li><span class="math inline">\(\mathcal{F}_{\mathbb{R}, x_0^+}\)</span> 是 <span class="math inline">\(\mathbb{R}\)</span> 中的右侧邻域滤子。</li>
+<li><span class="math inline">\(\mathcal{F}_{\mu, \text{ae}}\)</span> 是几乎处处成立的滤子，其中 <span class="math inline">\(\mu\)</span> 是 <span class="math inline">\(X\)</span> 上的测度。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -589,7 +626,13 @@ Filters can also express the idea of things happening often and things happening
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.13 定理：</strong> 设 <span class="math inline">\(\mathcal{B}\)</span> 是 <span class="math inline">\(X\)</span> 中滤子 <span class="math inline">\(\mathcal{F}\)</span> 的一个基，<span class="math inline">\(\mathcal{C}\)</span> 是 <span class="math inline">\(Y\)</span> 中滤子 <span class="math inline">\(\mathcal{G}\)</span> 的一个基。对于映射 <span class="math inline">\(f: X \to Y\)</span>，以下各项是等价的： * <span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{B}\)</span> 收敛于 <span class="math inline">\(\mathcal{C}\)</span>； * <span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(\mathcal{C}\)</span>； * <span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{B}\)</span> 收敛于 <span class="math inline">\(\mathcal{G}\)</span>； * <span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(\mathcal{G}\)</span>。
+<p><strong>7.2.0.13 定理：</strong> 设 <span class="math inline">\(\mathcal{B}\)</span> 是 <span class="math inline">\(X\)</span> 中滤子 <span class="math inline">\(\mathcal{F}\)</span> 的一个基，<span class="math inline">\(\mathcal{C}\)</span> 是 <span class="math inline">\(Y\)</span> 中滤子 <span class="math inline">\(\mathcal{G}\)</span> 的一个基。对于映射 <span class="math inline">\(f: X \to Y\)</span>，以下各项是等价的：</p>
+<ul>
+<li><span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{B}\)</span> 收敛于 <span class="math inline">\(\mathcal{C}\)</span>；</li>
+<li><span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(\mathcal{C}\)</span>；</li>
+<li><span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{B}\)</span> 收敛于 <span class="math inline">\(\mathcal{G}\)</span>；</li>
+<li><span class="math inline">\(f\)</span> 沿 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(\mathcal{G}\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -609,7 +652,11 @@ Filters can also express the idea of things happening often and things happening
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.14 定义：</strong> 设 <span class="math inline">\(\mathcal{F}\)</span> 是拓扑空间 <span class="math inline">\(X\)</span> 中的滤子，<span class="math inline">\(q\)</span> 是 <span class="math inline">\(X\)</span> 中的一点。则： * <span class="math inline">\(p\)</span> 是 <span class="math inline">\(\mathcal{F}\)</span> 的一个<strong>极限点 (limit point)</strong> 或称 <span class="math inline">\(\mathcal{F}\)</span> <strong>收敛</strong>于 <span class="math inline">\(p\)</span>，当且仅当邻域系 <span class="math inline">\(\mathcal{N}_{X,p} \subseteq \mathcal{F}\)</span>； * <span class="math inline">\(p\)</span> 是 <span class="math inline">\(\mathcal{F}\)</span> 的一个<strong>聚点 (accumulation point)</strong>，当且仅当对于任何邻域 <span class="math inline">\(U \in \mathcal{N}_{X,q}\)</span>，存在 <span class="math inline">\(A \in \mathcal{F}\)</span> 使得 <span class="math inline">\(U \cap A \neq \emptyset\)</span>。
+<p><strong>7.2.0.14 定义：</strong> 设 <span class="math inline">\(\mathcal{F}\)</span> 是拓扑空间 <span class="math inline">\(X\)</span> 中的滤子，<span class="math inline">\(q\)</span> 是 <span class="math inline">\(X\)</span> 中的一点。则：</p>
+<ul>
+<li><span class="math inline">\(p\)</span> 是 <span class="math inline">\(\mathcal{F}\)</span> 的一个<strong>极限点 (limit point)</strong> 或称 <span class="math inline">\(\mathcal{F}\)</span> <strong>收敛</strong>于 <span class="math inline">\(p\)</span>，当且仅当邻域系 <span class="math inline">\(\mathcal{N}_{X,p} \subseteq \mathcal{F}\)</span>；</li>
+<li><span class="math inline">\(p\)</span> 是 <span class="math inline">\(\mathcal{F}\)</span> 的一个<strong>聚点 (accumulation point)</strong>，当且仅当对于任何邻域 <span class="math inline">\(U \in \mathcal{N}_{X,q}\)</span>，存在 <span class="math inline">\(A \in \mathcal{F}\)</span> 使得 <span class="math inline">\(U \cap A \neq \emptyset\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -647,7 +694,13 @@ Filters can also express the idea of things happening often and things happening
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.2.0.16 定理：</strong> 设 <span class="math inline">\(X\)</span> 为一拓扑空间。设 <span class="math inline">\(A \subseteq X\)</span>。则： * <span class="math inline">\(A\)</span> 在 <span class="math inline">\(X\)</span> 中是开集，当且仅当只要 <span class="math inline">\(p \in A\)</span> 是滤子 <span class="math inline">\(\mathcal{F}\)</span> 的极限点，就有 <span class="math inline">\(A \in \mathcal{F}\)</span>； * 点 <span class="math inline">\(q \in X\)</span> 是 <span class="math inline">\(A\)</span> 的累积点，当且仅当存在一个收敛于 <span class="math inline">\(q\)</span> 的滤子 <span class="math inline">\(\mathcal{F}\)</span> 满足 <span class="math inline">\(A \setminus \{q\} \in \mathcal{F}\)</span>； * 所有收敛于 <span class="math inline">\(p\)</span> 的滤子的交集等于邻域系 <span class="math inline">\(\mathcal{N}_{X,p}\)</span>； * 若滤子 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(p\)</span>，且 <span class="math inline">\(\mathcal{G} \supseteq \mathcal{F}\)</span> 也是一个滤子，则 <span class="math inline">\(\mathcal{G}\)</span> 也收敛于 <span class="math inline">\(p\)</span>。
+<p><strong>7.2.0.16 定理：</strong> 设 <span class="math inline">\(X\)</span> 为一拓扑空间。设 <span class="math inline">\(A \subseteq X\)</span>。则：</p>
+<ul>
+<li><span class="math inline">\(A\)</span> 在 <span class="math inline">\(X\)</span> 中是开集，当且仅当只要 <span class="math inline">\(p \in A\)</span> 是滤子 <span class="math inline">\(\mathcal{F}\)</span> 的极限点，就有 <span class="math inline">\(A \in \mathcal{F}\)</span>；</li>
+<li>点 <span class="math inline">\(q \in X\)</span> 是 <span class="math inline">\(A\)</span> 的累积点，当且仅当存在一个收敛于 <span class="math inline">\(q\)</span> 的滤子 <span class="math inline">\(\mathcal{F}\)</span> 满足 <span class="math inline">\(A \setminus \{q\} \in \mathcal{F}\)</span>；</li>
+<li>所有收敛于 <span class="math inline">\(p\)</span> 的滤子的交集等于邻域系 <span class="math inline">\(\mathcal{N}_{X,p}\)</span>；</li>
+<li>若滤子 <span class="math inline">\(\mathcal{F}\)</span> 收敛于 <span class="math inline">\(p\)</span>，且 <span class="math inline">\(\mathcal{G} \supseteq \mathcal{F}\)</span> 也是一个滤子，则 <span class="math inline">\(\mathcal{G}\)</span> 也收敛于 <span class="math inline">\(p\)</span>。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -730,7 +783,11 @@ Filters can also express the idea of things happening often and things happening
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<p><strong>7.3.0.5 定理：</strong> 子族 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是拓扑基当且仅当满足： * <strong><span class="math inline">\(\mathbf{B}_1\)</span>：</strong> <span class="math inline">\(\mathcal{B}\)</span> 中所有元素的并集等于 <span class="math inline">\(X\)</span>； * <strong><span class="math inline">\(\mathbf{B}_2\)</span>：</strong> 对于 <span class="math inline">\(\mathcal{B}\)</span> 中的任意两个元素 <span class="math inline">\(U_1, U_2\)</span>，存在 <span class="math inline">\(\mathcal{B}\)</span> 的子族 <span class="math inline">\(\mathcal{A}\)</span> 使得它们的交集等于 <span class="math inline">\(\mathcal{A}\)</span> 中元素的并集。</p>
+<p><strong>7.3.0.5 定理：</strong> 子族 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是拓扑基当且仅当满足：</p>
+<ul>
+<li><strong><span class="math inline">\(\mathbf{B}_1\)</span>：</strong> <span class="math inline">\(\mathcal{B}\)</span> 中所有元素的并集等于 <span class="math inline">\(X\)</span>；</li>
+<li><strong><span class="math inline">\(\mathbf{B}_2\)</span>：</strong> 对于 <span class="math inline">\(\mathcal{B}\)</span> 中的任意两个元素 <span class="math inline">\(U_1, U_2\)</span>，存在 <span class="math inline">\(\mathcal{B}\)</span> 的子族 <span class="math inline">\(\mathcal{A}\)</span> 使得它们的交集等于 <span class="math inline">\(\mathcal{A}\)</span> 中元素的并集。</li>
+</ul>
 公理 <span class="math inline">\(\mathbf{B}_2\)</span> 等价于： * <strong><span class="math inline">\(\mathbf{B}_2'\)</span>：</strong> 对于 <span class="math inline">\(\mathcal{B}\)</span> 中的任意两个元素 <span class="math inline">\(U_1, U_2\)</span> 及其交集中的任意点 <span class="math inline">\(x\)</span>，存在 <span class="math inline">\(\mathcal{B}\)</span> 中的元素 <span class="math inline">\(U\)</span> 使得 <span class="math inline">\(x \in U \subseteq U_1 \cap U_2\)</span>。
 </details>
 </div>
@@ -778,12 +835,24 @@ Filters can also express the idea of things happening often and things happening
 </div>
 </div>
 <div class="callout-question" data-appearance="simple">
-<p><strong>7.3.0.9 Question:</strong> Here are some questions about bases. (1) Describe a smallest base for an indiscrete space. (2) Describe a smallest base for a discrete space. Is it unique? (3) Describe a smallest base for the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>. Is it unique? (4) Why is the <span class="math inline">\(\mathcal{B}\)</span> in the definition of Zariski topology on <span class="math inline">\(\mathbb{R}^2\)</span> a base?</p>
+<p><strong>7.3.0.9 Question:</strong> Here are some questions about bases.</p>
+<ol type="1">
+<li>Describe a smallest base for an indiscrete space.</li>
+<li>Describe a smallest base for a discrete space. Is it unique?</li>
+<li>Describe a smallest base for the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>. Is it unique?</li>
+<li>Why is the <span class="math inline">\(\mathcal{B}\)</span> in the definition of Zariski topology on <span class="math inline">\(\mathbb{R}^2\)</span> a base?</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.3.0.9 问题：</strong> 以下是关于基的一些问题： (1) 描述平凡拓扑（离散空间）的最小基。 (2) 描述离散空间的最小基。它是唯一的吗？ (3) 描述 <span class="math inline">\(\mathbb{R}^2\)</span> 标准拓扑的最小基。它是唯一的吗？ (4) 为什么 <span class="math inline">\(\mathbb{R}^2\)</span> 上 Zariski 拓扑定义中的 <span class="math inline">\(\mathcal{B}\)</span> 确实是一个基？
+<p><strong>7.3.0.9 问题：</strong> 以下是关于基的一些问题：</p>
+<ol type="1">
+<li>描述平凡拓扑（离散空间）的最小基。</li>
+<li>描述离散空间的最小基。它是唯一的吗？</li>
+<li>描述 <span class="math inline">\(\mathbb{R}^2\)</span> 标准拓扑的最小基。它是唯一的吗？</li>
+<li>为什么 <span class="math inline">\(\mathbb{R}^2\)</span> 上 Zariski 拓扑定义中的 <span class="math inline">\(\mathcal{B}\)</span> 确实是一个基？</li>
+</ol>
 </details>
 </div>
 <div class="callout callout-style-simple callout-caution">
@@ -792,12 +861,24 @@ Filters can also express the idea of things happening often and things happening
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.3.0.10 Remark:</strong> As an answer to Question 7.3.0.9 (3), there are different bases that generates the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>. (1) the collection <span class="math inline">\(\mathcal{B}_B\)</span> of open balls (disks) <span class="math inline">\(B_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(B_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} &lt; r \}\)</span>; (2) the collection <span class="math inline">\(\mathcal{B}_C\)</span> of open cubes (squares) <span class="math inline">\(C_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(C_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| &lt; r, |y_2 - x_2| &lt; r \}\)</span>; (3) the collection <span class="math inline">\(\mathcal{B}_D\)</span> of open diamonds <span class="math inline">\(D_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(D_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| + |y_2 - x_2| &lt; r \}\)</span>; (4) the collection <span class="math inline">\(\mathcal{B}_{\mathbb{Q}}\)</span> of rational open balls (disks) <span class="math inline">\(B_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{Q}^2, r \in (0, \infty) \cap \mathbb{Q}\)</span>.</p>
+<p><strong>7.3.0.10 Remark:</strong> As an answer to Question 7.3.0.9 (3), there are different bases that generates the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<ol type="1">
+<li>the collection <span class="math inline">\(\mathcal{B}_B\)</span> of open balls (disks) <span class="math inline">\(B_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(B_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} &lt; r \}\)</span>;</li>
+<li>the collection <span class="math inline">\(\mathcal{B}_C\)</span> of open cubes (squares) <span class="math inline">\(C_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(C_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| &lt; r, |y_2 - x_2| &lt; r \}\)</span>;</li>
+<li>the collection <span class="math inline">\(\mathcal{B}_D\)</span> of open diamonds <span class="math inline">\(D_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{R}^2, r &gt; 0\)</span>, where <span class="math inline">\(D_{(x_1, x_2)}^2(r) = \{ (y_1, y_2) \in \mathbb{R}^2 : |y_1 - x_1| + |y_2 - x_2| &lt; r \}\)</span>;</li>
+<li>the collection <span class="math inline">\(\mathcal{B}_{\mathbb{Q}}\)</span> of rational open balls (disks) <span class="math inline">\(B_p^2(r)\)</span> for <span class="math inline">\(p = (x_1, x_2) \in \mathbb{Q}^2, r \in (0, \infty) \cap \mathbb{Q}\)</span>.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.3.0.10 备注：</strong> 作为问题 7.3.0.9 (3) 的回答，有多种不同的基可以生成 <span class="math inline">\(\mathbb{R}^2\)</span> 上的标准拓扑： (1) 开球（圆盘）族 <span class="math inline">\(\mathcal{B}_B\)</span>； (2) 开立方体（正方形）族 <span class="math inline">\(\mathcal{B}_C\)</span>； (3) 开菱形族 <span class="math inline">\(\mathcal{B}_D\)</span>； (4) 有理开球族 <span class="math inline">\(\mathcal{B}_{\mathbb{Q}}\)</span>（球心坐标和半径均为有理数）。
+<p><strong>7.3.0.10 备注：</strong> 作为问题 7.3.0.9 (3) 的回答，有多种不同的基可以生成 <span class="math inline">\(\mathbb{R}^2\)</span> 上的标准拓扑：</p>
+<ol type="1">
+<li>开球（圆盘）族 <span class="math inline">\(\mathcal{B}_B\)</span>；</li>
+<li>开立方体（正方形）族 <span class="math inline">\(\mathcal{B}_C\)</span>；</li>
+<li>开菱形族 <span class="math inline">\(\mathcal{B}_D\)</span>；</li>
+<li>有理开球族 <span class="math inline">\(\mathcal{B}_{\mathbb{Q}}\)</span>（球心坐标和半径均为有理数）。</li>
+</ol>
 </details>
 </div>
 </div>
@@ -915,8 +996,13 @@ It is interesting to find although the Zariski topology is coarser than the stan
 </summary>
 <strong>7.4.0.2 定理：</strong> 子族 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是拓扑 <span class="math inline">\(\mathcal{T}\)</span> 的基，当且仅当 <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span>，且对于任何 <span class="math inline">\(p \in X\)</span> 及其任何邻域 <span class="math inline">\(N \in \mathcal{N}_{X,p}\)</span>，都存在 <span class="math inline">\(U \in \mathcal{B}\)</span> 使得 <span class="math inline">\(p \in U \subseteq N\)</span>。
 </details>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
 <p><em>Proof:</em> If <span class="math inline">\(\mathcal{B}\)</span> is a base for <span class="math inline">\(\mathcal{T}\)</span>, then <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and for any <span class="math inline">\(p \in X\)</span> with a neighborhood <span class="math inline">\(N \in \mathcal{N}_{X,p}\)</span>, there is a <span class="math inline">\(U \in \mathcal{T}\)</span> such that <span class="math inline">\(p \in U \subseteq N\)</span>. Then by Theorem 3.2.1.2, there is <span class="math inline">\(W \in \mathcal{B}\)</span> such that <span class="math inline">\(p \in W \subseteq U \subseteq N\)</span>.</p>
-<p>If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <span class="math inline">\((\forall p \in X)(\forall N \in \mathcal{N}_{X,p})(\exists U \in \mathcal{B})(p \in U \subseteq N)\)</span>, since <span class="math inline">\(\mathcal{T}(\mathcal{B})\)</span> is a topology, it is sufficient to show that <span class="math inline">\(\mathcal{T} \subseteq \{ \bigcup_{W \in \mathcal{A}} W : \mathcal{A} \subseteq \mathcal{B} \}\)</span> for <span class="math inline">\(\mathcal{B}\)</span> to be a base of <span class="math inline">\(\mathcal{T}\)</span>, by Definition 3.2.1.1. Let <span class="math inline">\(U \in \mathcal{T}(\mathcal{B})\)</span>. For any <span class="math inline">\(p \in U\)</span>, since <span class="math inline">\(U \in \mathcal{N}_{X,p}\)</span>, there is <span class="math inline">\(W_p \in \mathcal{B}\)</span> such that <span class="math inline">\(p \in W_p \subseteq U\)</span>. Then we have <span class="math inline">\(U = \bigcup_{p \in U} W_p\)</span>. The proof is complete. ■</p>
+If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <span class="math inline">\((\forall p \in X)(\forall N \in \mathcal{N}_{X,p})(\exists U \in \mathcal{B})(p \in U \subseteq N)\)</span>, since <span class="math inline">\(\mathcal{T}(\mathcal{B})\)</span> is a topology, it is sufficient to show that <span class="math inline">\(\mathcal{T} \subseteq \{ \bigcup_{W \in \mathcal{A}} W : \mathcal{A} \subseteq \mathcal{B} \}\)</span> for <span class="math inline">\(\mathcal{B}\)</span> to be a base of <span class="math inline">\(\mathcal{T}\)</span>, by Definition 3.2.1.1. Let <span class="math inline">\(U \in \mathcal{T}(\mathcal{B})\)</span>. For any <span class="math inline">\(p \in U\)</span>, since <span class="math inline">\(U \in \mathcal{N}_{X,p}\)</span>, there is <span class="math inline">\(W_p \in \mathcal{B}\)</span> such that <span class="math inline">\(p \in W_p \subseteq U\)</span>. Then we have <span class="math inline">\(U = \bigcup_{p \in U} W_p\)</span>. The proof is complete. ■
+</details>
 </div>
 </div>
 </div>
@@ -1037,7 +1123,12 @@ It is interesting to find although the Zariski topology is coarser than the stan
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.4.1.1 定理：</strong> 设 <span class="math inline">\(X\)</span> 为一个集合，<span class="math inline">\((\mathcal{B}_{X,p})_{p \in X}\)</span> 是 <span class="math inline">\(X\)</span> 中的一组预滤子族。假设满足以下条件： * <strong><span class="math inline">\(\mathbf{NB}_1\)</span>：</strong> 每个点都在其预邻域基的每个元素中； * <strong><span class="math inline">\(\mathbf{NB}_2\)</span>：</strong> 邻域的传递性（每个邻域包含一个开邻域）； * <strong><span class="math inline">\(\mathbf{NB}_3\)</span>：</strong> 预滤子的向下定向性。 则 <span class="math inline">\((X, \mathcal{T})\)</span> 构成一个拓扑空间，且 <span class="math inline">\(\mathcal{B}_{X,p}\)</span> 成为该拓扑下 <span class="math inline">\(p\)</span> 点的邻域基。
+<p><strong>7.4.1.1 定理：</strong> 设 <span class="math inline">\(X\)</span> 为一个集合，<span class="math inline">\((\mathcal{B}_{X,p})_{p \in X}\)</span> 是 <span class="math inline">\(X\)</span> 中的一组预滤子族。假设满足以下条件：</p>
+<ul>
+<li><strong><span class="math inline">\(\mathbf{NB}_1\)</span>：</strong> 每个点都在其预邻域基的每个元素中；</li>
+<li><strong><span class="math inline">\(\mathbf{NB}_2\)</span>：</strong> 邻域的传递性（每个邻域包含一个开邻域）；</li>
+<li><strong><span class="math inline">\(\mathbf{NB}_3\)</span>：</strong> 预滤子的向下定向性。 则 <span class="math inline">\((X, \mathcal{T})\)</span> 构成一个拓扑空间，且 <span class="math inline">\(\mathcal{B}_{X,p}\)</span> 成为该拓扑下 <span class="math inline">\(p\)</span> 点的邻域基。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1085,7 +1176,11 @@ It is interesting to find although the Zariski topology is coarser than the stan
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.5.0.1 定义：</strong> 设 <span class="math inline">\(p\)</span> 为拓扑空间 <span class="math inline">\(X\)</span> 中的一个序列，<span class="math inline">\(q\)</span> 为 <span class="math inline">\(X\)</span> 中的一个点： * 若序列 <span class="math inline">\(p\)</span> <strong>最终落在</strong> <span class="math inline">\(q\)</span> 的每一个邻域内，则称 <span class="math inline">\(q\)</span> 是 <span class="math inline">\(p\)</span> 的一个<strong>极限点</strong>（或称 <span class="math inline">\(p\)</span> <strong>收敛</strong>于 <span class="math inline">\(q\)</span>）； * 若序列 <span class="math inline">\(p\)</span> <strong>频繁落在</strong> <span class="math inline">\(q\)</span> 的每一个邻域内，则称 <span class="math inline">\(q\)</span> 是 <span class="math inline">\(p\)</span> 的一个<strong>聚点</strong>（或累积点）。
+<p><strong>7.5.0.1 定义：</strong> 设 <span class="math inline">\(p\)</span> 为拓扑空间 <span class="math inline">\(X\)</span> 中的一个序列，<span class="math inline">\(q\)</span> 为 <span class="math inline">\(X\)</span> 中的一个点：</p>
+<ul>
+<li>若序列 <span class="math inline">\(p\)</span> <strong>最终落在</strong> <span class="math inline">\(q\)</span> 的每一个邻域内，则称 <span class="math inline">\(q\)</span> 是 <span class="math inline">\(p\)</span> 的一个<strong>极限点</strong>（或称 <span class="math inline">\(p\)</span> <strong>收敛</strong>于 <span class="math inline">\(q\)</span>）；</li>
+<li>若序列 <span class="math inline">\(p\)</span> <strong>频繁落在</strong> <span class="math inline">\(q\)</span> 的每一个邻域内，则称 <span class="math inline">\(q\)</span> 是 <span class="math inline">\(p\)</span> 的一个<strong>聚点</strong>（或累积点）。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1101,7 +1196,12 @@ It is interesting to find although the Zariski topology is coarser than the stan
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>7.5.0.2 定理：</strong> 设 <span class="math inline">\(A\)</span> 为 <span class="math inline">\(\mathbb{R}\)</span> 的子集，则： * 点 <span class="math inline">\(q \in \mathbb{R}\)</span> 是 <span class="math inline">\(A\)</span> 的<strong>粘附点</strong>，当且仅当存在 <span class="math inline">\(A\)</span> 中的序列 <span class="math inline">\(p\)</span> 收敛于 <span class="math inline">\(q\)</span>； * 点 <span class="math inline">\(q \in \mathbb{R}\)</span> 是 <span class="math inline">\(A\)</span> 的<strong>聚点</strong>，当且仅当存在 <span class="math inline">\(A \setminus \{q\}\)</span> 中的序列 <span class="math inline">\(p\)</span> 收敛于 <span class="math inline">\(q\)</span>； * <span class="math inline">\(A\)</span> 是<strong>闭集</strong>，当且仅当 <span class="math inline">\(A\)</span> 中没有序列收敛于 <span class="math inline">\(A\)</span> 之外（即 <span class="math inline">\(\mathbb{R} \setminus A\)</span> 中）的点。
+<p><strong>7.5.0.2 定理：</strong> 设 <span class="math inline">\(A\)</span> 为 <span class="math inline">\(\mathbb{R}\)</span> 的子集，则：</p>
+<ul>
+<li>点 <span class="math inline">\(q \in \mathbb{R}\)</span> 是 <span class="math inline">\(A\)</span> 的<strong>粘附点</strong>，当且仅当存在 <span class="math inline">\(A\)</span> 中的序列 <span class="math inline">\(p\)</span> 收敛于 <span class="math inline">\(q\)</span>；</li>
+<li>点 <span class="math inline">\(q \in \mathbb{R}\)</span> 是 <span class="math inline">\(A\)</span> 的<strong>聚点</strong>，当且仅当存在 <span class="math inline">\(A \setminus \{q\}\)</span> 中的序列 <span class="math inline">\(p\)</span> 收敛于 <span class="math inline">\(q\)</span>；</li>
+<li><span class="math inline">\(A\)</span> 是<strong>闭集</strong>，当且仅当 <span class="math inline">\(A\)</span> 中没有序列收敛于 <span class="math inline">\(A\)</span> 之外（即 <span class="math inline">\(\mathbb{R} \setminus A\)</span> 中）的点。</li>
+</ul>
 </details>
 </div>
 </div>
