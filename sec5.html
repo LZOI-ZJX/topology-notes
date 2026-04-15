@@ -140,7 +140,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">首页</span></a>
+ <span class="menu-text">BASIC TOPOLOGY</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -153,6 +153,54 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./sec5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">5. MAPS BETWEEN AND SUBSETS OF TOPOLOGICAL SPACES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. TOPOLOGICAL SUBSPACES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. LIMITS AND CONVERGENCE</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. INDUCED TOPOLOGIES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. ORDERS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. IDENTIFYING AND ATTACHING SPACES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. CONNECTEDNESS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. SEPARATION</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13.</span></a>
   </div>
 </li>
     </ul>
@@ -269,8 +317,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
 <p><em>Proof:</em> Let <span class="math inline">\(f: X \to Y\)</span> be a morphism in <span class="math inline">\(\mathsf{Top}\)</span>, namely a continuous map. If <span class="math inline">\(f\)</span> is monic, then it is left-cancellable. For any <span class="math inline">\(p_0, p_1 \in X\)</span> with <span class="math inline">\(f(p_0) = f(p_1)\)</span>, we consider the constant maps <span class="math inline">\(c_{p_0} : * \to X\)</span> and <span class="math inline">\(c_{p_1} : * \to X\)</span> sending the singleton to <span class="math inline">\(p_0\)</span> and <span class="math inline">\(p_1\)</span>, respectively; then we have <span class="math inline">\(f \circ c_{p_0} = f \circ c_{p_1} : X \to Y\)</span>. Cancelling <span class="math inline">\(f\)</span> on the left we have <span class="math inline">\(c_{p_0} = c_{p_1}\)</span>, which implies that <span class="math inline">\(p_0 = p_1\)</span> and <span class="math inline">\(f\)</span> is an injection. If <span class="math inline">\(f\)</span> is injective, then let <span class="math inline">\(h_0, h_1 : Z \to X\)</span> be continuous maps such that <span class="math inline">\(f \circ h_0 = f \circ h_1\)</span>. For any <span class="math inline">\(r \in Z\)</span>, we have <span class="math inline">\(f(h_0(r)) = f(h_1(r))\)</span>, and by injectivity we have <span class="math inline">\(h_0(r) = h_1(r)\)</span>, this implies that <span class="math inline">\(h_0 = h_1\)</span>. Then, <span class="math inline">\(f\)</span> is left-cancellable and is a monomorphism.</p>
-<p>If <span class="math inline">\(f\)</span> is epic, then it is right-cancellable. Let <span class="math inline">\(g_0: Y \to 2_{\text{triv}} = (\{0, 1\}, \mathcal{T}_{\text{triv}})\)</span> be the constant map with value 0. Let <span class="math inline">\(g_1: Y \to 2_{\text{triv}}\)</span> send all members of <span class="math inline">\(f(X)\)</span> to 0 and other ones to 1. Then, <span class="math inline">\(g_0 \circ f = g_1 \circ f : X \to 2_{\text{triv}}\)</span> is the constant map with value 0, but <span class="math inline">\(g_0 = g_1\)</span> only when <span class="math inline">\(f(X) = Y\)</span> and <span class="math inline">\(f\)</span> is a surjection. If <span class="math inline">\(f\)</span> is surjective, then let <span class="math inline">\(g_0, g_1 : Y \to Z\)</span> be continuous maps such that <span class="math inline">\(g_0 \circ f = g_1 \circ f\)</span>. For any <span class="math inline">\(q \in Y\)</span>, by surjectivity there is <span class="math inline">\(p \in f^{-1}(q)\)</span>, and we have <span class="math inline">\(g_0(q) = g_0(f(p)) = g_1(f(p)) = g_1(q)\)</span>, this implies that <span class="math inline">\(g_0 = g_1\)</span>. Then, <span class="math inline">\(f\)</span> is right-cancellable and is an epimorphism. ■</p>
+If <span class="math inline">\(f\)</span> is epic, then it is right-cancellable. Let <span class="math inline">\(g_0: Y \to 2_{\text{triv}} = (\{0, 1\}, \mathcal{T}_{\text{triv}})\)</span> be the constant map with value 0. Let <span class="math inline">\(g_1: Y \to 2_{\text{triv}}\)</span> send all members of <span class="math inline">\(f(X)\)</span> to 0 and other ones to 1. Then, <span class="math inline">\(g_0 \circ f = g_1 \circ f : X \to 2_{\text{triv}}\)</span> is the constant map with value 0, but <span class="math inline">\(g_0 = g_1\)</span> only when <span class="math inline">\(f(X) = Y\)</span> and <span class="math inline">\(f\)</span> is a surjection. If <span class="math inline">\(f\)</span> is surjective, then let <span class="math inline">\(g_0, g_1 : Y \to Z\)</span> be continuous maps such that <span class="math inline">\(g_0 \circ f = g_1 \circ f\)</span>. For any <span class="math inline">\(q \in Y\)</span>, by surjectivity there is <span class="math inline">\(p \in f^{-1}(q)\)</span>, and we have <span class="math inline">\(g_0(q) = g_0(f(p)) = g_1(f(p)) = g_1(q)\)</span>, this implies that <span class="math inline">\(g_0 = g_1\)</span>. Then, <span class="math inline">\(f\)</span> is right-cancellable and is an epimorphism. ■
+</details>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -464,13 +517,18 @@ in which case the map <span class="math inline">\(g\)</span> is unique.
 </div>
 </div>
 </div>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
 <p><em>Proof:</em> For the necessary condition, chase the diagram</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pic\5226proof.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
-<p>For the sufficient condition, for the diagram on the left, choose <span class="math inline">\(f = \mathrm{id}_X\)</span> and then <span class="math inline">\(g\)</span> is a retraction; for the diagram on the right, this is an exercise. ■</p>
+For the sufficient condition, for the diagram on the left, choose <span class="math inline">\(f = \mathrm{id}_X\)</span> and then <span class="math inline">\(g\)</span> is a retraction; for the diagram on the right, this is an exercise. ■
+</details>
 </section>
 <section id="embeddings-and-quotient-maps." class="level3">
 <h3 class="anchored" data-anchor-id="embeddings-and-quotient-maps.">5.2.3 Embeddings and quotient maps.</h3>
@@ -752,7 +810,12 @@ in which case the map <span class="math inline">\(g\)</span> is unique.
 </div>
 </div>
 </div>
-<p><em>Proof:</em> We prove the equivalence of (2), (5), and (6) as an example, and uses the fact for any <span class="math inline">\(A \subseteq X\)</span> and <span class="math inline">\(B \subseteq Y\)</span>, <span class="math display">\[A \subseteq f^{-1}(f(A)), \quad B \supseteq f(f^{-1}(B)). \tag{44}\]</span> If (2) is given, then for any <span class="math inline">\(A \subseteq X\)</span>, the preimage <span class="math inline">\(f^{-1}(f(A)^-)\)</span> is closed in <span class="math inline">\(X\)</span> and contains <span class="math inline">\(A\)</span>, then <span class="math inline">\(f^{-1}(f(A)^-) \supseteq A^-\)</span>. By taking the image, we obtain <span class="math display">\[f(A^-) \subseteq f(f^{-1}(f(A)^-)) \subseteq f(A)^-, \tag{45}\]</span> which implies (5). If (5) is given, then for any <span class="math inline">\(B \subseteq Y\)</span>, we have <span class="math display">\[f(f^{-1}(B)^-) \subseteq f(f^{-1}(B))^- \subseteq B^-, \tag{46}\]</span> which implies <span class="math inline">\(f^{-1}(B)^-) \subseteq f^{-1}(f(f^{-1}(B)^-)) \subseteq f^{-1}(B^-)\)</span>, which is (6). If (6) is given, then for any closed <span class="math inline">\(B \subseteq Y\)</span>, we have <span class="math display">\[f^{-1}(B) \subseteq f^{-1}(B)^- \subseteq f^{-1}(B^-) = f^{-1}(B), \tag{47}\]</span> which implies that <span class="math inline">\(f^{-1}(B)\)</span> is closed in <span class="math inline">\(X\)</span> and (2) holds. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> We prove the equivalence of (2), (5), and (6) as an example, and uses the fact for any <span class="math inline">\(A \subseteq X\)</span> and <span class="math inline">\(B \subseteq Y\)</span>, <span class="math display">\[A \subseteq f^{-1}(f(A)), \quad B \supseteq f(f^{-1}(B)). \tag{44}\]</span> If (2) is given, then for any <span class="math inline">\(A \subseteq X\)</span>, the preimage <span class="math inline">\(f^{-1}(f(A)^-)\)</span> is closed in <span class="math inline">\(X\)</span> and contains <span class="math inline">\(A\)</span>, then <span class="math inline">\(f^{-1}(f(A)^-) \supseteq A^-\)</span>. By taking the image, we obtain <span class="math display">\[f(A^-) \subseteq f(f^{-1}(f(A)^-)) \subseteq f(A)^-, \tag{45}\]</span> which implies (5). If (5) is given, then for any <span class="math inline">\(B \subseteq Y\)</span>, we have <span class="math display">\[f(f^{-1}(B)^-) \subseteq f(f^{-1}(B))^- \subseteq B^-, \tag{46}\]</span> which implies <span class="math inline">\(f^{-1}(B)^-) \subseteq f^{-1}(f(f^{-1}(B)^-)) \subseteq f^{-1}(B^-)\)</span>, which is (6). If (6) is given, then for any closed <span class="math inline">\(B \subseteq Y\)</span>, we have <span class="math display">\[f^{-1}(B) \subseteq f^{-1}(B)^- \subseteq f^{-1}(B^-) = f^{-1}(B), \tag{47}\]</span> which implies that <span class="math inline">\(f^{-1}(B)\)</span> is closed in <span class="math inline">\(X\)</span> and (2) holds. ■
+</details>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -891,7 +954,12 @@ in which case the map <span class="math inline">\(g\)</span> is unique.
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>5.5.0.1 定义：</strong> 一个拓扑空间 <span class="math inline">\(X\)</span> 称为： * <strong>可分的 (separable)</strong>，当且仅当它有一个可数的稠密子集； * <strong>第一可数的 (first countable)</strong>，当且仅当它的每个点都有一个可数邻域基； * <strong>第二可数的 (second countable)</strong>，当且仅当它有一个可数基。
+<p><strong>5.5.0.1 定义：</strong> 一个拓扑空间 <span class="math inline">\(X\)</span> 称为：</p>
+<ul>
+<li><strong>可分的 (separable)</strong>，当且仅当它有一个可数的稠密子集；</li>
+<li><strong>第一可数的 (first countable)</strong>，当且仅当它的每个点都有一个可数邻域基；</li>
+<li><strong>第二可数的 (second countable)</strong>，当且仅当它有一个可数基。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -924,19 +992,21 @@ in which case the map <span class="math inline">\(g\)</span> is unique.
 <div class="callout-body-container">
 <p><strong>5.6.0.1 Definition:</strong> An (elementary) <em>topos</em> is defined to be a category <span class="math inline">\(\mathsf{E}\)</span> with the following properties:</p>
 <ol type="1">
-<li><p><span class="math inline">\(\mathsf{E}\)</span> has all finite limits;</p></li>
-<li><p><span class="math inline">\(\mathsf{E}\)</span> has a subobject classifier;</p></li>
-<li><p><span class="math inline">\(\mathsf{E}\)</span> is cartesian closed.</p>
+<li><span class="math inline">\(\mathsf{E}\)</span> has all finite limits;</li>
+<li><span class="math inline">\(\mathsf{E}\)</span> has a subobject classifier;</li>
+<li><span class="math inline">\(\mathsf{E}\)</span> is cartesian closed.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
-<p>[点击展开翻译]</p>
+[点击展开翻译]
 </summary>
-<p><strong>5.6.0.1 定义：</strong> 一个（初等）<strong>Topos</strong> 被定义为满足以下性质的范畴 <span class="math inline">\(\mathsf{E}\)</span>：</p></details></li>
-<li><p><span class="math inline">\(\mathsf{E}\)</span> 具有所有有限极限；</p></li>
-<li><p><span class="math inline">\(\mathsf{E}\)</span> 具有一个子对象分类器；</p></li>
-<li><p><span class="math inline">\(\mathsf{E}\)</span> 是笛卡尔封闭的。</p>
-</li>
+<p><strong>5.6.0.1 定义：</strong> 一个（初等）<strong>Topos</strong> 被定义为满足以下性质的范畴 <span class="math inline">\(\mathsf{E}\)</span>：</p>
+<ol type="1">
+<li><span class="math inline">\(\mathsf{E}\)</span> 具有所有有限极限；</li>
+<li><span class="math inline">\(\mathsf{E}\)</span> 具有一个子对象分类器；</li>
+<li><span class="math inline">\(\mathsf{E}\)</span> 是笛卡尔封闭的。</li>
 </ol>
+</details>
 </div>
 </div>
 </div>

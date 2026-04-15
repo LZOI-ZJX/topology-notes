@@ -167,6 +167,42 @@ window.Quarto = {
  <span class="menu-text">7. LIMITS AND CONVERGENCE</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. INDUCED TOPOLOGIES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. ORDERS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. IDENTIFYING AND ATTACHING SPACES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. CONNECTEDNESS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. SEPARATION</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13.</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -302,12 +338,24 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>6.1.1.5 Proposition:</strong> (1) A topological subspace of a Hausdorff space is Hausdorff. (2) A topological subspace of a separable space is separable. (3) A topological subspace of a first countable space is first countable. (4) A topological subspace of a second countable space is second countable.</p>
+<p><strong>6.1.1.5 Proposition:</strong></p>
+<ol type="1">
+<li>A topological subspace of a Hausdorff space is Hausdorff.</li>
+<li>A topological subspace of a separable space is separable.</li>
+<li>A topological subspace of a first countable space is first countable.</li>
+<li>A topological subspace of a second countable space is second countable.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>命题：</strong> (1) Hausdorff 空间的拓扑子空间是 Hausdorff 的。 (2) 可分空间的拓扑子空间是可分的。 (3) 第一可数空间的拓扑子空间是第一可数的。 (4) 第二可数空间的拓扑子空间是第二可数的。
+<p><strong>命题：</strong></p>
+<ol type="1">
+<li>Hausdorff 空间的拓扑子空间是 Hausdorff 的。</li>
+<li>可分空间的拓扑子空间是可分的。</li>
+<li>第一可数空间的拓扑子空间是第一可数的。</li>
+<li>第二可数空间的拓扑子空间是第二可数的。</li>
+</ol>
 </details>
 </div>
 </div>
@@ -378,7 +426,7 @@ Restriction and gluing.
 </div>
 </div>
 </div>
-We classify intervals by boundedness.
+<p>We classify intervals by boundedness.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -492,12 +540,24 @@ There are special properites of bounded closed intervals, which we recall from M
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Remark:</strong> Bounded closed intervals and finite sets in <span class="math inline">\(\mathbb{R}\)</span> share similar topological properties, which we will call compactness. (1) A continuous function <span class="math inline">\(f: A \to \mathbb{R}\)</span> on a finite set <span class="math inline">\(A\)</span> is any function on <span class="math inline">\(A\)</span> attains both the maximum and the minimum values. (2) A sequence <span class="math inline">\((x_n)_{n \in \mathbb{N}}\)</span> in a finite set <span class="math inline">\(A\)</span> has a constant subsequence <span class="math inline">\((x_{n_k})_{k \in \mathbb{N}}\)</span> with some value <span class="math inline">\(c \in A\)</span> by the pigeonhole principle. (3) An open cover <span class="math inline">\((U_n)_{n \in I}\)</span> of a finite set <span class="math inline">\(A\)</span> has a finite subcover by choosing an open set covering each element of <span class="math inline">\(A\)</span>. (4) A nested sequence <span class="math inline">\(F_1 \supseteq F_2 \supseteq \cdots\)</span> of closed subsets of a finite set <span class="math inline">\(A\)</span> is simply a nested sequence of finite subsets of <span class="math inline">\(A\)</span>, whose cardinalities are non-increasing positive integers, and must stabilize, and therefore, there is a <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math inline">\(F_n = F_N\)</span> for <span class="math inline">\(n \ge N\)</span> and then the sequence has nonempty intersection <span class="math inline">\(\bigcap_{n=1}^\infty F_n = F_N\)</span>. Hence, we say that compactness is a generalization of finiteness.</p>
+<p><strong>Remark:</strong> Bounded closed intervals and finite sets in <span class="math inline">\(\mathbb{R}\)</span> share similar topological properties, which we will call compactness.</p>
+<ol type="1">
+<li>A continuous function <span class="math inline">\(f: A \to \mathbb{R}\)</span> on a finite set <span class="math inline">\(A\)</span> is any function on <span class="math inline">\(A\)</span> attains both the maximum and the minimum values.</li>
+<li>A sequence <span class="math inline">\((x_n)_{n \in \mathbb{N}}\)</span> in a finite set <span class="math inline">\(A\)</span> has a constant subsequence <span class="math inline">\((x_{n_k})_{k \in \mathbb{N}}\)</span> with some value <span class="math inline">\(c \in A\)</span> by the pigeonhole principle.</li>
+<li>An open cover <span class="math inline">\((U_n)_{n \in I}\)</span> of a finite set <span class="math inline">\(A\)</span> has a finite subcover by choosing an open set covering each element of <span class="math inline">\(A\)</span>.</li>
+<li>A nested sequence <span class="math inline">\(F_1 \supseteq F_2 \supseteq \cdots\)</span> of closed subsets of a finite set <span class="math inline">\(A\)</span> is simply a nested sequence of finite subsets of <span class="math inline">\(A\)</span>, whose cardinalities are non-increasing positive integers, and must stabilize, and therefore, there is a <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math inline">\(F_n = F_N\)</span> for <span class="math inline">\(n \ge N\)</span> and then the sequence has nonempty intersection <span class="math inline">\(\bigcap_{n=1}^\infty F_n = F_N\)</span>. Hence, we say that compactness is a generalization of finiteness.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>备注：</strong> <span class="math inline">\(\mathbb{R}\)</span> 中的有界闭区间与有限集具有相似的拓扑性质，我们将这种性质称为“紧性”。 (1) 有限集 <span class="math inline">\(A\)</span> 上的连续函数 <span class="math inline">\(f: A \to \mathbb{R}\)</span>（即 <span class="math inline">\(A\)</span> 上的任意函数）都能取到最大值和最小值。 (2) 根据鸽巢原理，有限集 <span class="math inline">\(A\)</span> 中的序列 <span class="math inline">\((x_n)_{n \in \mathbb{N}}\)</span> 拥有一个值为 <span class="math inline">\(c \in A\)</span> 的常数子序列 <span class="math inline">\((x_{n_k})_{k \in \mathbb{N}}\)</span>。 (3) 通过为 <span class="math inline">\(A\)</span> 中的每个元素选择一个包含它的开集，有限集 <span class="math inline">\(A\)</span> 的开覆盖 <span class="math inline">\((U_n)_{n \in I}\)</span> 必有有限子覆盖。 (4) 有限集 <span class="math inline">\(A\)</span> 的闭子集构成的嵌套序列 <span class="math inline">\(F_1 \supseteq F_2 \supseteq \cdots\)</span> 本质上是 <span class="math inline">\(A\)</span> 的有限子集构成的嵌套序列，其基数是非增正整数且必然稳定。因此，存在 <span class="math inline">\(N \in \mathbb{N}\)</span> 使得当 <span class="math inline">\(n \ge N\)</span> 时 <span class="math inline">\(F_n = F_N\)</span>，从而该序列具有非空交集 <span class="math inline">\(\bigcap_{n=1}^\infty F_n = F_N\)</span>。 因此，我们说紧性是有限性的一种推广。
+<p><strong>备注：</strong> <span class="math inline">\(\mathbb{R}\)</span> 中的有界闭区间与有限集具有相似的拓扑性质，我们将这种性质称为“紧性”。</p>
+<ol type="1">
+<li>有限集 <span class="math inline">\(A\)</span> 上的连续函数 <span class="math inline">\(f: A \to \mathbb{R}\)</span>（即 <span class="math inline">\(A\)</span> 上的任意函数）都能取到最大值和最小值。</li>
+<li>根据鸽巢原理，有限集 <span class="math inline">\(A\)</span> 中的序列 <span class="math inline">\((x_n)_{n \in \mathbb{N}}\)</span> 拥有一个值为 <span class="math inline">\(c \in A\)</span> 的常数子序列 <span class="math inline">\((x_{n_k})_{k \in \mathbb{N}}\)</span>。</li>
+<li>通过为 <span class="math inline">\(A\)</span> 中的每个元素选择一个包含它的开集，有限集 <span class="math inline">\(A\)</span> 的开覆盖 <span class="math inline">\((U_n)_{n \in I}\)</span> 必有有限子覆盖。</li>
+<li>有限集 <span class="math inline">\(A\)</span> 的闭子集构成的嵌套序列 <span class="math inline">\(F_1 \supseteq F_2 \supseteq \cdots\)</span> 本质上是 <span class="math inline">\(A\)</span> 的有限子集构成的嵌套序列，其基数是非增正整数且必然稳定。因此，存在 <span class="math inline">\(N \in \mathbb{N}\)</span> 使得当 <span class="math inline">\(n \ge N\)</span> 时 <span class="math inline">\(F_n = F_N\)</span>，从而该序列具有非空交集 <span class="math inline">\(\bigcap_{n=1}^\infty F_n = F_N\)</span>。 因此，我们说紧性是有限性的一种推广。</li>
+</ol>
 </details>
 </div>
 </div>
@@ -528,7 +588,12 @@ The properties Theorem 6.2.1.2, Theorem 6.2.1.3, Theorem 6.2.1.4, and Theorem 6.
 </div>
 </div>
 </div>
-<p><em>Proof:</em> Let <span class="math inline">\(f: I \to \mathbb{R}\)</span> be a continuous function. Let <span class="math inline">\((q_n)_{n \in \mathbb{N}}\)</span> be an increasing sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(\lim_{n \to \infty} q_n = \sup_I f\)</span>. Let <span class="math inline">\(U_n = \{x \in I : f(x) &lt; q_n\}\)</span> which is open in <span class="math inline">\(I\)</span>. If either <span class="math inline">\(f\)</span> is unbounded above or <span class="math inline">\(f\)</span> never takes <span class="math inline">\(\sup_I f\)</span> then <span class="math inline">\(\{U_n\}_{n \in \mathbb{N}}\)</span> is an open cover of <span class="math inline">\(I\)</span> and by Heine–Borel has a subcover <span class="math inline">\(\{U_n\}_{n=1}^N\)</span> for some <span class="math inline">\(N \in \mathbb{N}\)</span>. This implies that <span class="math inline">\(f(x) &lt; q_n &lt; \sup_I f\)</span> and contradicts to the definition of the supremum. analogously, <span class="math inline">\(f\)</span> is bounded below and attains <span class="math inline">\(\inf_I f\)</span>. The extremal value theorem hold for <span class="math inline">\(f\)</span>. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> Let <span class="math inline">\(f: I \to \mathbb{R}\)</span> be a continuous function. Let <span class="math inline">\((q_n)_{n \in \mathbb{N}}\)</span> be an increasing sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(\lim_{n \to \infty} q_n = \sup_I f\)</span>. Let <span class="math inline">\(U_n = \{x \in I : f(x) &lt; q_n\}\)</span> which is open in <span class="math inline">\(I\)</span>. If either <span class="math inline">\(f\)</span> is unbounded above or <span class="math inline">\(f\)</span> never takes <span class="math inline">\(\sup_I f\)</span> then <span class="math inline">\(\{U_n\}_{n \in \mathbb{N}}\)</span> is an open cover of <span class="math inline">\(I\)</span> and by Heine–Borel has a subcover <span class="math inline">\(\{U_n\}_{n=1}^N\)</span> for some <span class="math inline">\(N \in \mathbb{N}\)</span>. This implies that <span class="math inline">\(f(x) &lt; q_n &lt; \sup_I f\)</span> and contradicts to the definition of the supremum. analogously, <span class="math inline">\(f\)</span> is bounded below and attains <span class="math inline">\(\inf_I f\)</span>. The extremal value theorem hold for <span class="math inline">\(f\)</span>. ■
+</details>
 These does not hold for subspaces on non-open or unbounded subsets of <span class="math inline">\(\mathbb{R}\)</span>, such as <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\([0, 1[\)</span> and <span class="math inline">\(]0, 1[\)</span>.
 <details>
 <summary style="color: gray; cursor: pointer;">
@@ -649,7 +714,12 @@ Consider the discrete (free) topology functor <span class="math inline">\(F: \te
 </div>
 </div>
 </div>
-<p><em>Proof:</em> Let <span class="math inline">\(U\)</span> be a clopen subset of <span class="math inline">\(A = \bigcup_{i \in I} A_i\)</span>. Then for each <span class="math inline">\(i \in I, U \cap A_i\)</span> is clopen in <span class="math inline">\(A_i\)</span>. Since <span class="math inline">\(A_i\)</span> is connected for each <span class="math inline">\(i \in I\)</span>, there is a <span class="math inline">\(J \subseteq I\)</span> such that <span class="math inline">\(i \in J\)</span> iff <span class="math inline">\(A_i \subseteq U\)</span> and <span class="math inline">\(i \in I \setminus J\)</span> iff <span class="math inline">\(A_i \subseteq U^c\)</span>. However, for any <span class="math inline">\(i_1 \in J\)</span> and <span class="math inline">\(i_2 \in I \setminus J\)</span>, we have <span class="math inline">\(A_{i_1} \cap A_{i_2} \subseteq U \cap U^c = \emptyset\)</span>. Therefore, if <span class="math inline">\(\bigcap_{i \in I} A_i \neq \emptyset\)</span>, then <span class="math inline">\(J \times (I \setminus J) = \emptyset\)</span> and then either <span class="math inline">\(U = \emptyset\)</span> or <span class="math inline">\(U = A\)</span>, and <span class="math inline">\(A\)</span> is connected. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> Let <span class="math inline">\(U\)</span> be a clopen subset of <span class="math inline">\(A = \bigcup_{i \in I} A_i\)</span>. Then for each <span class="math inline">\(i \in I, U \cap A_i\)</span> is clopen in <span class="math inline">\(A_i\)</span>. Since <span class="math inline">\(A_i\)</span> is connected for each <span class="math inline">\(i \in I\)</span>, there is a <span class="math inline">\(J \subseteq I\)</span> such that <span class="math inline">\(i \in J\)</span> iff <span class="math inline">\(A_i \subseteq U\)</span> and <span class="math inline">\(i \in I \setminus J\)</span> iff <span class="math inline">\(A_i \subseteq U^c\)</span>. However, for any <span class="math inline">\(i_1 \in J\)</span> and <span class="math inline">\(i_2 \in I \setminus J\)</span>, we have <span class="math inline">\(A_{i_1} \cap A_{i_2} \subseteq U \cap U^c = \emptyset\)</span>. Therefore, if <span class="math inline">\(\bigcap_{i \in I} A_i \neq \emptyset\)</span>, then <span class="math inline">\(J \times (I \setminus J) = \emptyset\)</span> and then either <span class="math inline">\(U = \emptyset\)</span> or <span class="math inline">\(U = A\)</span>, and <span class="math inline">\(A\)</span> is connected. ■
+</details>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -733,7 +803,12 @@ Consider the discrete (free) topology functor <span class="math inline">\(F: \te
 </div>
 </div>
 </div>
-<p><em>Proof:</em> It is an exercise for the reader that a nonempty interval is connected. If <span class="math inline">\(A \subset \mathbb{R}\)</span> yields a connected subspace, then it must be nonempty. For any <span class="math inline">\(z \in \mathbb{R} \setminus A\)</span>, since <span class="math inline">\(]-\infty, z[ \cap A\)</span> and <span class="math inline">\(]z, \infty[ \cap A\)</span> separates <span class="math inline">\(A\)</span>, either <span class="math inline">\(A \subseteq ]-\infty, z[\)</span> or <span class="math inline">\(A \subseteq ]z, \infty[\)</span>. In particular, for any <span class="math inline">\(x, y \in A\)</span> and <span class="math inline">\(z \notin A\)</span>, we must have <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> lie on the same side of <span class="math inline">\(z\)</span> and therefore <span class="math inline">\(A\)</span> is an interval. ■</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> It is an exercise for the reader that a nonempty interval is connected. If <span class="math inline">\(A \subset \mathbb{R}\)</span> yields a connected subspace, then it must be nonempty. For any <span class="math inline">\(z \in \mathbb{R} \setminus A\)</span>, since <span class="math inline">\(]-\infty, z[ \cap A\)</span> and <span class="math inline">\(]z, \infty[ \cap A\)</span> separates <span class="math inline">\(A\)</span>, either <span class="math inline">\(A \subseteq ]-\infty, z[\)</span> or <span class="math inline">\(A \subseteq ]z, \infty[\)</span>. In particular, for any <span class="math inline">\(x, y \in A\)</span> and <span class="math inline">\(z \notin A\)</span>, we must have <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> lie on the same side of <span class="math inline">\(z\)</span> and therefore <span class="math inline">\(A\)</span> is an interval. ■
+</details>
 </section>
 </section>
 <section id="examples-of-subspaces-of-mathbbr-mathbbr-的子空间示例" class="level2">
