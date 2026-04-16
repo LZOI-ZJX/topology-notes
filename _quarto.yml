@@ -30,6 +30,10 @@ website:
         href: sec12.qmd
       - text: "13. "
         href: sec13.qmd
+      - text: "14. "
+        href: sec14.qmd
+      - text: "15. "
+        href: sec15.qmd
 
 format:
   html:

@@ -16,7 +16,6 @@ format:
 
 How points or closed sets are separated by opens sets?
 
-SEPARATION AXIOMS IN NLAB AND [10, DEFINITION 5.1]
 
 ::: {.callout-note appearance="simple"}
 **12.1.1.1 Definition:** Two points $p$ and $q$ of a topological space $X$ are
@@ -201,18 +200,6 @@ $$
 \end{aligned} \qquad (175)
 $$
 
-<details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
-**12.1.3.2 命题**：
-$$
-\begin{aligned}
-\mathbf{T}_5 &\implies \mathbf{T}_4 \\
-\mathbf{T}_4 \land \mathbf{T}_3 &\implies \mathbf{T}_{3\frac{1}{2}} \\
-\mathbf{T}_4 \land \mathbf{T}_1 &\implies \mathbf{T}_{3\frac{1}{2}} \implies \mathbf{T}_3 \\
-\mathbf{T}_3 \land \mathbf{T}_2 &\implies \mathbf{T}_{2\frac{1}{2}} \\
-\mathbf{T}_3 \land \mathbf{T}_0 &\implies \mathbf{T}_{2\frac{1}{2}} \implies \mathbf{T}_2 \implies \mathbf{T}_1 \implies \mathbf{T}_0
-\end{aligned} \qquad (175)
-$$
-</details>
 :::
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开证明]</summary>

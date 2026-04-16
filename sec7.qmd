@@ -17,6 +17,7 @@ We omit the definition of limits. (Remark 7.1.0.1/2/3)
 
 ::: {.callout-tip appearance="simple"}
 **7.1.0.4 Proposition:** Let
+
 * $\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n > N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})$ and
 * $\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| < \epsilon\} : \epsilon \in \mathbb{R}, \epsilon > 0 \} \subseteq \mathcal{P}(\mathbb{R})$.
 Then $\lim_{n \to \infty} x_n = L$ iff
@@ -39,6 +40,7 @@ The collections $\mathcal{B}_{\mathbb{N}}$ and $\mathcal{B}_{\mathbb{R}, x_0}$ i
 
 ::: {.callout-tip appearance="simple"}
 **7.1.0.5 Theorem:** If $\lim_{n \to \infty} a_n = a_0$ and $\lim_{n \to \infty} b_n = b_0$ then
+
 * $\lim_{n \to \infty} a_n + b_n = a_0 + b_0$.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
@@ -62,6 +64,7 @@ Here we have the definition.
 
 ::: {.callout-note appearance="simple"}
 **7.1.0.6 Definition:** A *prefilter* in a set $X$ is a collection $\mathcal{B} \subseteq \mathcal{P}(X)$ that satisfies
+
 * *Nonempty.* $\mathcal{B} \neq \emptyset$.
 * *Downward directedness.* For any $A, B \in \mathcal{B}$, there is $C \in \mathcal{B}$ such that $C \subseteq A \cap B$.
 
@@ -80,6 +83,7 @@ Next we show how various types of limits encountered in analysis can be defined 
 
 ::: {.callout-note appearance="simple"}
 **7.1.0.7 Example:**
+
 * $\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n > N\} : N \in \mathbb{N} \}$ is a prefilter in $\mathbb{N}$ and
 * $\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| < \epsilon\} : \epsilon \in \mathbb{R}, \epsilon > 0 \}$ is a prefilter in $\mathbb{R}$.
 * $\mathcal{B}_{\mathbb{R}, x_0^\circ} = \{ \{x \in \mathbb{R} : 0 < |x - x_0| < \epsilon\} : \epsilon \in \mathbb{R}, \epsilon > 0 \}$ is a prefilter in $\mathbb{R}$.
@@ -114,6 +118,7 @@ $$(\forall V \in \mathcal{B}_{\mathbb{R}, \infty})(\exists U \in \mathcal{B}_{\m
 
 ::: {.callout-note appearance="simple"}
 **7.2.0.1 Definition:** A *filter* in a set $X$ is a collection $\mathcal{F} \subseteq \mathcal{P}(X)$ satisfying the following conditions:
+
 * *Nonempty.* $\mathcal{F} \neq \emptyset$.
 * *Finite intersection is closed.* For any $A, B \in \mathcal{F}$, the intersection $A \cap B \in \mathcal{F}$.
 * *Isotony.* For any $A \in \mathcal{F}$ and $B \in \mathcal{P}(X)$, if $A \subseteq B$ then $B \in \mathcal{F}$.
@@ -134,6 +139,7 @@ Note that, being closed under finite intersection implies that the universe $X \
 
 ::: {.callout-note appearance="simple"}
 **7.2.0.2 Definition:** Let $\mathcal{B} \subseteq \mathcal{P}(X)$ be a collection. Then
+
 * the *upward closure* $\mathcal{B}^{\uparrow X}$ of $\mathcal{B}$ in $X$ is $\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}$ and
 * the *downward closure* $\mathcal{B}^{\downarrow}$ of $\mathcal{B}$ is $\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}$.
 
@@ -344,6 +350,7 @@ By Theorem 3.1.5.3 (1), $\mathcal{T}(\mathcal{S})$ is indeed a topology on $X$.
 
 ::: {.callout-tip appearance="simple"}
 **7.3.0.5 Theorem:** A subcollection $\mathcal{B} \subseteq \mathcal{P}(X)$ is a topological base iff
+
 * **$\mathbf{B}_1$:** $\bigcup_{U \in \mathcal{B}} U = X$; and
 * **$\mathbf{B}_2$:** $(\forall U_1, U_2 \in \mathcal{B})(\exists \mathcal{A} \subseteq \mathcal{B})(U_1 \cap U_2 = \bigcup_{W \in \mathcal{A}} W)$.
 
@@ -577,6 +584,7 @@ Let $\mathcal{F} \subseteq \mathcal{P}(X)$ be a filter. The following statements
 
 ::: {.callout-tip appearance="simple"}
 **7.4.1.1 Theorem:** Let $X$ be a set. Let $(\mathcal{B}_{X,p})_{p \in X}$ be a family of prefilters in $X$. Assume that:
+
 * **$\mathbf{NB}_1$:** $(\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(p \in A)$;
 * **$\mathbf{NB}_2$:** $(\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(\exists B \in \mathcal{B}_{X,q})(\exists B \in \mathcal{B}_q)(B \subseteq A)$; (Note: Typo in original text, usually refers to the existence of a neighborhood $V$ of $p$ such that $V$ is a neighborhood of each of its points).
 * **$\mathbf{NB}_3$:** $(\forall p \in X)(\forall A, B \in \mathcal{B}_{X,p})(\exists W \in \mathcal{B}_{X,p})(W \subseteq A \cap B)$.
@@ -597,6 +605,7 @@ with $\mathcal{B}_{X,p}$ a neighborhood base at any $p \in X$ of $\mathcal{T}$.
 
 ::: {.callout-tip appearance="simple"}
 **7.4.1.2 Theorem:** Let $X$ be a set. Let $(\mathcal{N}_{X,p})_{p \in X}$ be a family of filters in $X$. Assume that:
+
 * **$\mathbf{N}_1$:** $(\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(p \in A)$;
 * **$\mathbf{N}_2$:** $(\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(\forall B \in \mathcal{P}(X))(B \supseteq A \Rightarrow B \in \mathcal{N}_{X,q})$;
 * **$\mathbf{N}_3$:** $(\forall p \in X)(\forall A, B \in \mathcal{N}_{X,p})(A \cap B \in \mathcal{N}_{X,p})$;
@@ -620,12 +629,14 @@ with $\mathcal{N}_{X,p}$ the neighborhood filter at any $p \in X$ of $\mathcal{T
 # 7.5 Sequence convergence | 序列收敛
 
 This section is devoted to the study of **Moore–Smith convergence** (nets), but starts with the familiar case of sequences. Recall that a sequence is a function $p: \mathbb{N} \to X, n \mapsto p_n$, which is:
+
 * **in a set $A$** iff $p_n \in A$ for each $n \in \mathbb{N}$;
 * **eventually in a set $A$** iff $(\exists N \in \mathbb{N})(\forall n \geq N)(p_n \in A)$;
 * **frequently in a set $A$** iff $(\forall N \in \mathbb{N})(\exists n \geq N)(p_n \in A)$.
 
 ::: {.callout-tip appearance="simple"}
 **7.5.0.1 Definition:** Let $p$ be a sequence in and $q$ be a point of a topological space $X$. Then:
+
 * $q$ is a **limit point** of $p$ (or $p$ **converges** at $q$) iff $p$ is *eventually* in each neighborhood of $q$;
 * $q$ is an **accumulation point** of $p$ iff $p$ is *frequently* in each neighborhood of $q$.
 
@@ -639,6 +650,7 @@ This section is devoted to the study of **Moore–Smith convergence** (nets), bu
 
 ::: {.callout-important appearance="simple"}
 **7.5.0.2 Theorem:** Let $A$ be a subset of $\mathbb{R}$. Then
+
 * a point $q \in \mathbb{R}$ is an **adherent point** of $A$ iff there is a sequence $p$ in $A$ which converges to $q$;
 * a point $q \in \mathbb{R}$ is an **accumulation point** of $A$ iff there is a sequence $p$ in $A \setminus \{q\}$ which converges to $q$;
 * $A$ is **closed** iff no sequence $p$ in $A$ converges to a point of $\mathbb{R} \setminus A$.

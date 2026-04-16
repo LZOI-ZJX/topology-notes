@@ -80,10 +80,12 @@ If $f$ is epic, then it is right-cancellable. Let $g_0: Y \to 2_{\text{triv}} = 
 ::: {.callout-note appearance="simple"}
 **5.2.1.1 Definition:** A map
 $$f: (X, \mathcal{T}_X) \to (Y, \mathcal{T}_Y) \tag{39}$$
+
 * is *open* iff $(\forall U \in \mathcal{T}_X)(f(U) \in \mathcal{T}_Y)$;
 * is *closed* iff $(\forall A \in \mathcal{C}_X)(f(A) \in \mathcal{C}_Y)$, where $\mathcal{C}_X$ and $\mathcal{C}_Y$ are the collections of closed subsets of $X$ and $Y$, respectively.
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **5.2.1.1 定义：** 一个映射 $f: (X, \mathcal{T}_X) \to (Y, \mathcal{T}_Y)$：
+
 * 是**开映射**，当且仅当 $(\forall U \in \mathcal{T}_X)(f(U) \in \mathcal{T}_Y)$；
 * 是**闭映射**，当且仅当 $(\forall A \in \mathcal{C}_X)(f(A) \in \mathcal{C}_Y)$，其中 $\mathcal{C}_X$ 和 $\mathcal{C}_Y$ 分别是 $X$ 和 $Y$ 的闭子集族。
 </details>

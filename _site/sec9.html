@@ -194,13 +194,25 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12.</span></a>
+ <span class="menu-text">12. SEPARATION</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec13.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">13.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15.</span></a>
   </div>
 </li>
     </ul>
@@ -912,12 +924,22 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>9.5.5.1 Definition:</strong> An ordinal <span class="math inline">\(\alpha\)</span> is * <em>zero</em> if <span class="math inline">\(\alpha = 0\)</span>; * <em>successor</em> if <span class="math inline">\(\alpha = \beta + 1\)</span> for some ordinal <span class="math inline">\(\beta\)</span>; * <em>limit</em> otherwise.</p>
+<p><strong>9.5.5.1 Definition:</strong> An ordinal <span class="math inline">\(\alpha\)</span> is</p>
+<ul>
+<li><em>zero</em> if <span class="math inline">\(\alpha = 0\)</span>;</li>
+<li><em>successor</em> if <span class="math inline">\(\alpha = \beta + 1\)</span> for some ordinal <span class="math inline">\(\beta\)</span>;</li>
+<li><em>limit</em> otherwise.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>9.5.5.1 定义：</strong> 一个序数 <span class="math inline">\(\alpha\)</span> 是： * <em>零</em>，若 <span class="math inline">\(\alpha = 0\)</span>； * <em>后继序数</em> (successor)，若对于某个序数 <span class="math inline">\(\beta\)</span> 有 <span class="math inline">\(\alpha = \beta + 1\)</span>； * 否则为 <em>极限序数</em> (limit)。
+<p><strong>9.5.5.1 定义：</strong> 一个序数 <span class="math inline">\(\alpha\)</span> 是：</p>
+<ul>
+<li><em>零</em>，若 <span class="math inline">\(\alpha = 0\)</span>；</li>
+<li><em>后继序数</em> (successor)，若对于某个序数 <span class="math inline">\(\beta\)</span> 有 <span class="math inline">\(\alpha = \beta + 1\)</span>；</li>
+<li>否则为 <em>极限序数</em> (limit)。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1352,12 +1374,32 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>9.6.4.6 Properties of ordinal exponentiation:</strong> (1) <span class="math inline">\(\alpha^0 = 1, \alpha^1 = \alpha\)</span>. (2) <span class="math inline">\(0^\alpha = 0\)</span> if <span class="math inline">\(0 &lt; \alpha; 1^\alpha = 1\)</span>. (3) <span class="math inline">\(\alpha^\beta \cdot \alpha^\gamma = \alpha^{\beta+\gamma}\)</span>. (4) <span class="math inline">\((\alpha^\beta)^\gamma = \alpha^{\beta\cdot\gamma}\)</span>. (5) Ordinal exponentiation is strictly increasing and continuous in the right argument: If <span class="math inline">\(\gamma &gt; 1\)</span> and <span class="math inline">\(\alpha &lt; \beta\)</span>, then <span class="math inline">\(\gamma^\alpha &lt; \gamma^\beta\)</span>. (6) Ordinal exponentiation is non-strictly increasing in the left argument: If <span class="math inline">\(\alpha &lt; \beta\)</span>, then <span class="math inline">\(\alpha^\gamma \le \beta^\gamma\)</span>. (7) If <span class="math inline">\(\alpha &gt; 1\)</span> and <span class="math inline">\(\alpha^\beta = \alpha^\gamma\)</span>, then <span class="math inline">\(\beta = \gamma\)</span>. (8) If <span class="math inline">\(\beta &gt; 1\)</span> and <span class="math inline">\(\alpha &gt; 0\)</span> then there exist unique <span class="math inline">\(\gamma, \delta\)</span>, and <span class="math inline">\(\rho\)</span> such that <span class="math inline">\(\alpha = \beta^\gamma \cdot \delta + \rho\)</span> such that <span class="math inline">\(0 &lt; \delta &lt; \beta\)</span> and <span class="math inline">\(\rho &lt; \beta^\gamma\)</span>.</p>
+<p><strong>9.6.4.6 Properties of ordinal exponentiation:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha^0 = 1, \alpha^1 = \alpha\)</span>.</li>
+<li><span class="math inline">\(0^\alpha = 0\)</span> if <span class="math inline">\(0 &lt; \alpha; 1^\alpha = 1\)</span>.</li>
+<li><span class="math inline">\(\alpha^\beta \cdot \alpha^\gamma = \alpha^{\beta+\gamma}\)</span>.</li>
+<li><span class="math inline">\((\alpha^\beta)^\gamma = \alpha^{\beta\cdot\gamma}\)</span>.</li>
+<li>Ordinal exponentiation is strictly increasing and continuous in the right argument: If <span class="math inline">\(\gamma &gt; 1\)</span> and <span class="math inline">\(\alpha &lt; \beta\)</span>, then <span class="math inline">\(\gamma^\alpha &lt; \gamma^\beta\)</span>.</li>
+<li>Ordinal exponentiation is non-strictly increasing in the left argument: If <span class="math inline">\(\alpha &lt; \beta\)</span>, then <span class="math inline">\(\alpha^\gamma \le \beta^\gamma\)</span>.</li>
+<li>If <span class="math inline">\(\alpha &gt; 1\)</span> and <span class="math inline">\(\alpha^\beta = \alpha^\gamma\)</span>, then <span class="math inline">\(\beta = \gamma\)</span>.</li>
+<li>If <span class="math inline">\(\beta &gt; 1\)</span> and <span class="math inline">\(\alpha &gt; 0\)</span> then there exist unique <span class="math inline">\(\gamma, \delta\)</span>, and <span class="math inline">\(\rho\)</span> such that <span class="math inline">\(\alpha = \beta^\gamma \cdot \delta + \rho\)</span> such that <span class="math inline">\(0 &lt; \delta &lt; \beta\)</span> and <span class="math inline">\(\rho &lt; \beta^\gamma\)</span>.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>9.6.4.6 序数指数运算的性质：</strong> (1) <span class="math inline">\(\alpha^0 = 1, \alpha^1 = \alpha\)</span>。 (2) 若 <span class="math inline">\(0 &lt; \alpha\)</span> 则 <span class="math inline">\(0^\alpha = 0\)</span>；<span class="math inline">\(1^\alpha = 1\)</span>。 (3) <span class="math inline">\(\alpha^\beta \cdot \alpha^\gamma = \alpha^{\beta+\gamma}\)</span>。 (4) <span class="math inline">\((\alpha^\beta)^\gamma = \alpha^{\beta\cdot\gamma}\)</span>。 (5) 序数指数运算关于右变元严格递增且连续：若 <span class="math inline">\(\gamma &gt; 1\)</span> 且 <span class="math inline">\(\alpha &lt; \beta\)</span>，则 <span class="math inline">\(\gamma^\alpha &lt; \gamma^\beta\)</span>。 (6) 序数指数运算关于左变元是非严格递增的：若 <span class="math inline">\(\alpha &lt; \beta\)</span>，则 <span class="math inline">\(\alpha^\gamma \le \beta^\gamma\)</span>。 (7) 若 <span class="math inline">\(\alpha &gt; 1\)</span> 且 <span class="math inline">\(\alpha^\beta = \alpha^\gamma\)</span>，则 <span class="math inline">\(\beta = \gamma\)</span>。 (8) 若 <span class="math inline">\(\beta &gt; 1\)</span> 且 <span class="math inline">\(\alpha &gt; 0\)</span>，则存在唯一的 <span class="math inline">\(\gamma, \delta\)</span> 和 <span class="math inline">\(\rho\)</span> 使得 <span class="math inline">\(\alpha = \beta^\gamma \cdot \delta + \rho\)</span>，其中 <span class="math inline">\(0 &lt; \delta &lt; \beta\)</span> 且 <span class="math inline">\(\rho &lt; \beta^\gamma\)</span>。
+<p><strong>9.6.4.6 序数指数运算的性质：</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha^0 = 1, \alpha^1 = \alpha\)</span>。</li>
+<li>若 <span class="math inline">\(0 &lt; \alpha\)</span> 则 <span class="math inline">\(0^\alpha = 0\)</span>；<span class="math inline">\(1^\alpha = 1\)</span>。</li>
+<li><span class="math inline">\(\alpha^\beta \cdot \alpha^\gamma = \alpha^{\beta+\gamma}\)</span>。</li>
+<li><span class="math inline">\((\alpha^\beta)^\gamma = \alpha^{\beta\cdot\gamma}\)</span>。</li>
+<li>序数指数运算关于右变元严格递增且连续：若 <span class="math inline">\(\gamma &gt; 1\)</span> 且 <span class="math inline">\(\alpha &lt; \beta\)</span>，则 <span class="math inline">\(\gamma^\alpha &lt; \gamma^\beta\)</span>。</li>
+<li>序数指数运算关于左变元是非严格递增的：若 <span class="math inline">\(\alpha &lt; \beta\)</span>，则 <span class="math inline">\(\alpha^\gamma \le \beta^\gamma\)</span>。</li>
+<li>若 <span class="math inline">\(\alpha &gt; 1\)</span> 且 <span class="math inline">\(\alpha^\beta = \alpha^\gamma\)</span>，则 <span class="math inline">\(\beta = \gamma\)</span>。</li>
+<li>若 <span class="math inline">\(\beta &gt; 1\)</span> 且 <span class="math inline">\(\alpha &gt; 0\)</span>，则存在唯一的 <span class="math inline">\(\gamma, \delta\)</span> 和 <span class="math inline">\(\rho\)</span> 使得 <span class="math inline">\(\alpha = \beta^\gamma \cdot \delta + \rho\)</span>，其中 <span class="math inline">\(0 &lt; \delta &lt; \beta\)</span> 且 <span class="math inline">\(\rho &lt; \beta^\gamma\)</span>。</li>
+</ol>
 </details>
 </div>
 </div>
@@ -1494,12 +1536,22 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>9.7.1.4 Proposition:</strong> Let <span class="math inline">\((X, \preceq)\)</span> be a totally ordered set. The order topology <span class="math inline">\(\mathcal{T}_{\preceq}\)</span> on <span class="math inline">\((X, \preceq)\)</span> is the topology generated by the base <span class="math inline">\(\mathcal{B}_{\preceq}\)</span> consisting of all sets of the following types: (1) All open intervals <span class="math inline">\(]a, b[\)</span> in <span class="math inline">\(X\)</span>. (2) All intervals of the form <span class="math inline">\([a_0, b[\)</span>, where <span class="math inline">\(a_0\)</span> is the least element of <span class="math inline">\(X\)</span>. (3) All intervals of the form <span class="math inline">\(]a, b_0]\)</span>, where <span class="math inline">\(b_0\)</span> is the greatest element of <span class="math inline">\(X\)</span>.</p>
+<p><strong>9.7.1.4 Proposition:</strong> Let <span class="math inline">\((X, \preceq)\)</span> be a totally ordered set. The order topology <span class="math inline">\(\mathcal{T}_{\preceq}\)</span> on <span class="math inline">\((X, \preceq)\)</span> is the topology generated by the base <span class="math inline">\(\mathcal{B}_{\preceq}\)</span> consisting of all sets of the following types:</p>
+<ol type="1">
+<li>All open intervals <span class="math inline">\(]a, b[\)</span> in <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\([a_0, b[\)</span>, where <span class="math inline">\(a_0\)</span> is the least element of <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\(]a, b_0]\)</span>, where <span class="math inline">\(b_0\)</span> is the greatest element of <span class="math inline">\(X\)</span>.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>9.7.1.4 命题：</strong> 设 <span class="math inline">\((X, \preceq)\)</span> 为全序集。其上的序拓扑 <span class="math inline">\(\mathcal{T}_{\preceq}\)</span> 是由包含以下类型集合的基 <span class="math inline">\(\mathcal{B}_{\preceq}\)</span> 生成的拓扑： (1) <span class="math inline">\(X\)</span> 中所有的开区间 <span class="math inline">\(]a, b[\)</span>。 (2) 所有形式为 <span class="math inline">\([a_0, b[\)</span> 的区间，其中 <span class="math inline">\(a_0\)</span> 是 <span class="math inline">\(X\)</span> 的最小元素。 (3) 所有形式为 <span class="math inline">\(]a, b_0]\)</span> 的区间，其中 <span class="math inline">\(b_0\)</span> 是 <span class="math inline">\(X\)</span> 的最大元素。
+<p><strong>9.7.1.4 命题：</strong> 设 <span class="math inline">\((X, \preceq)\)</span> 为全序集。其上的序拓扑 <span class="math inline">\(\mathcal{T}_{\preceq}\)</span> 是由包含以下类型集合的基 <span class="math inline">\(\mathcal{B}_{\preceq}\)</span> 生成的拓扑：</p>
+<ol type="1">
+<li><span class="math inline">\(X\)</span> 中所有的开区间 <span class="math inline">\(]a, b[\)</span>。</li>
+<li>所有形式为 <span class="math inline">\([a_0, b[\)</span> 的区间，其中 <span class="math inline">\(a_0\)</span> 是 <span class="math inline">\(X\)</span> 的最小元素。</li>
+<li>所有形式为 <span class="math inline">\(]a, b_0]\)</span> 的区间，其中 <span class="math inline">\(b_0\)</span> 是 <span class="math inline">\(X\)</span> 的最大元素。</li>
+</ol>
 </details>
 </div>
 </div>
@@ -1716,12 +1768,22 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>9.7.4.3 Example:</strong> The order topology on the ordinal <span class="math inline">\(\omega_1\)</span>, the set of all countable ordinals has the following properties: (1) The element <span class="math inline">\(\omega_1\)</span> is a limit point of the subset <span class="math inline">\([0, \omega_1[\)</span> even though no sequence of elements in <span class="math inline">\([0, \omega_1[\)</span> has the element <span class="math inline">\(\omega_1\)</span> as its limit. (2) In particular, <span class="math inline">\([0, \omega_1]\)</span> is not first-countable. (3) The subspace <span class="math inline">\([0, \omega_1[\)</span> is first-countable however, since the only point in <span class="math inline">\([0, \omega_1]\)</span> without a countable neighborhood base is <span class="math inline">\(\omega_1\)</span>, neither <span class="math inline">\([0, \omega_1[\)</span> or <span class="math inline">\([0, \omega_1]\)</span> is separable or second-countable. Also, <span class="math inline">\([0, \omega_1]\)</span> is compact, while <span class="math inline">\([0, \omega_1[\)</span> is sequentially compact and countably compact, but not compact or paracompact.</p>
+<p><strong>9.7.4.3 Example:</strong> The order topology on the ordinal <span class="math inline">\(\omega_1\)</span>, the set of all countable ordinals has the following properties:</p>
+<ol type="1">
+<li>The element <span class="math inline">\(\omega_1\)</span> is a limit point of the subset <span class="math inline">\([0, \omega_1[\)</span> even though no sequence of elements in <span class="math inline">\([0, \omega_1[\)</span> has the element <span class="math inline">\(\omega_1\)</span> as its limit.</li>
+<li>In particular, <span class="math inline">\([0, \omega_1]\)</span> is not first-countable.</li>
+<li>The subspace <span class="math inline">\([0, \omega_1[\)</span> is first-countable however, since the only point in <span class="math inline">\([0, \omega_1]\)</span> without a countable neighborhood base is <span class="math inline">\(\omega_1\)</span>, neither <span class="math inline">\([0, \omega_1[\)</span> or <span class="math inline">\([0, \omega_1]\)</span> is separable or second-countable. Also, <span class="math inline">\([0, \omega_1]\)</span> is compact, while <span class="math inline">\([0, \omega_1[\)</span> is sequentially compact and countably compact, but not compact or paracompact.</li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>9.7.4.3 示例：</strong> 所有可数序数的集合——序数 <span class="math inline">\(\omega_1\)</span> 上的序拓扑具有以下性质： (1) 元素 <span class="math inline">\(\omega_1\)</span> 是子集 <span class="math inline">\([0, \omega_1[\)</span> 的极限点，尽管 <span class="math inline">\([0, \omega_1[\)</span> 中没有序列以 <span class="math inline">\(\omega_1\)</span> 为极限。 (2) 特别地，<span class="math inline">\([0, \omega_1]\)</span> 不是第一可数的。 (3) 然而子空间 <span class="math inline">\([0, \omega_1[\)</span> 是第一可数的。由于 <span class="math inline">\([0, \omega_1]\)</span> 中唯一没有可数邻域基的点是 <span class="math inline">\(\omega_1\)</span>，因此 <span class="math inline">\([0, \omega_1[\)</span> 和 <span class="math inline">\([0, \omega_1]\)</span> 都不是可分的，也不是第二可数的。 此外，<span class="math inline">\([0, \omega_1]\)</span> 是紧的，而 <span class="math inline">\([0, \omega_1[\)</span> 是序列紧且可数紧的，但不是紧的或仿紧的。
+<p><strong>9.7.4.3 示例：</strong> 所有可数序数的集合——序数 <span class="math inline">\(\omega_1\)</span> 上的序拓扑具有以下性质：</p>
+<ol type="1">
+<li>元素 <span class="math inline">\(\omega_1\)</span> 是子集 <span class="math inline">\([0, \omega_1[\)</span> 的极限点，尽管 <span class="math inline">\([0, \omega_1[\)</span> 中没有序列以 <span class="math inline">\(\omega_1\)</span> 为极限。</li>
+<li>特别地，<span class="math inline">\([0, \omega_1]\)</span> 不是第一可数的。</li>
+<li>然而子空间 <span class="math inline">\([0, \omega_1[\)</span> 是第一可数的。由于 <span class="math inline">\([0, \omega_1]\)</span> 中唯一没有可数邻域基的点是 <span class="math inline">\(\omega_1\)</span>，因此 <span class="math inline">\([0, \omega_1[\)</span> 和 <span class="math inline">\([0, \omega_1]\)</span> 都不是可分的，也不是第二可数的。 此外，<span class="math inline">\([0, \omega_1]\)</span> 是紧的，而 <span class="math inline">\([0, \omega_1[\)</span> 是序列紧且可数紧的，但不是紧的或仿紧的。</li>
+</ol>
 </details>
 </div>
 </div>

@@ -1,6 +1,6 @@
 ---
 title: "INDUCED TOPOLOGIES"
-date: "2026-04-07"
+date: "2026-04-16"
 format:
   html:
     toc: true
@@ -15,11 +15,11 @@ format:
 
 Let $X$ and $Y$ be topological spaces.
 
-- If $A \subseteq X$, what is the most natural topology on $A$?
-- What is the most natural topology on the disjoint union $X \sqcup Y$ of $X$ and $Y$?
-- What is the most natural topology on the cartesian product $X \times Y$ of $X$ and $Y$?
-- What is the most natural topology on $\mathbb{S}^1$, given a map $\pi: \mathbb{R} \to \mathbb{S}^1$ with $\pi(x) = e^{ix}$?
-- What is the most natural topology on $\mathbb{R}^2$ making all polynomials continuous?
+* If $A \subseteq X$, what is the most natural topology on $A$?
+* What is the most natural topology on the disjoint union $X \sqcup Y$ of $X$ and $Y$?
+* What is the most natural topology on the cartesian product $X \times Y$ of $X$ and $Y$?
+* What is the most natural topology on $\mathbb{S}^1$, given a map $\pi: \mathbb{R} \to \mathbb{S}^1$ with $\pi(x) = e^{ix}$?
+* What is the most natural topology on $\mathbb{R}^2$ making all polynomials continuous?
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 设 $X$ 和 $Y$ 为拓扑空间。
@@ -181,8 +181,11 @@ A topological space is more likely to be compact as the topology be coarser. In 
 **8.1.3.9 Weak and weak* convergences:** Let $x_\bullet: (I, \preceq) \to X$ be a net (Definition 7.6.0.3) in a topological vector space $X$ over $\mathbb{K}$. It *converges* (Definition 7.6.0.6) in $\mathcal{T}_{X, X^*}$ or *converges weakly* to $y \in X$ iff $\alpha(x_\bullet) \to \alpha(x)$ in $\mathbb{K}$ for any $\alpha \in X^*$, denoted by $x_\bullet \xrightarrow{w} y$, $x_\bullet \rightharpoonup y$, or $\text{w-}\lim_{i \in I} x_i \to y$.
 
 Let $\alpha_\bullet: (I, \preceq) \to X^*$ be a net in the continuous dual space $X^*$. It *converges* (Definition 7.6.0.6) in $\mathcal{T}_{X, X^*}$ to $y \in X$ iff $\alpha_\bullet(x) \to \alpha(x)$ in $\mathbb{K}$ for any $\alpha \in X^*$, denoted by $\alpha_\bullet \xrightarrow{w^*} y$, $\alpha_\bullet \stackrel{*}{\rightharpoonup} y$, or $\text{w}^*\text{-}\lim_{i \in I} \alpha_i \to y$.
+
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
-**8.1.3.9 弱收敛与弱*收敛：** 设 $x_\bullet: (I, \preceq) \to X$ 为 $\mathbb{K}$ 上拓扑向量空间 $X$ 中的网（定义 7.6.0.3）。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*（定义 7.6.0.6）或*弱收敛*于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha(x_\bullet) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $x_\bullet \xrightarrow{w} y$，$x_\bullet \rightharpoonup y$，或 $\text{w-}\lim_{i \in I} x_i \to y$。
+
+**8.1.3.9 弱收敛与弱*收敛：** 
+设 $x_\bullet: (I, \preceq) \to X$ 为 $\mathbb{K}$ 上拓扑向量空间 $X$ 中的网（定义 7.6.0.3）。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*（定义 7.6.0.6）或*弱收敛*于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha(x_\bullet) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $x_\bullet \xrightarrow{w} y$，$x_\bullet \rightharpoonup y$，或 $\text{w-}\lim_{i \in I} x_i \to y$。
 
 设 $\alpha_\bullet: (I, \preceq) \to X^*$ 为连续对偶空间 $X^*$ 中的网。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*（定义 7.6.0.6）于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha_\bullet(x) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $\alpha_\bullet \xrightarrow{w^*} y$，$\alpha_\bullet \stackrel{*}{\rightharpoonup} y$，或 $\text{w}^*\text{-}\lim_{i \in I} \alpha_i \to y$。
 </details>
@@ -196,7 +199,9 @@ The weak/weak* topology is characterized by the weak/weak* convergence. We could
 
 Let $\alpha$ be a sequence in the continuous dual space $X^*$. It *converges* in $\mathcal{T}_{X, X^*}$ to $y \in X$ iff $\alpha_n(x) \to \alpha(x)$ in $\mathbb{K}$ for any $\alpha \in X^*$, denoted by $\alpha_n \xrightarrow{w^*} y$, $\alpha_n \stackrel{*}{\rightharpoonup} y$, or $\text{w}^*\text{-}\lim_{n \to \infty} \alpha_n \to y$.
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
-**8.1.3.10 序列的弱收敛与弱*收敛：** 设 $x$ 为 $\mathbb{K}$ 上拓扑向量空间 $X$ 中的序列。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*或*弱收敛*于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha(x_n) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $x_\bullet \xrightarrow{w} y$，$x_\bullet \rightharpoonup y$，或 $\text{w-}\lim_{n \to \infty} x_n \to y$。
+
+**8.1.3.10 序列的弱收敛与弱*收敛：** 
+设 $x$ 为 $\mathbb{K}$ 上拓扑向量空间 $X$ 中的序列。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*或*弱收敛*于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha(x_n) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $x_\bullet \xrightarrow{w} y$，$x_\bullet \rightharpoonup y$，或 $\text{w-}\lim_{n \to \infty} x_n \to y$。
 
 设 $\alpha$ 为连续对偶空间 $X^*$ 中的序列。它在 $\mathcal{T}_{X, X^*}$ 中*收敛*于 $y \in X$，当且仅当对于任意 $\alpha \in X^*$，$\alpha_n(x) \to \alpha(x)$ 在 $\mathbb{K}$ 中成立，记作 $\alpha_n \xrightarrow{w^*} y$，$\alpha_n \stackrel{*}{\rightharpoonup} y$，或 $\text{w}^*\text{-}\lim_{n \to \infty} \alpha_n \to y$。
 </details>
@@ -304,12 +309,14 @@ For the sufficient condition, letting $h = \text{id}_Z$ we obtain the continuity
 
 ::: {.callout-important appearance="simple"}
 **8.2.2.9 Proposition:** Let $f$ be a continuous injection. Then the following are equivalent.
+
 * The map $f$ is an embedding.
 * The map $f$ sends open sets to relatively open sets.
 * The map $f$ sends closed sets to relatively closed sets.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.2.2.9 命题：** 设 $f$ 是连续单射。则以下各项等价：
+
 * 映射 $f$ 是嵌入。
 * 映射 $f$ 将开集映射为相对开集。
 * 映射 $f$ 将闭集映射为相对闭集。
@@ -414,6 +421,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.3.1.6 命题：** 设 $A$ 和 $B$ 分别是拓扑空间 $X$ 和 $Y$ 的子集；则：
+
 * 若 $A$ 和 $B$ 均为开集，则 $A \times B$ 是开集；
 * 若 $A$ 和 $B$ 均为闭集，则 $A \times B$ 是闭集。
 </details>
@@ -429,6 +437,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.3.1.7 命题：** 设 $A$ 和 $B$ 分别是拓扑空间 $X$ 和 $Y$ 的子集；则：
+
 * 若 $A \times B$ 是开集且 $B$（或 $A$）非空，则 $A$（或 $B$）是开集；
 * 若 $A \times B$ 是闭集且 $B$（或 $A$）非空，则 $A$（或 $B$）是闭集。
 </details>
@@ -443,6 +452,7 @@ The product topology is also called the *Tychonoff topology*. The universal prop
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.3.1.8 命题：** 设 $X, Y$ 为拓扑空间，$X \times Y$ 为其乘积空间。对于任何 $A \subseteq X$ 和 $B \subseteq Y$，我们有：
+
 * $(A \times B)^- = A^- \times B^-$（闭包）；
 * $(A \times B)^\circ = A^\circ \times B^\circ$（内部）；以及
 * 莱布尼茨法则 $(A \times B)^b = (A^b \times B) \cup (A \times B^b) \cup (A^b \times B^b)$（边界）。
@@ -466,12 +476,14 @@ $$f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2, \quad (p_1, p_2) \mapsto (f
 
 ::: {.callout-important appearance="simple"}
 **8.3.1.10 Proposition:** Let $f_i: X_i \to Y_i, i \in \{1, 2\}$ be maps between topological spaces, and their product be $f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2$.
+
 * The product map $f_1 \times f_2$ is continuous if both $f_1$ and $f_2$ are continuous.
 * The product map $f_1 \times f_2$ is open if both $f_1$ and $f_2$ are open.
 * The product map $f_1 \times f_2$ is closed if both $f_1$ and $f_2$ are closed.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.3.1.10 命题：** 设 $f_i: X_i \to Y_i, i \in \{1, 2\}$ 为拓扑空间之间的映射，其乘积映射为 $f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2$。
+
 * 若 $f_1$ 和 $f_2$ 均连续，则乘积映射 $f_1 \times f_2$ 连续。
 * 若 $f_1$ 和 $f_2$ 均是开映射，则乘积映射 $f_1 \times f_2$ 是开映射。
 * 若 $f_1$ 和 $f_2$ 均是闭映射，则乘积映射 $f_1 \times f_2$ 是闭映射。
@@ -688,6 +700,7 @@ Observe that a map $g: (X, \mathcal{T}_X) \to (Y, \mathcal{T}_Y)$ is continuous 
 :::
 
 Compare Proposition 8.4.2.2 with these definitions. A map $g: X \to Y$ between topological spaces is
+
 * continuous iff for any open $V$ in $Y$ there is an open $U$ in $X$ such that $U = g^{-1}(V)$;
 * open iff for any open $U$ in $X$ there is an open $V$ in $Y$ such that $g(U) = V$;
 * closed iff for any closed $A$ in $X$ there is a closed $B$ in $Y$ such that $g(A) = B$.
@@ -754,12 +767,14 @@ Compare Proposition 8.4.2.2 with these definitions. A map $g: X \to Y$ between t
 
 ::: {.callout-important appearance="simple"}
 **8.4.2.11 Proposition:** Let $g: X \to Y$ be a continuous surjection. Then the following are equivalent.
+
 * The map $g$ is a quotient map.
 * The map $g$ sends saturated open sets to open sets.
 * The map $g$ sends saturated closed sets to closed sets.
 
 <details><summary style="color: gray; cursor: pointer;">[点击展开翻译]</summary>
 **8.4.2.11 命题：** 设 $g: X \to Y$ 是连续满射。则以下各项等价：
+
 * 映射 $g$ 是商映射。
 * 映射 $g$ 将饱和开集映射为开集。
 * 映射 $g$ 将饱和闭集映射为闭集。

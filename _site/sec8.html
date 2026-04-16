@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-07">
+<meta name="dcterms.date" content="2026-04-16">
 
 <title>INDUCED TOPOLOGIES – 拓扑学讲义翻译</title>
 <style>
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sec8.html">8. X</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sec8.html">8. INDUCED TOPOLOGIES</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -170,19 +170,49 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">8. X</span></a>
+ <span class="menu-text">8. INDUCED TOPOLOGIES</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.</span></a>
+ <span class="menu-text">9. ORDERS</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sec10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10.</span></a>
+ <span class="menu-text">10. IDENTIFYING AND ATTACHING SPACES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. CONNECTEDNESS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. SEPARATION</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sec15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15.</span></a>
   </div>
 </li>
     </ul>
@@ -244,7 +274,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 7, 2026</p>
+      <p class="date">April 16, 2026</p>
     </div>
   </div>
   
@@ -633,7 +663,7 @@ A topological space is more likely to be compact as the topology be coarser. In 
 </div>
 <div class="callout-body-container">
 <p><strong>8.1.3.9 Weak and weak* convergences:</strong> Let <span class="math inline">\(x_\bullet: (I, \preceq) \to X\)</span> be a net (Definition 7.6.0.3) in a topological vector space <span class="math inline">\(X\)</span> over <span class="math inline">\(\mathbb{K}\)</span>. It <em>converges</em> (Definition 7.6.0.6) in <span class="math inline">\(\mathcal{T}_{X, X^*}\)</span> or <em>converges weakly</em> to <span class="math inline">\(y \in X\)</span> iff <span class="math inline">\(\alpha(x_\bullet) \to \alpha(x)\)</span> in <span class="math inline">\(\mathbb{K}\)</span> for any <span class="math inline">\(\alpha \in X^*\)</span>, denoted by <span class="math inline">\(x_\bullet \xrightarrow{w} y\)</span>, <span class="math inline">\(x_\bullet \rightharpoonup y\)</span>, or <span class="math inline">\(\text{w-}\lim_{i \in I} x_i \to y\)</span>.</p>
-Let <span class="math inline">\(\alpha_\bullet: (I, \preceq) \to X^*\)</span> be a net in the continuous dual space <span class="math inline">\(X^*\)</span>. It <em>converges</em> (Definition 7.6.0.6) in <span class="math inline">\(\mathcal{T}_{X, X^*}\)</span> to <span class="math inline">\(y \in X\)</span> iff <span class="math inline">\(\alpha_\bullet(x) \to \alpha(x)\)</span> in <span class="math inline">\(\mathbb{K}\)</span> for any <span class="math inline">\(\alpha \in X^*\)</span>, denoted by <span class="math inline">\(\alpha_\bullet \xrightarrow{w^*} y\)</span>, <span class="math inline">\(\alpha_\bullet \stackrel{*}{\rightharpoonup} y\)</span>, or <span class="math inline">\(\text{w}^*\text{-}\lim_{i \in I} \alpha_i \to y\)</span>.
+<p>Let <span class="math inline">\(\alpha_\bullet: (I, \preceq) \to X^*\)</span> be a net in the continuous dual space <span class="math inline">\(X^*\)</span>. It <em>converges</em> (Definition 7.6.0.6) in <span class="math inline">\(\mathcal{T}_{X, X^*}\)</span> to <span class="math inline">\(y \in X\)</span> iff <span class="math inline">\(\alpha_\bullet(x) \to \alpha(x)\)</span> in <span class="math inline">\(\mathbb{K}\)</span> for any <span class="math inline">\(\alpha \in X^*\)</span>, denoted by <span class="math inline">\(\alpha_\bullet \xrightarrow{w^*} y\)</span>, <span class="math inline">\(\alpha_\bullet \stackrel{*}{\rightharpoonup} y\)</span>, or <span class="math inline">\(\text{w}^*\text{-}\lim_{i \in I} \alpha_i \to y\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -856,12 +886,22 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>8.2.2.9 Proposition:</strong> Let <span class="math inline">\(f\)</span> be a continuous injection. Then the following are equivalent. * The map <span class="math inline">\(f\)</span> is an embedding. * The map <span class="math inline">\(f\)</span> sends open sets to relatively open sets. * The map <span class="math inline">\(f\)</span> sends closed sets to relatively closed sets.</p>
+<p><strong>8.2.2.9 Proposition:</strong> Let <span class="math inline">\(f\)</span> be a continuous injection. Then the following are equivalent.</p>
+<ul>
+<li>The map <span class="math inline">\(f\)</span> is an embedding.</li>
+<li>The map <span class="math inline">\(f\)</span> sends open sets to relatively open sets.</li>
+<li>The map <span class="math inline">\(f\)</span> sends closed sets to relatively closed sets.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.2.2.9 命题：</strong> 设 <span class="math inline">\(f\)</span> 是连续单射。则以下各项等价： * 映射 <span class="math inline">\(f\)</span> 是嵌入。 * 映射 <span class="math inline">\(f\)</span> 将开集映射为相对开集。 * 映射 <span class="math inline">\(f\)</span> 将闭集映射为相对闭集。
+<p><strong>8.2.2.9 命题：</strong> 设 <span class="math inline">\(f\)</span> 是连续单射。则以下各项等价：</p>
+<ul>
+<li>映射 <span class="math inline">\(f\)</span> 是嵌入。</li>
+<li>映射 <span class="math inline">\(f\)</span> 将开集映射为相对开集。</li>
+<li>映射 <span class="math inline">\(f\)</span> 将闭集映射为相对闭集。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1025,7 +1065,11 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.3.1.6 命题：</strong> 设 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 分别是拓扑空间 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的子集；则： * 若 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 均为开集，则 <span class="math inline">\(A \times B\)</span> 是开集； * 若 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 均为闭集，则 <span class="math inline">\(A \times B\)</span> 是闭集。
+<p><strong>8.3.1.6 命题：</strong> 设 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 分别是拓扑空间 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的子集；则：</p>
+<ul>
+<li>若 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 均为开集，则 <span class="math inline">\(A \times B\)</span> 是开集；</li>
+<li>若 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 均为闭集，则 <span class="math inline">\(A \times B\)</span> 是闭集。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1046,7 +1090,11 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.3.1.7 命题：</strong> 设 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 分别是拓扑空间 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的子集；则： * 若 <span class="math inline">\(A \times B\)</span> 是开集且 <span class="math inline">\(B\)</span>（或 <span class="math inline">\(A\)</span>）非空，则 <span class="math inline">\(A\)</span>（或 <span class="math inline">\(B\)</span>）是开集； * 若 <span class="math inline">\(A \times B\)</span> 是闭集且 <span class="math inline">\(B\)</span>（或 <span class="math inline">\(A\)</span>）非空，则 <span class="math inline">\(A\)</span>（或 <span class="math inline">\(B\)</span>）是闭集。
+<p><strong>8.3.1.7 命题：</strong> 设 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 分别是拓扑空间 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 的子集；则：</p>
+<ul>
+<li>若 <span class="math inline">\(A \times B\)</span> 是开集且 <span class="math inline">\(B\)</span>（或 <span class="math inline">\(A\)</span>）非空，则 <span class="math inline">\(A\)</span>（或 <span class="math inline">\(B\)</span>）是开集；</li>
+<li>若 <span class="math inline">\(A \times B\)</span> 是闭集且 <span class="math inline">\(B\)</span>（或 <span class="math inline">\(A\)</span>）非空，则 <span class="math inline">\(A\)</span>（或 <span class="math inline">\(B\)</span>）是闭集。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1067,7 +1115,12 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.3.1.8 命题：</strong> 设 <span class="math inline">\(X, Y\)</span> 为拓扑空间，<span class="math inline">\(X \times Y\)</span> 为其乘积空间。对于任何 <span class="math inline">\(A \subseteq X\)</span> 和 <span class="math inline">\(B \subseteq Y\)</span>，我们有： * <span class="math inline">\((A \times B)^- = A^- \times B^-\)</span>（闭包）； * <span class="math inline">\((A \times B)^\circ = A^\circ \times B^\circ\)</span>（内部）；以及 * 莱布尼茨法则 <span class="math inline">\((A \times B)^b = (A^b \times B) \cup (A \times B^b) \cup (A^b \times B^b)\)</span>（边界）。
+<p><strong>8.3.1.8 命题：</strong> 设 <span class="math inline">\(X, Y\)</span> 为拓扑空间，<span class="math inline">\(X \times Y\)</span> 为其乘积空间。对于任何 <span class="math inline">\(A \subseteq X\)</span> 和 <span class="math inline">\(B \subseteq Y\)</span>，我们有：</p>
+<ul>
+<li><span class="math inline">\((A \times B)^- = A^- \times B^-\)</span>（闭包）；</li>
+<li><span class="math inline">\((A \times B)^\circ = A^\circ \times B^\circ\)</span>（内部）；以及</li>
+<li>莱布尼茨法则 <span class="math inline">\((A \times B)^b = (A^b \times B) \cup (A \times B^b) \cup (A^b \times B^b)\)</span>（边界）。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1097,12 +1150,22 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>8.3.1.10 Proposition:</strong> Let <span class="math inline">\(f_i: X_i \to Y_i, i \in \{1, 2\}\)</span> be maps between topological spaces, and their product be <span class="math inline">\(f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2\)</span>. * The product map <span class="math inline">\(f_1 \times f_2\)</span> is continuous if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are continuous. * The product map <span class="math inline">\(f_1 \times f_2\)</span> is open if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are open. * The product map <span class="math inline">\(f_1 \times f_2\)</span> is closed if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are closed.</p>
+<p><strong>8.3.1.10 Proposition:</strong> Let <span class="math inline">\(f_i: X_i \to Y_i, i \in \{1, 2\}\)</span> be maps between topological spaces, and their product be <span class="math inline">\(f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2\)</span>.</p>
+<ul>
+<li>The product map <span class="math inline">\(f_1 \times f_2\)</span> is continuous if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are continuous.</li>
+<li>The product map <span class="math inline">\(f_1 \times f_2\)</span> is open if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are open.</li>
+<li>The product map <span class="math inline">\(f_1 \times f_2\)</span> is closed if both <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are closed.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.3.1.10 命题：</strong> 设 <span class="math inline">\(f_i: X_i \to Y_i, i \in \{1, 2\}\)</span> 为拓扑空间之间的映射，其乘积映射为 <span class="math inline">\(f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2\)</span>。 * 若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均连续，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 连续。 * 若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均是开映射，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 是开映射。 * 若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均是闭映射，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 是闭映射。
+<p><strong>8.3.1.10 命题：</strong> 设 <span class="math inline">\(f_i: X_i \to Y_i, i \in \{1, 2\}\)</span> 为拓扑空间之间的映射，其乘积映射为 <span class="math inline">\(f_1 \times f_2: X_1 \times X_2 \to Y_1 \times Y_2\)</span>。</p>
+<ul>
+<li>若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均连续，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 连续。</li>
+<li>若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均是开映射，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 是开映射。</li>
+<li>若 <span class="math inline">\(f_1\)</span> 和 <span class="math inline">\(f_2\)</span> 均是闭映射，则乘积映射 <span class="math inline">\(f_1 \times f_2\)</span> 是闭映射。</li>
+</ul>
 </details>
 </div>
 </div>
@@ -1441,7 +1504,12 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 </div>
 </div>
 </div>
-<p>Compare Proposition 8.4.2.2 with these definitions. A map <span class="math inline">\(g: X \to Y\)</span> between topological spaces is * continuous iff for any open <span class="math inline">\(V\)</span> in <span class="math inline">\(Y\)</span> there is an open <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span> such that <span class="math inline">\(U = g^{-1}(V)\)</span>; * open iff for any open <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span> there is an open <span class="math inline">\(V\)</span> in <span class="math inline">\(Y\)</span> such that <span class="math inline">\(g(U) = V\)</span>; * closed iff for any closed <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> there is a closed <span class="math inline">\(B\)</span> in <span class="math inline">\(Y\)</span> such that <span class="math inline">\(g(A) = B\)</span>.</p>
+<p>Compare Proposition 8.4.2.2 with these definitions. A map <span class="math inline">\(g: X \to Y\)</span> between topological spaces is</p>
+<ul>
+<li>continuous iff for any open <span class="math inline">\(V\)</span> in <span class="math inline">\(Y\)</span> there is an open <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span> such that <span class="math inline">\(U = g^{-1}(V)\)</span>;</li>
+<li>open iff for any open <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span> there is an open <span class="math inline">\(V\)</span> in <span class="math inline">\(Y\)</span> such that <span class="math inline">\(g(U) = V\)</span>;</li>
+<li>closed iff for any closed <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> there is a closed <span class="math inline">\(B\)</span> in <span class="math inline">\(Y\)</span> such that <span class="math inline">\(g(A) = B\)</span>.</li>
+</ul>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1562,12 +1630,22 @@ Compare Proposition 8.2.2.2 with these definitions. A map <span class="math inli
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>8.4.2.11 Proposition:</strong> Let <span class="math inline">\(g: X \to Y\)</span> be a continuous surjection. Then the following are equivalent. * The map <span class="math inline">\(g\)</span> is a quotient map. * The map <span class="math inline">\(g\)</span> sends saturated open sets to open sets. * The map <span class="math inline">\(g\)</span> sends saturated closed sets to closed sets.</p>
+<p><strong>8.4.2.11 Proposition:</strong> Let <span class="math inline">\(g: X \to Y\)</span> be a continuous surjection. Then the following are equivalent.</p>
+<ul>
+<li>The map <span class="math inline">\(g\)</span> is a quotient map.</li>
+<li>The map <span class="math inline">\(g\)</span> sends saturated open sets to open sets.</li>
+<li>The map <span class="math inline">\(g\)</span> sends saturated closed sets to closed sets.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>8.4.2.11 命题：</strong> 设 <span class="math inline">\(g: X \to Y\)</span> 是连续满射。则以下各项等价： * 映射 <span class="math inline">\(g\)</span> 是商映射。 * 映射 <span class="math inline">\(g\)</span> 将饱和开集映射为开集。 * 映射 <span class="math inline">\(g\)</span> 将饱和闭集映射为闭集。
+<p><strong>8.4.2.11 命题：</strong> 设 <span class="math inline">\(g: X \to Y\)</span> 是连续满射。则以下各项等价：</p>
+<ul>
+<li>映射 <span class="math inline">\(g\)</span> 是商映射。</li>
+<li>映射 <span class="math inline">\(g\)</span> 将饱和开集映射为开集。</li>
+<li>映射 <span class="math inline">\(g\)</span> 将饱和闭集映射为闭集。</li>
+</ul>
 </details>
 </div>
 </div>

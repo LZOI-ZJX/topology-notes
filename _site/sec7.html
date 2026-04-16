@@ -262,7 +262,11 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.1.0.4 Proposition:</strong> Let * <span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})\)</span> and * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \} \subseteq \mathcal{P}(\mathbb{R})\)</span>. Then <span class="math inline">\(\lim_{n \to \infty} x_n = L\)</span> iff <span class="math display">\[(\forall V \in \mathcal{B}_{\mathbb{R}, x_0})(\exists U \in \mathcal{F}_{\mathbb{N}})(n \in U \implies x_n \in V). \tag{59}\]</span></p>
+<p><strong>7.1.0.4 Proposition:</strong> Let</p>
+<ul>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \} \subseteq \mathcal{P}(\mathbb{N})\)</span> and</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \} \subseteq \mathcal{P}(\mathbb{R})\)</span>. Then <span class="math inline">\(\lim_{n \to \infty} x_n = L\)</span> iff <span class="math display">\[(\forall V \in \mathcal{B}_{\mathbb{R}, x_0})(\exists U \in \mathcal{F}_{\mathbb{N}})(n \in U \implies x_n \in V). \tag{59}\]</span></li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -289,7 +293,10 @@ The collections <span class="math inline">\(\mathcal{B}_{\mathbb{N}}\)</span> an
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.1.0.5 Theorem:</strong> If <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> and <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span> then * <span class="math inline">\(\lim_{n \to \infty} a_n + b_n = a_0 + b_0\)</span>.</p>
+<p><strong>7.1.0.5 Theorem:</strong> If <span class="math inline">\(\lim_{n \to \infty} a_n = a_0\)</span> and <span class="math inline">\(\lim_{n \to \infty} b_n = b_0\)</span> then</p>
+<ul>
+<li><span class="math inline">\(\lim_{n \to \infty} a_n + b_n = a_0 + b_0\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -321,7 +328,11 @@ Here we have the definition.
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.1.0.6 Definition:</strong> A <em>prefilter</em> in a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> that satisfies * <em>Nonempty.</em> <span class="math inline">\(\mathcal{B} \neq \emptyset\)</span>. * <em>Downward directedness.</em> For any <span class="math inline">\(A, B \in \mathcal{B}\)</span>, there is <span class="math inline">\(C \in \mathcal{B}\)</span> such that <span class="math inline">\(C \subseteq A \cap B\)</span>.</p>
+<p><strong>7.1.0.6 Definition:</strong> A <em>prefilter</em> in a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> that satisfies</p>
+<ul>
+<li><em>Nonempty.</em> <span class="math inline">\(\mathcal{B} \neq \emptyset\)</span>.</li>
+<li><em>Downward directedness.</em> For any <span class="math inline">\(A, B \in \mathcal{B}\)</span>, there is <span class="math inline">\(C \in \mathcal{B}\)</span> such that <span class="math inline">\(C \subseteq A \cap B\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -348,7 +359,14 @@ Next we show how various types of limits encountered in analysis can be defined 
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.1.0.7 Example:</strong> * <span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{N}\)</span> and * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>. * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^\circ} = \{ \{x \in \mathbb{R} : 0 &lt; |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>. * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^+} = \{ ]x_0, x_0 + \epsilon[ : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>. * <span class="math inline">\(\mathcal{B}_{\mathbb{R}, \infty} = \{ ]A, \infty[ : A \in \mathbb{R}, A &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><strong>7.1.0.7 Example:</strong></p>
+<ul>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{N}} = \{ \{n \in \mathbb{N} : n &gt; N\} : N \in \mathbb{N} \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{N}\)</span> and</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0} = \{ \{x \in \mathbb{R} : |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^\circ} = \{ \{x \in \mathbb{R} : 0 &lt; |x - x_0| &lt; \epsilon\} : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, x_0^+} = \{ ]x_0, x_0 + \epsilon[ : \epsilon \in \mathbb{R}, \epsilon &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(\mathcal{B}_{\mathbb{R}, \infty} = \{ ]A, \infty[ : A \in \mathbb{R}, A &gt; 0 \}\)</span> is a prefilter in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -390,7 +408,12 @@ Next we show how various types of limits encountered in analysis can be defined 
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.2.0.1 Definition:</strong> A <em>filter</em> in a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{F} \subseteq \mathcal{P}(X)\)</span> satisfying the following conditions: * <em>Nonempty.</em> <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>. * <em>Finite intersection is closed.</em> For any <span class="math inline">\(A, B \in \mathcal{F}\)</span>, the intersection <span class="math inline">\(A \cap B \in \mathcal{F}\)</span>. * <em>Isotony.</em> For any <span class="math inline">\(A \in \mathcal{F}\)</span> and <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, if <span class="math inline">\(A \subseteq B\)</span> then <span class="math inline">\(B \in \mathcal{F}\)</span>.</p>
+<p><strong>7.2.0.1 Definition:</strong> A <em>filter</em> in a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{F} \subseteq \mathcal{P}(X)\)</span> satisfying the following conditions:</p>
+<ul>
+<li><em>Nonempty.</em> <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>.</li>
+<li><em>Finite intersection is closed.</em> For any <span class="math inline">\(A, B \in \mathcal{F}\)</span>, the intersection <span class="math inline">\(A \cap B \in \mathcal{F}\)</span>.</li>
+<li><em>Isotony.</em> For any <span class="math inline">\(A \in \mathcal{F}\)</span> and <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, if <span class="math inline">\(A \subseteq B\)</span> then <span class="math inline">\(B \in \mathcal{F}\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -418,7 +441,11 @@ Note that, being closed under finite intersection implies that the universe <spa
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.2.0.2 Definition:</strong> Let <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> be a collection. Then * the <em>upward closure</em> <span class="math inline">\(\mathcal{B}^{\uparrow X}\)</span> of <span class="math inline">\(\mathcal{B}\)</span> in <span class="math inline">\(X\)</span> is <span class="math inline">\(\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}\)</span> and * the <em>downward closure</em> <span class="math inline">\(\mathcal{B}^{\downarrow}\)</span> of <span class="math inline">\(\mathcal{B}\)</span> is <span class="math inline">\(\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}\)</span>.</p>
+<p><strong>7.2.0.2 Definition:</strong> Let <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> be a collection. Then</p>
+<ul>
+<li>the <em>upward closure</em> <span class="math inline">\(\mathcal{B}^{\uparrow X}\)</span> of <span class="math inline">\(\mathcal{B}\)</span> in <span class="math inline">\(X\)</span> is <span class="math inline">\(\mathcal{B}^{\uparrow X} = \{S \subseteq X : (\exists B \in \mathcal{B})(B \subseteq S)\}\)</span> and</li>
+<li>the <em>downward closure</em> <span class="math inline">\(\mathcal{B}^{\downarrow}\)</span> of <span class="math inline">\(\mathcal{B}\)</span> is <span class="math inline">\(\mathcal{B}^{\downarrow} = \{S \subseteq B : B \in \mathcal{B}\}\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -777,7 +804,11 @@ Filters can also express the idea of things happening often and things happening
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.3.0.5 Theorem:</strong> A subcollection <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> is a topological base iff * <strong><span class="math inline">\(\mathbf{B}_1\)</span>:</strong> <span class="math inline">\(\bigcup_{U \in \mathcal{B}} U = X\)</span>; and * <strong><span class="math inline">\(\mathbf{B}_2\)</span>:</strong> <span class="math inline">\((\forall U_1, U_2 \in \mathcal{B})(\exists \mathcal{A} \subseteq \mathcal{B})(U_1 \cap U_2 = \bigcup_{W \in \mathcal{A}} W)\)</span>.</p>
+<p><strong>7.3.0.5 Theorem:</strong> A subcollection <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> is a topological base iff</p>
+<ul>
+<li><strong><span class="math inline">\(\mathbf{B}_1\)</span>:</strong> <span class="math inline">\(\bigcup_{U \in \mathcal{B}} U = X\)</span>; and</li>
+<li><strong><span class="math inline">\(\mathbf{B}_2\)</span>:</strong> <span class="math inline">\((\forall U_1, U_2 \in \mathcal{B})(\exists \mathcal{A} \subseteq \mathcal{B})(U_1 \cap U_2 = \bigcup_{W \in \mathcal{A}} W)\)</span>.</li>
+</ul>
 <p>The axiom <span class="math inline">\(\mathbf{B}_2\)</span> is equivalent to * <strong><span class="math inline">\(\mathbf{B}_2'\)</span>:</strong> <span class="math inline">\((\forall U_1, U_2 \in \mathcal{B})(\forall x \in U_1 \cap U_2)(\exists U \in \mathcal{B})(x \in U \subseteq U_1 \cap U_2)\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
@@ -1117,7 +1148,12 @@ If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <s
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.4.1.1 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a set. Let <span class="math inline">\((\mathcal{B}_{X,p})_{p \in X}\)</span> be a family of prefilters in <span class="math inline">\(X\)</span>. Assume that: * <strong><span class="math inline">\(\mathbf{NB}_1\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(p \in A)\)</span>; * <strong><span class="math inline">\(\mathbf{NB}_2\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(\exists B \in \mathcal{B}_{X,q})(\exists B \in \mathcal{B}_q)(B \subseteq A)\)</span>; (Note: Typo in original text, usually refers to the existence of a neighborhood <span class="math inline">\(V\)</span> of <span class="math inline">\(p\)</span> such that <span class="math inline">\(V\)</span> is a neighborhood of each of its points). * <strong><span class="math inline">\(\mathbf{NB}_3\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A, B \in \mathcal{B}_{X,p})(\exists W \in \mathcal{B}_{X,p})(W \subseteq A \cap B)\)</span>.</p>
+<p><strong>7.4.1.1 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a set. Let <span class="math inline">\((\mathcal{B}_{X,p})_{p \in X}\)</span> be a family of prefilters in <span class="math inline">\(X\)</span>. Assume that:</p>
+<ul>
+<li><strong><span class="math inline">\(\mathbf{NB}_1\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(p \in A)\)</span>;</li>
+<li><strong><span class="math inline">\(\mathbf{NB}_2\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{B}_{X,p})(\exists B \in \mathcal{B}_{X,q})(\exists B \in \mathcal{B}_q)(B \subseteq A)\)</span>; (Note: Typo in original text, usually refers to the existence of a neighborhood <span class="math inline">\(V\)</span> of <span class="math inline">\(p\)</span> such that <span class="math inline">\(V\)</span> is a neighborhood of each of its points).</li>
+<li><strong><span class="math inline">\(\mathbf{NB}_3\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A, B \in \mathcal{B}_{X,p})(\exists W \in \mathcal{B}_{X,p})(W \subseteq A \cap B)\)</span>.</li>
+</ul>
 <p>Then <span class="math inline">\((X, \mathcal{T})\)</span> is a topological space where <span class="math display">\[\mathcal{T} = \left\{ O \subseteq X : \mathcal{P}(O) \cap \bigcap_{\forall p \in O} \mathcal{B}_{X,p} \neq \emptyset \right\} \tag{74}\]</span> with <span class="math inline">\(\mathcal{B}_{X,p}\)</span> a neighborhood base at any <span class="math inline">\(p \in X\)</span> of <span class="math inline">\(\mathcal{T}\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
@@ -1139,7 +1175,13 @@ If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <s
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.4.1.2 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a set. Let <span class="math inline">\((\mathcal{N}_{X,p})_{p \in X}\)</span> be a family of filters in <span class="math inline">\(X\)</span>. Assume that: * <strong><span class="math inline">\(\mathbf{N}_1\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(p \in A)\)</span>; * <strong><span class="math inline">\(\mathbf{N}_2\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(\forall B \in \mathcal{P}(X))(B \supseteq A \Rightarrow B \in \mathcal{N}_{X,q})\)</span>; * <strong><span class="math inline">\(\mathbf{N}_3\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A, B \in \mathcal{N}_{X,p})(A \cap B \in \mathcal{N}_{X,p})\)</span>; * <strong><span class="math inline">\(\mathbf{N}_4\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(\exists B \in \mathcal{N}_{X,p})(\forall q \in X)(q \in B \Rightarrow A \in \mathcal{N}_{X,q})\)</span>.</p>
+<p><strong>7.4.1.2 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a set. Let <span class="math inline">\((\mathcal{N}_{X,p})_{p \in X}\)</span> be a family of filters in <span class="math inline">\(X\)</span>. Assume that:</p>
+<ul>
+<li><strong><span class="math inline">\(\mathbf{N}_1\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(p \in A)\)</span>;</li>
+<li><strong><span class="math inline">\(\mathbf{N}_2\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(\forall B \in \mathcal{P}(X))(B \supseteq A \Rightarrow B \in \mathcal{N}_{X,q})\)</span>;</li>
+<li><strong><span class="math inline">\(\mathbf{N}_3\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A, B \in \mathcal{N}_{X,p})(A \cap B \in \mathcal{N}_{X,p})\)</span>;</li>
+<li><strong><span class="math inline">\(\mathbf{N}_4\)</span>:</strong> <span class="math inline">\((\forall p \in X)(\forall A \in \mathcal{N}_{X,p})(\exists B \in \mathcal{N}_{X,p})(\forall q \in X)(q \in B \Rightarrow A \in \mathcal{N}_{X,q})\)</span>.</li>
+</ul>
 <p>Then <span class="math inline">\((X, \mathcal{T})\)</span> is a topological space where <span class="math display">\[\mathcal{T} = \{ O \subseteq X : (\forall p \in O)(O \in \mathcal{N}_{X,p}) \} \tag{75}\]</span> with <span class="math inline">\(\mathcal{N}_{X,p}\)</span> the neighborhood filter at any <span class="math inline">\(p \in X\)</span> of <span class="math inline">\(\mathcal{T}\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
@@ -1164,14 +1206,23 @@ If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <s
 </section>
 <section id="sequence-convergence-序列收敛" class="level1">
 <h1>7.5 Sequence convergence | 序列收敛</h1>
-<p>This section is devoted to the study of <strong>Moore–Smith convergence</strong> (nets), but starts with the familiar case of sequences. Recall that a sequence is a function <span class="math inline">\(p: \mathbb{N} \to X, n \mapsto p_n\)</span>, which is: * <strong>in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\(p_n \in A\)</span> for each <span class="math inline">\(n \in \mathbb{N}\)</span>; * <strong>eventually in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\((\exists N \in \mathbb{N})(\forall n \geq N)(p_n \in A)\)</span>; * <strong>frequently in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\((\forall N \in \mathbb{N})(\exists n \geq N)(p_n \in A)\)</span>.</p>
+<p>This section is devoted to the study of <strong>Moore–Smith convergence</strong> (nets), but starts with the familiar case of sequences. Recall that a sequence is a function <span class="math inline">\(p: \mathbb{N} \to X, n \mapsto p_n\)</span>, which is:</p>
+<ul>
+<li><strong>in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\(p_n \in A\)</span> for each <span class="math inline">\(n \in \mathbb{N}\)</span>;</li>
+<li><strong>eventually in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\((\exists N \in \mathbb{N})(\forall n \geq N)(p_n \in A)\)</span>;</li>
+<li><strong>frequently in a set <span class="math inline">\(A\)</span></strong> iff <span class="math inline">\((\forall N \in \mathbb{N})(\exists n \geq N)(p_n \in A)\)</span>.</li>
+</ul>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.5.0.1 Definition:</strong> Let <span class="math inline">\(p\)</span> be a sequence in and <span class="math inline">\(q\)</span> be a point of a topological space <span class="math inline">\(X\)</span>. Then: * <span class="math inline">\(q\)</span> is a <strong>limit point</strong> of <span class="math inline">\(p\)</span> (or <span class="math inline">\(p\)</span> <strong>converges</strong> at <span class="math inline">\(q\)</span>) iff <span class="math inline">\(p\)</span> is <em>eventually</em> in each neighborhood of <span class="math inline">\(q\)</span>; * <span class="math inline">\(q\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(p\)</span> iff <span class="math inline">\(p\)</span> is <em>frequently</em> in each neighborhood of <span class="math inline">\(q\)</span>.</p>
+<p><strong>7.5.0.1 Definition:</strong> Let <span class="math inline">\(p\)</span> be a sequence in and <span class="math inline">\(q\)</span> be a point of a topological space <span class="math inline">\(X\)</span>. Then:</p>
+<ul>
+<li><span class="math inline">\(q\)</span> is a <strong>limit point</strong> of <span class="math inline">\(p\)</span> (or <span class="math inline">\(p\)</span> <strong>converges</strong> at <span class="math inline">\(q\)</span>) iff <span class="math inline">\(p\)</span> is <em>eventually</em> in each neighborhood of <span class="math inline">\(q\)</span>;</li>
+<li><span class="math inline">\(q\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(p\)</span> iff <span class="math inline">\(p\)</span> is <em>frequently</em> in each neighborhood of <span class="math inline">\(q\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
@@ -1191,7 +1242,12 @@ If <span class="math inline">\(\mathcal{B} \subseteq \mathcal{T}\)</span> and <s
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>7.5.0.2 Theorem:</strong> Let <span class="math inline">\(A\)</span> be a subset of <span class="math inline">\(\mathbb{R}\)</span>. Then * a point <span class="math inline">\(q \in \mathbb{R}\)</span> is an <strong>adherent point</strong> of <span class="math inline">\(A\)</span> iff there is a sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A\)</span> which converges to <span class="math inline">\(q\)</span>; * a point <span class="math inline">\(q \in \mathbb{R}\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(A\)</span> iff there is a sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A \setminus \{q\}\)</span> which converges to <span class="math inline">\(q\)</span>; * <span class="math inline">\(A\)</span> is <strong>closed</strong> iff no sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A\)</span> converges to a point of <span class="math inline">\(\mathbb{R} \setminus A\)</span>.</p>
+<p><strong>7.5.0.2 Theorem:</strong> Let <span class="math inline">\(A\)</span> be a subset of <span class="math inline">\(\mathbb{R}\)</span>. Then</p>
+<ul>
+<li>a point <span class="math inline">\(q \in \mathbb{R}\)</span> is an <strong>adherent point</strong> of <span class="math inline">\(A\)</span> iff there is a sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A\)</span> which converges to <span class="math inline">\(q\)</span>;</li>
+<li>a point <span class="math inline">\(q \in \mathbb{R}\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(A\)</span> iff there is a sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A \setminus \{q\}\)</span> which converges to <span class="math inline">\(q\)</span>;</li>
+<li><span class="math inline">\(A\)</span> is <strong>closed</strong> iff no sequence <span class="math inline">\(p\)</span> in <span class="math inline">\(A\)</span> converges to a point of <span class="math inline">\(\mathbb{R} \setminus A\)</span>.</li>
+</ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
