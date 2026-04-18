@@ -28,12 +28,16 @@ website:
         href: sec11.qmd
       - text: "12. SEPARATION"
         href: sec12.qmd
-      - text: "13. "
+      - text: "13. COMPACTNESS"
         href: sec13.qmd
-      - text: "14. "
+      - text: "14. COUNTABILITY"
         href: sec14.qmd
-      - text: "15. "
+      - text: "15. METRIC SPACES"
         href: sec15.qmd
+      - text: "16. LENGTH SPACES"
+        href: sec16.qmd
+      - text: "17. SPACES OF METRICS"
+        href: sec17.qmd
 
 format:
   html:
