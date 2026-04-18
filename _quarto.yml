@@ -38,6 +38,10 @@ website:
         href: sec16.qmd
       - text: "17. SPACES OF METRICS"
         href: sec17.qmd
+      - text: "18. METRIZING TOPOLOGICAL SPACES"
+        href: sec18.qmd
+      - text: "19. TOPOLOGY OF FUNCTION SPACES"
+        href: sec19.qmd
 
 format:
   html:

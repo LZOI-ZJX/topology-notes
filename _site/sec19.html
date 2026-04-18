@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-04-18">
 
-<title>COUNTABILITY – 拓扑学讲义翻译</title>
+<title>TOPOLOGY OF FUNCTION SPACES – 拓扑学讲义翻译</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sec14.html">14. COUNTABILITY</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      拓扑学讲义翻译
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,7 +207,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sec14.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sec14.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">14. COUNTABILITY</span></a>
   </div>
 </li>
@@ -237,11 +239,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#countability." id="toc-countability." class="nav-link active" data-scroll-target="#countability.">14.1 Countability.</a>
+  <li><a href="#function-and-sequence-spaces.-函数与序列空间" id="toc-function-and-sequence-spaces.-函数与序列空间" class="nav-link active" data-scroll-target="#function-and-sequence-spaces.-函数与序列空间">19.1 Function and sequence spaces. | 函数与序列空间</a></li>
+  <li><a href="#compact-open-topology-紧开拓扑" id="toc-compact-open-topology-紧开拓扑" class="nav-link" data-scroll-target="#compact-open-topology-紧开拓扑">19.2 Compact-open topology | 紧开拓扑</a>
   <ul class="collapse">
-  <li><a href="#separable-spaces." id="toc-separable-spaces." class="nav-link" data-scroll-target="#separable-spaces.">14.1.1 Separable spaces.</a></li>
-  <li><a href="#first-countable-spaces." id="toc-first-countable-spaces." class="nav-link" data-scroll-target="#first-countable-spaces.">14.1.2 First countable spaces.</a></li>
-  <li><a href="#second-countable-spaces." id="toc-second-countable-spaces." class="nav-link" data-scroll-target="#second-countable-spaces.">14.1.3 Second countable spaces.</a></li>
+  <li><a href="#definition-of-the-compact-open-topology-紧开拓扑的定义" id="toc-definition-of-the-compact-open-topology-紧开拓扑的定义" class="nav-link" data-scroll-target="#definition-of-the-compact-open-topology-紧开拓扑的定义">19.2.1 <em>Definition of the compact-open topology</em> | 紧开拓扑的定义</a></li>
+  <li><a href="#properties-of-the-compact-open-topology-紧开拓扑的性质" id="toc-properties-of-the-compact-open-topology-紧开拓扑的性质" class="nav-link" data-scroll-target="#properties-of-the-compact-open-topology-紧开拓扑的性质">19.2.2 <em>Properties of the compact-open topology</em> | 紧开拓扑的性质</a></li>
+  <li><a href="#applications-of-the-compact-open-topology-紧开拓扑的应用" id="toc-applications-of-the-compact-open-topology-紧开拓扑的应用" class="nav-link" data-scroll-target="#applications-of-the-compact-open-topology-紧开拓扑的应用">19.2.3 <em>Applications of the compact-open topology</em> | 紧开拓扑的应用</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -251,7 +254,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">COUNTABILITY</h1>
+<h1 class="title">TOPOLOGY OF FUNCTION SPACES</h1>
 </div>
 
 
@@ -274,21 +277,78 @@ window.Quarto = {
 </header>
 
 
-<section id="countability." class="level2">
-<h2 class="anchored" data-anchor-id="countability.">14.1 Countability.</h2>
-<p>Note that, a set <span class="math inline">\(X\)</span> is countable if there is an injection <span class="math inline">\(X \to \mathbb{N}\)</span>; in particular, <span class="math inline">\(X\)</span> may be finite or countably infinite.</p>
+<section id="function-and-sequence-spaces.-函数与序列空间" class="level2">
+<h2 class="anchored" data-anchor-id="function-and-sequence-spaces.-函数与序列空间">19.1 Function and sequence spaces. | 函数与序列空间</h2>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<strong>14.1.0.1 Definition:</strong> The <em>character</em> <span class="math inline">\(\chi(p,\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> on <span class="math inline">\(X\)</span> at <span class="math inline">\(p \in X\)</span> is the minimal cardinarity of neighborhood bases of <span class="math inline">\(\mathcal{T}\)</span> at <span class="math inline">\(p\)</span>, and the <em>character</em> <span class="math inline">\(\chi(\mathcal{T})\)</span> of <span class="math inline">\(\mathcal{T}\)</span> is the supremum of <span class="math inline">\(\chi(p,\mathcal{T})\)</span> over <span class="math inline">\(p \in X\)</span>. The <em>weight</em> <span class="math inline">\(w(\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> is the minimal cardinarity of bases of <span class="math inline">\(\mathcal{T}\)</span>. The <em>density</em> <span class="math inline">\(d(\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> on <span class="math inline">\(X\)</span> is the minimal cardinarity of dense subsets of <span class="math inline">\((X,\mathcal{T})\)</span>.
+<strong>19.1.0.1 Definition:</strong> For sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the power set denoted by <span class="math inline">\(Y^X\)</span> is the set <span class="math inline">\(\text{Map}(X; Y)\)</span> of maps <span class="math inline">\(f: X \to Y\)</span>. For any <span class="math inline">\(p \in X\)</span>, the <em>evaluation map</em> at <span class="math inline">\(p\)</span> is <span class="math display">\[\text{ev}_p: Y^X \to Y, \quad \text{ev}_p(f) = f(p), \qquad (258)\]</span> which is nothing but <span class="math inline">\(\text{pr}_p\)</span> written in a more comprehensible way.
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.0.1 定义：</strong> 拓扑空间 <span class="math inline">\(X\)</span> 上拓扑 <span class="math inline">\(\mathcal{T}\)</span> 在点 <span class="math inline">\(p \in X\)</span> 处的<strong>特征</strong> (character) <span class="math inline">\(\chi(p,\mathcal{T})\)</span> 是在 <span class="math inline">\(p\)</span> 处 <span class="math inline">\(\mathcal{T}\)</span> 的邻域基的最小基数，而 <span class="math inline">\(\mathcal{T}\)</span> 的<strong>特征</strong> <span class="math inline">\(\chi(\mathcal{T})\)</span> 是 <span class="math inline">\(\chi(p,\mathcal{T})\)</span> 在所有 <span class="math inline">\(p \in X\)</span> 上的上确界。拓扑 <span class="math inline">\(\mathcal{T}\)</span> 的<strong>权重</strong> (weight) <span class="math inline">\(w(\mathcal{T})\)</span> 是 <span class="math inline">\(\mathcal{T}\)</span> 的基的最小基数。拓扑空间 <span class="math inline">\((X,\mathcal{T})\)</span> 的<strong>密度</strong> (density) <span class="math inline">\(d(\mathcal{T})\)</span> 是 <span class="math inline">\((X,\mathcal{T})\)</span> 中稠密子集的最小基数。
+<strong>19.1.0.1 定义：</strong> 对于集合 <span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span>，记为 <span class="math inline">\(Y^X\)</span> 的幂集是映射 <span class="math inline">\(f: X \to Y\)</span> 的集合 <span class="math inline">\(\text{Map}(X; Y)\)</span>。对于任意 <span class="math inline">\(p \in X\)</span>，在 <span class="math inline">\(p\)</span> 处的<strong>赋值映射</strong> (evaluation map) 是 <span class="math display">\[\text{ev}_p: Y^X \to Y, \quad \text{ev}_p(f) = f(p), \qquad (258)\]</span> 这只不过是 <span class="math inline">\(\text{pr}_p\)</span> 用一种更容易理解的方式写出来而已。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>19.1.0.2 Definition:</strong> The <em>uniform topology</em> <span class="math inline">\(\mathcal{T}_{\text{uni}}\)</span> on <span class="math inline">\(\mathbb{R}^I\)</span> is the topology generated by the base <span class="math display">\[\mathcal{S}_{\text{uni}} = \left\{ \left\{ f \in \mathbb{R}^I : \sup_{i \in I}(f(i) - f_0(i)) &lt; \varepsilon \right\} : f_0 \in \mathbb{R}^I, \varepsilon &gt; 0 \right\}. \qquad (259)\]</span>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>19.1.0.2 定义：</strong> <span class="math inline">\(\mathbb{R}^I\)</span> 上的<strong>一致拓扑</strong> (uniform topology) <span class="math inline">\(\mathcal{T}_{\text{uni}}\)</span> 是由以下基生成的拓扑： <span class="math display">\[\mathcal{S}_{\text{uni}} = \left\{ \left\{ f \in \mathbb{R}^I : \sup_{i \in I}(f(i) - f_0(i)) &lt; \varepsilon \right\} : f_0 \in \mathbb{R}^I, \varepsilon &gt; 0 \right\}. \qquad (259)\]</span>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.1.0.3 Theorem:</strong> Let <span class="math inline">\((f_n)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(Y^X\)</span>, that is, a sequence of maps <span class="math inline">\(X \to Y\)</span>, and let <span class="math inline">\(f \in Y^X\)</span>. Then <span class="math inline">\(f_n \to f\)</span> as <span class="math inline">\(n \to \infty\)</span></p>
+<ol type="1">
+<li>in the product topology <span class="math inline">\(\mathcal{T}_{\text{prod}}\)</span> iff it converges pointwisely;</li>
+<li>in the box topology <span class="math inline">\(\mathcal{T}_{\text{box}}\)</span> when <span class="math inline">\(X\)</span> is Hausdorff iff it has a subsequence eventually constant for all but finitely many points and in a uniform way; or</li>
+<li>in the uniform topology <span class="math inline">\(\mathcal{T}_{\text{uni}}\)</span> when <span class="math inline">\(Y = \mathbb{R}\)</span> iff it converges uniformly.</li>
+</ol>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p><strong>19.1.0.3 定理：</strong> 设 <span class="math inline">\((f_n)_{n \in \mathbb{N}}\)</span> 是 <span class="math inline">\(Y^X\)</span> 中的一个序列，即一系列映射 <span class="math inline">\(X \to Y\)</span>，且设 <span class="math inline">\(f \in Y^X\)</span>。那么当 <span class="math inline">\(n \to \infty\)</span> 时 <span class="math inline">\(f_n \to f\)</span>：</p>
+<ol type="1">
+<li>在乘积拓扑 <span class="math inline">\(\mathcal{T}_{\text{prod}}\)</span> 中，当且仅当它逐点收敛；</li>
+<li>在盒子拓扑 <span class="math inline">\(\mathcal{T}_{\text{box}}\)</span> 中（当 <span class="math inline">\(X\)</span> 是 Hausdorff 空间时），当且仅当它有一个子序列除了有限多个点外最终是常数，并且是以一致的方式；或者</li>
+<li>在一致拓扑 <span class="math inline">\(\mathcal{T}_{\text{uni}}\)</span> 中（当 <span class="math inline">\(Y = \mathbb{R}\)</span> 时），当且仅当它一致收敛。</li>
+</ol>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>19.1.0.4 Remark:</strong> Recall in linear algebra, for a family <span class="math inline">\(\{X_i\}_{i \in I}\)</span> of linear spaces, we define their <em>direct sum</em> as <span class="math display">\[\bigoplus_{i \in I} X_i = \left\{ p \in \prod_{i \in I} X_i : (\exists J \subseteq I)(|J| &lt; \infty) \wedge (\forall i \in I \setminus J)(p(i) = 0) \right\} \qquad (260)\]</span> which is a proper subset of their <em>direct product</em> <span class="math inline">\(\prod_{i \in I} X_i\)</span>, which coincides with their cartesian product. We use <span class="math inline">\(\mathbb{R}^\infty\)</span> to denote the direct sum of <span class="math inline">\(\mathbb{N}\)</span>-copies of <span class="math inline">\(\mathbb{R}\)</span> while <span class="math inline">\(\mathbb{R}^\omega\)</span> for the direct product of <span class="math inline">\(\mathbb{N}\)</span>-copies of <span class="math inline">\(\mathbb{R}\)</span>. Then <span class="math inline">\(\mathbb{R}^\omega\)</span> coincides with the <span class="math inline">\(\mathbb{R}^{\mathbb{N}}\)</span> notation.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>19.1.0.4 备注：</strong> 回顾线性代数中，对于线性空间族 <span class="math inline">\(\{X_i\}_{i \in I}\)</span>，我们将它们的<strong>直和</strong> (direct sum) 定义为 <span class="math display">\[\bigoplus_{i \in I} X_i = \left\{ p \in \prod_{i \in I} X_i : (\exists J \subseteq I)(|J| &lt; \infty) \wedge (\forall i \in I \setminus J)(p(i) = 0) \right\} \qquad (260)\]</span> 它是它们的<strong>直积</strong> (direct product) <span class="math inline">\(\prod_{i \in I} X_i\)</span> 的真子集，其中直积与它们的笛卡尔积一致。 我们使用 <span class="math inline">\(\mathbb{R}^\infty\)</span> 来表示 <span class="math inline">\(\mathbb{R}\)</span> 的 <span class="math inline">\(\mathbb{N}\)</span> 个副本的直和，而用 <span class="math inline">\(\mathbb{R}^\omega\)</span> 表示 <span class="math inline">\(\mathbb{R}\)</span> 的 <span class="math inline">\(\mathbb{N}\)</span> 个副本的直积。那么 <span class="math inline">\(\mathbb{R}^\omega\)</span> 与 <span class="math inline">\(\mathbb{R}^{\mathbb{N}}\)</span> 记号一致。
 </details>
 </div>
 </div>
@@ -299,21 +359,75 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<strong>14.1.0.2 Proposition:</strong> Let <span class="math inline">\(\mathcal{T}\)</span> be a topology on <span class="math inline">\(X\)</span>. Then <span class="math display">\[\chi(\mathcal{T}) \le w(\mathcal{T}) \ge d(\mathcal{T}). \qquad (224)\]</span>
+<strong>19.1.0.5 Proposition:</strong> For a set <span class="math inline">\(X\)</span>, the power set <span class="math inline">\(X^{\mathbb{N}}\)</span> is the set of sequences on <span class="math inline">\(X\)</span>.
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.0.2 命题：</strong> 设 <span class="math inline">\(\mathcal{T}\)</span> 是 <span class="math inline">\(X\)</span> 上的一个拓扑。那么 <span class="math display">\[\chi(\mathcal{T}) \le w(\mathcal{T}) \ge d(\mathcal{T}). \qquad (224)\]</span>
+<strong>19.1.0.5 命题：</strong> 对于集合 <span class="math inline">\(X\)</span>，幂集 <span class="math inline">\(X^{\mathbb{N}}\)</span> 是 <span class="math inline">\(X\)</span> 上序列的集合。
 </details>
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-caution">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.1.0.6 Remark:</strong> Recall in functional analysis we learnt on <span class="math inline">\(\mathbb{R}\)</span> spaces of</p>
+<ol type="1">
+<li>sequences <span class="math inline">\(\mathbb{R}^\omega\)</span>,</li>
+<li>eventually zero sequences <span class="math inline">\(c_c(\mathbb{R})\)</span>,</li>
+<li>summable sequences <span class="math inline">\(l^1(\mathbb{R})\)</span>,</li>
+<li>square summable sequences <span class="math inline">\(l^2(\mathbb{R})\)</span>,</li>
+<li>sequences converge to zero <span class="math inline">\(c_0(\mathbb{R})\)</span>,</li>
+<li>bounded sequences <span class="math inline">\(l^\infty(\mathbb{R})\)</span>. We have <span class="math display">\[\mathbb{R}^\infty = c_c(\mathbb{R}) \subset l^1(\mathbb{R}) \subset l^2(\mathbb{R}) \subset c_0(\mathbb{R}) \subset l^\infty(\mathbb{R}) \subset \mathbb{R}^\omega. \qquad (261)\]</span></li>
+</ol>
 <details>
 <summary style="color: gray; cursor: pointer;">
-[点击展开证明]
+[点击展开翻译]
 </summary>
-<em>Proof:</em> For any <span class="math inline">\(p \in X\)</span>, as <span class="math inline">\(\mathcal{N}_p \cap \mathcal{T} \subseteq \mathcal{T}\)</span> we obtain that <span class="math inline">\(\chi(p,\mathcal{T}) \le w(\mathcal{T})\)</span>. Taking supermum over <span class="math inline">\(p\)</span> we have <span class="math inline">\(\chi(\mathcal{T}) \le w(\mathcal{T})\)</span>. Give a base <span class="math inline">\(\mathcal{B}\)</span> of <span class="math inline">\(\mathcal{T}\)</span> we obtain a dense subset of <span class="math inline">\((X,\mathcal{T})\)</span> by collecting a point in each of the member of <span class="math inline">\(\mathcal{B}\)</span>. Therefore, <span class="math inline">\(d(\mathcal{T}) \le w(\mathcal{T})\)</span>. <span class="math inline">\(\blacksquare\)</span>
+<p><strong>19.1.0.6 备注：</strong> 回顾在泛函分析中，我们学习了关于 <span class="math inline">\(\mathbb{R}\)</span> 的以下空间：</p>
+<ol type="1">
+<li>序列 <span class="math inline">\(\mathbb{R}^\omega\)</span>，</li>
+<li>最终为零的序列 <span class="math inline">\(c_c(\mathbb{R})\)</span>，</li>
+<li>可和序列 <span class="math inline">\(l^1(\mathbb{R})\)</span>，</li>
+<li>平方可和序列 <span class="math inline">\(l^2(\mathbb{R})\)</span>，</li>
+<li>收敛到零的序列 <span class="math inline">\(c_0(\mathbb{R})\)</span>，</li>
+<li>有界序列 <span class="math inline">\(l^\infty(\mathbb{R})\)</span>。 我们有 <span class="math display">\[\mathbb{R}^\infty = c_c(\mathbb{R}) \subset l^1(\mathbb{R}) \subset l^2(\mathbb{R}) \subset c_0(\mathbb{R}) \subset l^\infty(\mathbb{R}) \subset \mathbb{R}^\omega. \qquad (261)\]</span></li>
+</ol>
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>19.1.0.7 Theorem:</strong> Let <span class="math inline">\(\left(x^{(i)}\right)_{i \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}^\omega\)</span> and for every <span class="math inline">\(i \in \mathbb{N}\)</span>, write <span class="math inline">\(x^{(i)} = \left(x_n^{(i)}\right)_{n \in \mathbb{N}}\)</span>. Then <span class="math inline">\(\left(x^{(i)}\right)_{i \in \mathbb{N}}\)</span> converges to <span class="math inline">\(0^\omega\)</span> in the box topology iff it converges to <span class="math inline">\(0^\omega\)</span> in the product topology and there are <span class="math inline">\(I, N \in \mathbb{N}\)</span> such that if <span class="math inline">\(i &gt; I\)</span> and <span class="math inline">\(n &gt; N\)</span> then <span class="math inline">\(x_n^{(i)} = 0\)</span>.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>19.1.0.7 定理：</strong> 设 <span class="math inline">\(\left(x^{(i)}\right)_{i \in \mathbb{N}}\)</span> 是 <span class="math inline">\(\mathbb{R}^\omega\)</span> 中的一个序列，并且对于每个 <span class="math inline">\(i \in \mathbb{N}\)</span>，记 <span class="math inline">\(x^{(i)} = \left(x_n^{(i)}\right)_{n \in \mathbb{N}}\)</span>。那么 <span class="math inline">\(\left(x^{(i)}\right)_{i \in \mathbb{N}}\)</span> 在盒子拓扑中收敛到 <span class="math inline">\(0^\omega\)</span> 当且仅当它在乘积拓扑中收敛到 <span class="math inline">\(0^\omega\)</span> 并且存在 <span class="math inline">\(I, N \in \mathbb{N}\)</span> 使得如果 <span class="math inline">\(i &gt; I\)</span> 且 <span class="math inline">\(n &gt; N\)</span>，则有 <span class="math inline">\(x_n^{(i)} = 0\)</span>。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="compact-open-topology-紧开拓扑" class="level2">
+<h2 class="anchored" data-anchor-id="compact-open-topology-紧开拓扑">19.2 Compact-open topology | 紧开拓扑</h2>
+<section id="definition-of-the-compact-open-topology-紧开拓扑的定义" class="level3">
+<h3 class="anchored" data-anchor-id="definition-of-the-compact-open-topology-紧开拓扑的定义">19.2.1 <em>Definition of the compact-open topology</em> | 紧开拓扑的定义</h3>
+<p>The compact-open topology is one of the commonly used topologies on function spaces, and is applied in homotopy theory and functional analysis. It was introduced by Ralph Fox in 1945.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+紧开拓扑是函数空间上最常用的拓扑之一，应用于同伦论和泛函分析。它由 Ralph Fox 于 1945 年引入。
 </details>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
@@ -321,243 +435,226 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>14.1.0.3 Definition:</strong> A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is</p>
-<ul>
-<li><em>first countable</em> iff it has countable character, or <span class="math inline">\(\chi(\mathcal{T}) \le |\mathbb{N}|\)</span>;</li>
-<li><em>second countable</em> iff it has countable weight, or <span class="math inline">\(w(\mathcal{T}) \le |\mathbb{N}|\)</span>;</li>
-<li><em>separable</em> iff it has countable density, or <span class="math inline">\(d(\mathcal{T}) \le |\mathbb{N}|\)</span>.</li>
-</ul>
+<p><strong>19.2.1.1 Definition:</strong> Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two topological spaces. The <em>compact-open topology</em> <span class="math inline">\(\mathcal{T}_{\text{co}}\)</span> on <span class="math inline">\(\mathrm{C}(X;Y)\)</span> is the topology generated by the subbase</p>
+<p><span class="math display">\[\mathcal{S} = \{V(K;U) : \text{compact } K \subseteq X, \text{open } U \subseteq Y\} \tag{262}\]</span></p>
+<p>where</p>
+<p><span class="math display">\[V(K;U) = \{f \in \mathrm{C}(X;Y) : f(K) \subseteq U\}. \tag{263}\]</span></p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<p><strong>14.1.0.3 定义：</strong> 一个拓扑空间 <span class="math inline">\((X,\mathcal{T})\)</span> 是</p>
-<ul>
-<li><strong>第一可数的</strong> (first countable)，当且仅当它具有可数的特征，即 <span class="math inline">\(\chi(\mathcal{T}) \le |\mathbb{N}|\)</span>；</li>
-<li><strong>第二可数的</strong> (second countable)，当且仅当它具有可数的权重，即 <span class="math inline">\(w(\mathcal{T}) \le |\mathbb{N}|\)</span>；</li>
-<li><strong>可分的</strong> (separable)，当且仅当它具有可数的密度，即 <span class="math inline">\(d(\mathcal{T}) \le |\mathbb{N}|\)</span>。</li>
-</ul>
+<p>设 <span class="math inline">\(X\)</span> 与 <span class="math inline">\(Y\)</span> 是两个拓扑空间。<span class="math inline">\(\mathrm{C}(X;Y)\)</span> 上的<strong>紧开拓扑</strong> <span class="math inline">\(\mathcal{T}_{\text{co}}\)</span> 是由以下子基生成的拓扑：</p>
+<p><span class="math display">\[\mathcal{S} = \{V(K;U) : \text{紧集 } K \subseteq X,\, \text{开集 } U \subseteq Y\}\]</span></p>
+<p>其中</p>
+<span class="math display">\[V(K;U) = \{f \in \mathrm{C}(X;Y) : f(K) \subseteq U\}.\]</span>
 </details>
 </div>
 </div>
 </div>
-<section id="separable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="separable-spaces.">14.1.1 Separable spaces.</h3>
-<div class="callout callout-style-simple callout-tip">
+<p>A subbase for the open sets consists of the sets <span class="math inline">\(N(C,U)\)</span> where <span class="math inline">\(C\)</span> is any compact subset of <span class="math inline">\(Y\)</span>, <span class="math inline">\(U\)</span> any open subset of <span class="math inline">\(Z\)</span>, and <span class="math inline">\(N(C,U)\)</span> consists of all those continuous <span class="math inline">\(h: Y \to Z\)</span> for which <span class="math inline">\(hC \subseteq U\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+开集的一个子基由集合 <span class="math inline">\(N(C,U)\)</span> 构成，其中 <span class="math inline">\(C\)</span> 是 <span class="math inline">\(Y\)</span> 的任意紧子集，<span class="math inline">\(U\)</span> 是 <span class="math inline">\(Z\)</span> 的任意开子集，<span class="math inline">\(N(C,U)\)</span> 由所有满足 <span class="math inline">\(hC \subseteq U\)</span> 的连续映射 <span class="math inline">\(h: Y \to Z\)</span> 组成。
+</details>
+<div class="callout callout-style-simple callout-caution">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<strong>14.1.1.1 Theorem:</strong> A subspace of a separable space is separable.
+<p><strong>19.2.1.2 Remark:</strong> We can write <span class="math inline">\(V(K;U) = \mathrm{C}(K;U) \times_{\mathrm{C}(K;Y)} \mathrm{C}(X;Y)\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.1.1 定理：</strong> 可分空间的子空间是可分的。
+我们可以将 <span class="math inline">\(V(K;U)\)</span> 写作 <span class="math inline">\(\mathrm{C}(K;U) \times_{\mathrm{C}(K;Y)} \mathrm{C}(X;Y)\)</span>。
 </details>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.1.2 Theorem:</strong> A countable product of separable spaces is separable.
+<p>If the codomain of the functions under consideration has a uniform structure or a metric structure then the compact-open topology is the “topology of uniform convergence on compact sets.” That is to say, a sequence of functions converges in the compact-open topology precisely when it converges uniformly on every compact subset of the domain.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.1.2 定理：</strong> 可分空间的可数乘积是可分的。
+若所考虑函数的值域具有一致结构或度量结构，则紧开拓扑即为”紧集上一致收敛的拓扑”。也就是说，一列函数在紧开拓扑下收敛，当且仅当它在定义域的每个紧子集上一致收敛。
 </details>
-</div>
-</div>
-</div>
-<p><strong>14.1.1.3 Example:</strong> The product space <span class="math inline">\(\mathbb{R}^{[0,1]}\)</span> is separable.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.1.4 Proposition:</strong> If <span class="math inline">\(X\)</span> is a separable topological space, then every collection of disjoint open subsets in <span class="math inline">\(X\)</span> is countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.1.4 命题：</strong> 如果 <span class="math inline">\(X\)</span> 是一个可分的拓扑空间，那么 <span class="math inline">\(X\)</span> 中任意互不相交的开子集族都是可数的。
-</details>
-</div>
-</div>
-</div>
+<hr>
 </section>
-<section id="first-countable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="first-countable-spaces.">14.1.2 First countable spaces.</h3>
-<div class="callout callout-style-simple callout-tip">
+<section id="properties-of-the-compact-open-topology-紧开拓扑的性质" class="level3">
+<h3 class="anchored" data-anchor-id="properties-of-the-compact-open-topology-紧开拓扑的性质">19.2.2 <em>Properties of the compact-open topology</em> | 紧开拓扑的性质</h3>
+<div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.2.1 Theorem:</strong> A subspace of a first-countable space is first-countable.
+<p><strong>19.2.2.1 Proposition:</strong> The compact-open topology on <span class="math inline">\(\mathrm{C}(*,Y)\)</span> where <span class="math inline">\(*\)</span> is the point space agrees with the topology on <span class="math inline">\(Y\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-[7, 定理 30.2] <strong>14.1.2.1 定理：</strong> 第一可数空间的子空间是第一可数的。
+<span class="math inline">\(\mathrm{C}(*,Y)\)</span> 上的紧开拓扑（其中 <span class="math inline">\(*\)</span> 为单点空间）与 <span class="math inline">\(Y\)</span> 上的拓扑一致。
 </details>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip">
+<div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.2.2 Theorem:</strong> A countable product of first-countable spaces is first-countable.
+<p><strong>19.2.2.2 Proposition:</strong> If <span class="math inline">\(X\)</span> is a discrete space, then <span class="math inline">\(\mathrm{C}(X;Y)\)</span> is identified with the product space <span class="math inline">\(Y^X\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-[7, 定理 30.2] <strong>14.1.2.2 定理：</strong> 第一可数空间的可数乘积是第一可数的。
+若 <span class="math inline">\(X\)</span> 是离散空间，则 <span class="math inline">\(\mathrm{C}(X;Y)\)</span> 与乘积空间 <span class="math inline">\(Y^X\)</span> 等同。
 </details>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip">
+<div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>[7, Theorem 30.1] <strong>14.1.2.3 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a first countable topological space. Then</p>
-<ul>
-<li>it is Hausdorff iff every sequence in <span class="math inline">\(X\)</span> has at most one limit point;</li>
-<li>a point <span class="math inline">\(p \in X\)</span> belongs to the closure of a subset <span class="math inline">\(A \subseteq X\)</span> iff there is a sequence in <span class="math inline">\(A\)</span> converging to <span class="math inline">\(p\)</span>;</li>
-<li>a map <span class="math inline">\(f: X \to Y\)</span> is continuous iff it sends convergent sequences to convergent sequences;</li>
-<li>it is sequentially compact iff it is countably compact.</li>
-</ul>
+<p><strong>19.2.2.3 Proposition:</strong> If <span class="math inline">\(Y\)</span> is <span class="math inline">\(\mathrm{T}_0\)</span>, <span class="math inline">\(\mathrm{T}_1\)</span>, Hausdorff, regular, or Tychonoff, then the compact-open topology satisfies the same separation axiom.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<p>[7, 定理 30.1] <strong>14.1.2.3 定理：</strong> 设 <span class="math inline">\(X\)</span> 是一个第一可数拓扑空间。那么</p>
-<ul>
-<li>它是 Hausdorff 空间，当且仅当 <span class="math inline">\(X\)</span> 中的每个序列至多有一个极限点；</li>
-<li>点 <span class="math inline">\(p \in X\)</span> 属于子集 <span class="math inline">\(A \subseteq X\)</span> 的闭包，当且仅当存在 <span class="math inline">\(A\)</span> 中的序列收敛到 <span class="math inline">\(p\)</span>；</li>
-<li>映射 <span class="math inline">\(f: X \to Y\)</span> 是连续的，当且仅当它将收敛序列映射为收敛序列；</li>
-<li>它是序列紧的，当且仅当它是可数紧的。</li>
-</ul>
+若 <span class="math inline">\(Y\)</span> 满足 <span class="math inline">\(\mathrm{T}_0\)</span>、<span class="math inline">\(\mathrm{T}_1\)</span>、Hausdorff、正则或 Tychonoff 分离公理，则紧开拓扑也满足相同的分离公理。
 </details>
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.2.2.4 Proposition:</strong> If <span class="math inline">\(X\)</span> is Hausdorff and <span class="math inline">\(\mathcal{S}\)</span> is a subbase for the topology on <span class="math inline">\(Y\)</span>, then</p>
+<p><span class="math display">\[\mathcal{S} = \{V(K;U) : \text{compact } K \subseteq X,\, U \in \mathcal{S}\} \tag{264}\]</span></p>
+<p>is a subbase for the compact-open topology on <span class="math inline">\(\mathrm{C}(X;Y)\)</span>.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
-[点击展开证明]
+[点击展开翻译]
 </summary>
-<em>Proof:</em> We prove the second item. Let <span class="math inline">\(\mathcal{B}_p = (U_n)_{n\in\mathbb{N}}\)</span> be a countable neighborhood base of <span class="math inline">\(p \in X\)</span>. If <span class="math inline">\(p \in \overline{A}\)</span> then there is <span class="math inline">\(p_n \in U_n \cap A\)</span> for any <span class="math inline">\(n \in \mathbb{N}\)</span>. By definition of a neighborhood base, we have <span class="math inline">\(p_n \to p\)</span>. If there is <span class="math inline">\((p_k)_{k\in\mathbb{N}} \subseteq A\)</span> with <span class="math inline">\(p_k \to p\)</span>, then for any <span class="math inline">\(U \in \mathcal{N}_p\)</span>, by definition of a neighborhood base, there is <span class="math inline">\(U_n \subseteq U\)</span> and then there is some <span class="math inline">\(p_k \in U_n \cap A \subseteq U \cap A\)</span>. Therefore, <span class="math inline">\(p \in \overline{A}\)</span>. <span class="math inline">\(\blacksquare\)</span>
+<p>若 <span class="math inline">\(X\)</span> 是 Hausdorff 空间，且 <span class="math inline">\(\mathcal{S}\)</span> 是 <span class="math inline">\(Y\)</span> 上拓扑的一个子基，则</p>
+<p><span class="math display">\[\mathcal{S} = \{V(K;U) : \text{紧集 } K \subseteq X,\, U \in \mathcal{S}\}\]</span></p>
+是 <span class="math inline">\(\mathrm{C}(X;Y)\)</span> 上紧开拓扑的一个子基。
 </details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.2.2.5 Proposition:</strong> If <span class="math inline">\((Y,d)\)</span> is a metric space, then the compact-open topology is equal to the topology of compact convergence, in the sense that a sequence <span class="math inline">\(\{f_n\} \subseteq Y\)</span> converges to <span class="math inline">\(f \in Y\)</span> in the compact-open topology iff for every compact subset <span class="math inline">\(K\)</span> of <span class="math inline">\(X\)</span>, <span class="math inline">\(\{f_n\}\)</span> converges uniformly to <span class="math inline">\(f\)</span> on <span class="math inline">\(K\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+若 <span class="math inline">\((Y,d)\)</span> 是度量空间，则紧开拓扑等于紧收敛拓扑，即序列 <span class="math inline">\(\{f_n\} \subseteq Y\)</span> 在紧开拓扑下收敛到 <span class="math inline">\(f \in Y\)</span>，当且仅当对 <span class="math inline">\(X\)</span> 的每个紧子集 <span class="math inline">\(K\)</span>，<span class="math inline">\(\{f_n\}\)</span> 在 <span class="math inline">\(K\)</span> 上一致收敛到 <span class="math inline">\(f\)</span>。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.2.2.6 Proposition:</strong> If <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> and <span class="math inline">\(Z\)</span> are topological spaces, with <span class="math inline">\(Y\)</span> locally compact Hausdorff, then the composition map</p>
+<p><span class="math display">\[\mathrm{C}(Y,Z) \times \mathrm{C}(X;Y) \to \mathrm{C}(X,Z), \quad (f,g) \mapsto f \circ g, \tag{265}\]</span></p>
+<p>is continuous with the compact-open topology on all the function spaces and the product topology on the cartesian product.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p>若 <span class="math inline">\(X\)</span>、<span class="math inline">\(Y\)</span>、<span class="math inline">\(Z\)</span> 是拓扑空间，且 <span class="math inline">\(Y\)</span> 是局部紧 Hausdorff 空间，则复合映射</p>
+<p><span class="math display">\[\mathrm{C}(Y,Z) \times \mathrm{C}(X;Y) \to \mathrm{C}(X,Z), \quad (f,g) \mapsto f \circ g\]</span></p>
+在所有函数空间上赋予紧开拓扑、笛卡尔积上赋予乘积拓扑时是连续的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.2.2.7 Proposition:</strong> If <span class="math inline">\(X\)</span> is a locally compact Hausdorff space, then the evaluation map</p>
+<p><span class="math display">\[\mathrm{ev}: \mathrm{C}(X;Y) \times X \to Y, \quad \mathrm{ev}(f,p) = f(p), \tag{266}\]</span></p>
+<p>is continuous.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p>若 <span class="math inline">\(X\)</span> 是局部紧 Hausdorff 空间，则赋值映射</p>
+<p><span class="math display">\[\mathrm{ev}: \mathrm{C}(X;Y) \times X \to Y, \quad \mathrm{ev}(f,p) = f(p)\]</span></p>
+是连续的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>19.2.2.8 Proposition:</strong> If <span class="math inline">\(X\)</span> is compact, and <span class="math inline">\((Y,d)\)</span> is a metric space, then the compact-open topology on <span class="math inline">\(\mathrm{C}(X;Y)\)</span> is induced by the metric <span class="math inline">\(e\)</span> given by</p>
+<p><span class="math display">\[e(f,g) = \sup\{d(f(p), g(p)) : p \in X\} \tag{267}\]</span></p>
+<p>for <span class="math inline">\(f, g \in \mathrm{C}(X;Y)\)</span>.</p>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<p>若 <span class="math inline">\(X\)</span> 是紧空间，<span class="math inline">\((Y,d)\)</span> 是度量空间，则 <span class="math inline">\(\mathrm{C}(X;Y)\)</span> 上的紧开拓扑由以下度量 <span class="math inline">\(e\)</span> 诱导：</p>
+<p><span class="math display">\[e(f,g) = \sup\{d(f(p), g(p)) : p \in X\}\]</span></p>
+其中 <span class="math inline">\(f, g \in \mathrm{C}(X;Y)\)</span>。
+</details>
+</div>
+</div>
+</div>
+<hr>
 </section>
-<section id="second-countable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="second-countable-spaces.">14.1.3 Second countable spaces.</h3>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.3.1 Theorem:</strong> Any second countable space is first countable, separable, and Lindelöf.
+<section id="applications-of-the-compact-open-topology-紧开拓扑的应用" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-the-compact-open-topology-紧开拓扑的应用">19.2.3 <em>Applications of the compact-open topology</em> | 紧开拓扑的应用</h3>
+<p>The compact open topology can be used to topologize the following sets:</p>
+<ul>
+<li>the loop space of <span class="math inline">\(X\)</span> at <span class="math inline">\(p\)</span> is <span class="math inline">\(\Omega_p(X) = \{f{:}[0,1] \to X : f(0) = f(1) = p\}\)</span> (Definition 21.5.1.1),</li>
+<li>the path space of <span class="math inline">\(X\)</span> from <span class="math inline">\(p\)</span> to <span class="math inline">\(q\)</span> is <span class="math inline">\(\Omega_{p,q}(X) = \{f{:}[0,1] \to X : f(0) = p, f(1) = q\}\)</span> (Definition 21.5.1.1), and</li>
+<li>the path space of <span class="math inline">\(X\)</span> from <span class="math inline">\(p\)</span> is <span class="math inline">\(E_p(X) = \{f{:}[0,1] \to X : f(0) = p\}\)</span>.</li>
+</ul>
+<p>In addition, there is a homotopy equivalence between the spaces <span class="math inline">\(\mathrm{C}(\Sigma X; Y) \simeq \mathrm{C}(X; \Omega Y)\)</span>. The topological spaces <span class="math inline">\(\mathrm{C}(X;Y)\)</span> are useful in homotopy theory because they can be used to form a topological space and a model for the homotopy type of the set of homotopy classes of maps</p>
+<p><span class="math display">\[\pi(X;Y) = \{[f]: X \to Y : f \text{ is a homotopy class}\}. \tag{268}\]</span></p>
+<p>This is because <span class="math inline">\(\pi(X;Y)\)</span> is the set of path components in <span class="math inline">\(\mathrm{C}(X;Y)\)</span>; that is, there is an isomorphism of sets <span class="math inline">\(\pi(X;Y) \to \mathrm{C}([0,1]; \mathrm{C}(X;Y))/{\sim}\)</span>, where <span class="math inline">\(\sim\)</span> is the homotopy equivalence.</p>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.3.1 定理：</strong> 任何第二可数空间都是第一可数的、可分的且是 Lindelöf 空间。
-</details>
-</div>
-</div>
-</div>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开证明]
-</summary>
-<em>Proof:</em> For the Lindelöfness, note that any open cover has a countable subcover by leaving only one member containing each basic open subset. <span class="math inline">\(\blacksquare\)</span>
-</details>
-<p><strong>14.1.3.2 Corollary:</strong> Each base of a second countable space has a countable subbase.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.3.3 Proposition:</strong> The lexicographical order space <span class="math inline">\(([0,1]^2, \mathcal{T}_{\text{lexi}})\)</span> is separable but not first countable. The excluded point space <span class="math inline">\((X, \mathcal{T}_p')\)</span> is first countable but not separable if <span class="math inline">\(X\)</span> is uncountable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.3.3 命题：</strong> 字典序空间 <span class="math inline">\(([0,1]^2, \mathcal{T}_{\text{lexi}})\)</span> 是可分的但不是第一可数的。排除点空间 <span class="math inline">\((X, \mathcal{T}_p')\)</span> 是第一可数的，但如果 <span class="math inline">\(X\)</span> 是不可数的，则它不是可分的。
-</details>
-</div>
-</div>
-</div>
-<p><strong>14.1.3.4 Example:</strong> The <em>long line</em> is not second countable.</p>
-<p><strong>14.1.3.5 Example:</strong> The space <span class="math inline">\(\mathbb{R}_{\text{lower}}\)</span> is first countable, separable, and Lindelöf, but not second countable.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.3.6 Proposition:</strong> A locally compact, paracompact connected Hausdorff space is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.3.6 命题：</strong> 局部紧的、仿紧的连通 Hausdorff 空间是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.3.7 Theorem:</strong> A subspace of a second-countable space is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.3.7 定理：</strong> 第二可数空间的子空间是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.3.8 Theorem:</strong> A countable product of second-countable spaces is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.3.8 定理：</strong> 第二可数空间的可数乘积是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开证明]
-</summary>
-<em>Proof:</em> Let <span class="math inline">\(X\)</span> be a second-countable space with a countable base <span class="math inline">\(\mathcal{B}\)</span>. Then <span class="math inline">\(\{B \cap A : B \in \mathcal{B}\}\)</span> is a countable base for the subspace <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span>. Let <span class="math inline">\(X_i\)</span>, <span class="math inline">\(i \in I\)</span>, be second-countable spaces with countable base <span class="math inline">\(\mathcal{B}_i\)</span>. Then <span class="math display">\[\left\{ \prod_{i \in I} U_i : (\forall i \in I)(U_i \in \mathcal{B}_i) \wedge (U_i = X_i \text{ for all but finitely many } i \in I) \right\} \qquad (225)\]</span> is a countable base for <span class="math inline">\(\prod_{i \in I} X_i\)</span>. <span class="math inline">\(\blacksquare\)</span>
+<p>紧开拓扑可用于对以下集合赋予拓扑结构：</p>
+<ul>
+<li><span class="math inline">\(X\)</span> 在 <span class="math inline">\(p\)</span> 处的<strong>环路空间</strong>：<span class="math inline">\(\Omega_p(X) = \{f{:}[0,1] \to X : f(0) = f(1) = p\}\)</span>（定义 21.5.1.1），</li>
+<li><span class="math inline">\(X\)</span> 从 <span class="math inline">\(p\)</span> 到 <span class="math inline">\(q\)</span> 的<strong>路径空间</strong>：<span class="math inline">\(\Omega_{p,q}(X) = \{f{:}[0,1] \to X : f(0) = p,\, f(1) = q\}\)</span>（定义 21.5.1.1），以及</li>
+<li><span class="math inline">\(X\)</span> 从 <span class="math inline">\(p\)</span> 出发的<strong>路径空间</strong>：<span class="math inline">\(E_p(X) = \{f{:}[0,1] \to X : f(0) = p\}\)</span>。</li>
+</ul>
+<p>此外，空间 <span class="math inline">\(\mathrm{C}(\Sigma X; Y) \simeq \mathrm{C}(X; \Omega Y)\)</span> 之间存在同伦等价。拓扑空间 <span class="math inline">\(\mathrm{C}(X;Y)\)</span> 在同伦论中十分有用，因为它们可以用来构成一个拓扑空间，并作为映射同伦类集合的同伦型模型：</p>
+<p><span class="math display">\[\pi(X;Y) = \{[f]: X \to Y : f \text{ 是一个同伦类}\}.\]</span></p>
+这是因为 <span class="math inline">\(\pi(X;Y)\)</span> 是 <span class="math inline">\(\mathrm{C}(X;Y)\)</span> 中路径连通分支的集合；即存在集合同构 <span class="math inline">\(\pi(X;Y) \to \mathrm{C}([0,1]; \mathrm{C}(X;Y))/{\sim}\)</span>，其中 <span class="math inline">\(\sim\)</span> 为同伦等价关系。
 </details>
 
 

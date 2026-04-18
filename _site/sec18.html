@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-04-18">
 
-<title>COUNTABILITY – 拓扑学讲义翻译</title>
+<title>METRIZING TOPOLOGICAL SPACES – 拓扑学讲义翻译</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sec14.html">14. COUNTABILITY</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      拓扑学讲义翻译
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,7 +207,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sec14.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sec14.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">14. COUNTABILITY</span></a>
   </div>
 </li>
@@ -237,11 +239,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#countability." id="toc-countability." class="nav-link active" data-scroll-target="#countability.">14.1 Countability.</a>
+  <li><a href="#properties-of-metric-topologies.-度量拓扑的性质" id="toc-properties-of-metric-topologies.-度量拓扑的性质" class="nav-link active" data-scroll-target="#properties-of-metric-topologies.-度量拓扑的性质">18.1 Properties of metric topologies. | 度量拓扑的性质</a></li>
+  <li><a href="#metrizability.-可度量化性" id="toc-metrizability.-可度量化性" class="nav-link" data-scroll-target="#metrizability.-可度量化性">18.2 Metrizability. | 可度量化性</a>
   <ul class="collapse">
-  <li><a href="#separable-spaces." id="toc-separable-spaces." class="nav-link" data-scroll-target="#separable-spaces.">14.1.1 Separable spaces.</a></li>
-  <li><a href="#first-countable-spaces." id="toc-first-countable-spaces." class="nav-link" data-scroll-target="#first-countable-spaces.">14.1.2 First countable spaces.</a></li>
-  <li><a href="#second-countable-spaces." id="toc-second-countable-spaces." class="nav-link" data-scroll-target="#second-countable-spaces.">14.1.3 Second countable spaces.</a></li>
+  <li><a href="#urysohn-metrization-theorem.-urysohn-度量化定理" id="toc-urysohn-metrization-theorem.-urysohn-度量化定理" class="nav-link" data-scroll-target="#urysohn-metrization-theorem.-urysohn-度量化定理">18.2.1 Urysohn metrization theorem. | Urysohn 度量化定理</a></li>
+  <li><a href="#smirnov-metrization-theorem.-smirnov-度量化定理" id="toc-smirnov-metrization-theorem.-smirnov-度量化定理" class="nav-link" data-scroll-target="#smirnov-metrization-theorem.-smirnov-度量化定理">18.2.2 Smirnov metrization theorem. | Smirnov 度量化定理</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -251,7 +253,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">COUNTABILITY</h1>
+<h1 class="title">METRIZING TOPOLOGICAL SPACES</h1>
 </div>
 
 
@@ -274,182 +276,168 @@ window.Quarto = {
 </header>
 
 
-<section id="countability." class="level2">
-<h2 class="anchored" data-anchor-id="countability.">14.1 Countability.</h2>
-<p>Note that, a set <span class="math inline">\(X\)</span> is countable if there is an injection <span class="math inline">\(X \to \mathbb{N}\)</span>; in particular, <span class="math inline">\(X\)</span> may be finite or countably infinite.</p>
+<section id="properties-of-metric-topologies.-度量拓扑的性质" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-metric-topologies.-度量拓扑的性质">18.1 Properties of metric topologies. | 度量拓扑的性质</h2>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.1.0.1 Proposition:</strong> A metric space is compact iff it is sequentially compact iff it is limit point compact iff it is pseudocompact.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.1.0.1 命题：</strong> 一个度量空间是紧的，当且仅当它是序列紧的，当且仅当它是极限点紧的，当且仅当它是伪紧的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.1.0.2 Proposition:</strong> A metric space is first countable.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.1.0.2 命题：</strong> 度量空间是第一可数的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.1.0.3 Proposition:</strong> A metric space is Lindelöf iff it is separable iff it is second countable.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.1.0.3 命题：</strong> 一个度量空间是 Lindelöf 的，当且仅当它是可分的，当且仅当它是第二可数的。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.1.0.4 Proposition:</strong> A metric space is perfectly normal.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.1.0.4 命题：</strong> 度量空间是完美正规的。
+</details>
+</div>
+</div>
+</div>
+</section>
+<section id="metrizability.-可度量化性" class="level2">
+<h2 class="anchored" data-anchor-id="metrizability.-可度量化性">18.2 Metrizability. | 可度量化性</h2>
+<section id="urysohn-metrization-theorem.-urysohn-度量化定理" class="level3">
+<h3 class="anchored" data-anchor-id="urysohn-metrization-theorem.-urysohn-度量化定理">18.2.1 Urysohn metrization theorem. | Urysohn 度量化定理</h3>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<strong>14.1.0.1 Definition:</strong> The <em>character</em> <span class="math inline">\(\chi(p,\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> on <span class="math inline">\(X\)</span> at <span class="math inline">\(p \in X\)</span> is the minimal cardinarity of neighborhood bases of <span class="math inline">\(\mathcal{T}\)</span> at <span class="math inline">\(p\)</span>, and the <em>character</em> <span class="math inline">\(\chi(\mathcal{T})\)</span> of <span class="math inline">\(\mathcal{T}\)</span> is the supremum of <span class="math inline">\(\chi(p,\mathcal{T})\)</span> over <span class="math inline">\(p \in X\)</span>. The <em>weight</em> <span class="math inline">\(w(\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> is the minimal cardinarity of bases of <span class="math inline">\(\mathcal{T}\)</span>. The <em>density</em> <span class="math inline">\(d(\mathcal{T})\)</span> of a topology <span class="math inline">\(\mathcal{T}\)</span> on <span class="math inline">\(X\)</span> is the minimal cardinarity of dense subsets of <span class="math inline">\((X,\mathcal{T})\)</span>.
+<strong>18.2.1.1 Definition:</strong> A topological space <span class="math inline">\(X\)</span> is <em>metrizable</em> iff its topology is induced by a metric <span class="math inline">\(d\)</span> on <span class="math inline">\(X\)</span>.
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.0.1 定义：</strong> 拓扑空间 <span class="math inline">\(X\)</span> 上拓扑 <span class="math inline">\(\mathcal{T}\)</span> 在点 <span class="math inline">\(p \in X\)</span> 处的<strong>特征</strong> (character) <span class="math inline">\(\chi(p,\mathcal{T})\)</span> 是在 <span class="math inline">\(p\)</span> 处 <span class="math inline">\(\mathcal{T}\)</span> 的邻域基的最小基数，而 <span class="math inline">\(\mathcal{T}\)</span> 的<strong>特征</strong> <span class="math inline">\(\chi(\mathcal{T})\)</span> 是 <span class="math inline">\(\chi(p,\mathcal{T})\)</span> 在所有 <span class="math inline">\(p \in X\)</span> 上的上确界。拓扑 <span class="math inline">\(\mathcal{T}\)</span> 的<strong>权重</strong> (weight) <span class="math inline">\(w(\mathcal{T})\)</span> 是 <span class="math inline">\(\mathcal{T}\)</span> 的基的最小基数。拓扑空间 <span class="math inline">\((X,\mathcal{T})\)</span> 的<strong>密度</strong> (density) <span class="math inline">\(d(\mathcal{T})\)</span> 是 <span class="math inline">\((X,\mathcal{T})\)</span> 中稠密子集的最小基数。
+<strong>18.2.1.1 定义：</strong> 一个拓扑空间 <span class="math inline">\(X\)</span> 是<strong>可度量化的</strong> (metrizable)，当且仅当它的拓扑是由 <span class="math inline">\(X\)</span> 上的一个度量 <span class="math inline">\(d\)</span> 诱导的。
 </details>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.0.2 Proposition:</strong> Let <span class="math inline">\(\mathcal{T}\)</span> be a topology on <span class="math inline">\(X\)</span>. Then <span class="math display">\[\chi(\mathcal{T}) \le w(\mathcal{T}) \ge d(\mathcal{T}). \qquad (224)\]</span>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.0.2 命题：</strong> 设 <span class="math inline">\(\mathcal{T}\)</span> 是 <span class="math inline">\(X\)</span> 上的一个拓扑。那么 <span class="math display">\[\chi(\mathcal{T}) \le w(\mathcal{T}) \ge d(\mathcal{T}). \qquad (224)\]</span>
-</details>
-</div>
-</div>
-</div>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开证明]
-</summary>
-<em>Proof:</em> For any <span class="math inline">\(p \in X\)</span>, as <span class="math inline">\(\mathcal{N}_p \cap \mathcal{T} \subseteq \mathcal{T}\)</span> we obtain that <span class="math inline">\(\chi(p,\mathcal{T}) \le w(\mathcal{T})\)</span>. Taking supermum over <span class="math inline">\(p\)</span> we have <span class="math inline">\(\chi(\mathcal{T}) \le w(\mathcal{T})\)</span>. Give a base <span class="math inline">\(\mathcal{B}\)</span> of <span class="math inline">\(\mathcal{T}\)</span> we obtain a dense subset of <span class="math inline">\((X,\mathcal{T})\)</span> by collecting a point in each of the member of <span class="math inline">\(\mathcal{B}\)</span>. Therefore, <span class="math inline">\(d(\mathcal{T}) \le w(\mathcal{T})\)</span>. <span class="math inline">\(\blacksquare\)</span>
-</details>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>14.1.0.3 Definition:</strong> A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is</p>
+<strong>18.2.1.2 Definition:</strong> A topological space <span class="math inline">\(X\)</span> is <em>Tychonoff</em> iff it is Frechét and every disjoint point and closed subset are separated by functions.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.1.2 定义：</strong> 一个拓扑空间 <span class="math inline">\(X\)</span> 是 <strong>Tychonoff 空间</strong>，当且仅当它是 Fréchet 的（即 <span class="math inline">\(T_1\)</span> 的），并且每个不相交的点和闭子集都能被函数分离。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.2.1.3 Lemma:</strong> The product of Tychonoff spaces is Tychonoff.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.1.3 引理：</strong> Tychonoff 空间的乘积是 Tychonoff 的。
+</details>
+</div>
+</div>
+</div>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> Let <span class="math inline">\(X\)</span> be a Tychonoff space and <span class="math inline">\(I\)</span> an index set. To show that <span class="math inline">\(X^I\)</span> is Tychonoff, note that if <span class="math inline">\(f_i\)</span> are functions for <span class="math inline">\((x, U_i)\)</span> and <span class="math inline">\(g = \sup_{i \in I} f_i\)</span>, then <span class="math inline">\(g\)</span> is a function for <span class="math inline">\((x, \bigcap_{i \in I} U_i)\)</span>. If <span class="math inline">\(x \in X^I\)</span> let <span class="math inline">\(U_i \in \mathcal{N}_{x_i}\)</span> for <span class="math inline">\(i \in I\)</span>. If <span class="math inline">\(f\)</span> is a function for <span class="math inline">\((x_i, U_i)\)</span>, then <span class="math inline">\(f \circ \text{pr}_i\)</span> is a function for <span class="math inline">\((x, \text{pr}_i^{-1}(U_i))\)</span>. <span class="math inline">\(\blacksquare\)</span>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.2.1.4 Lemma:</strong> A topological space <span class="math inline">\(X\)</span> is Tychonoff iff it is homeomorphic to a subspace of <span class="math inline">\([0, 1]^{C(X; [0,1])}\)</span>.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.1.4 引理：</strong> 拓扑空间 <span class="math inline">\(X\)</span> 是 Tychonoff 空间，当且仅当它同胚于 <span class="math inline">\([0, 1]^{C(X; [0,1])}\)</span> 的一个子空间。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>18.2.1.5 Lemma:</strong> Let <span class="math inline">\(\mathcal{F} \subseteq C(X; [0, 1])\)</span>. Then the evaluation map <span class="math inline">\(\text{ev}: X \to [0, 1]^\mathcal{F}\)</span>, <span class="math inline">\(p \mapsto \text{ev}_p\)</span></p>
 <ul>
-<li><em>first countable</em> iff it has countable character, or <span class="math inline">\(\chi(\mathcal{T}) \le |\mathbb{N}|\)</span>;</li>
-<li><em>second countable</em> iff it has countable weight, or <span class="math inline">\(w(\mathcal{T}) \le |\mathbb{N}|\)</span>;</li>
-<li><em>separable</em> iff it has countable density, or <span class="math inline">\(d(\mathcal{T}) \le |\mathbb{N}|\)</span>.</li>
+<li>is continuous;</li>
+<li>is injective iff <span class="math inline">\(\mathcal{F}\)</span> separates points of <span class="math inline">\(X\)</span>; and</li>
+<li>is open onto its image if <span class="math inline">\(\mathcal{F}\)</span> separates points from disjoint closed subsets of <span class="math inline">\(X\)</span>.</li>
 </ul>
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<p><strong>14.1.0.3 定义：</strong> 一个拓扑空间 <span class="math inline">\((X,\mathcal{T})\)</span> 是</p>
+<p><strong>18.2.1.5 引理：</strong> 设 <span class="math inline">\(\mathcal{F} \subseteq C(X; [0, 1])\)</span>。那么求值映射 <span class="math inline">\(\text{ev}: X \to [0, 1]^\mathcal{F}\)</span>，<span class="math inline">\(p \mapsto \text{ev}_p\)</span></p>
 <ul>
-<li><strong>第一可数的</strong> (first countable)，当且仅当它具有可数的特征，即 <span class="math inline">\(\chi(\mathcal{T}) \le |\mathbb{N}|\)</span>；</li>
-<li><strong>第二可数的</strong> (second countable)，当且仅当它具有可数的权重，即 <span class="math inline">\(w(\mathcal{T}) \le |\mathbb{N}|\)</span>；</li>
-<li><strong>可分的</strong> (separable)，当且仅当它具有可数的密度，即 <span class="math inline">\(d(\mathcal{T}) \le |\mathbb{N}|\)</span>。</li>
-</ul>
-</details>
-</div>
-</div>
-</div>
-<section id="separable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="separable-spaces.">14.1.1 Separable spaces.</h3>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.1.1 Theorem:</strong> A subspace of a separable space is separable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.1.1 定理：</strong> 可分空间的子空间是可分的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.1.2 Theorem:</strong> A countable product of separable spaces is separable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.1.2 定理：</strong> 可分空间的可数乘积是可分的。
-</details>
-</div>
-</div>
-</div>
-<p><strong>14.1.1.3 Example:</strong> The product space <span class="math inline">\(\mathbb{R}^{[0,1]}\)</span> is separable.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.1.4 Proposition:</strong> If <span class="math inline">\(X\)</span> is a separable topological space, then every collection of disjoint open subsets in <span class="math inline">\(X\)</span> is countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.1.4 命题：</strong> 如果 <span class="math inline">\(X\)</span> 是一个可分的拓扑空间，那么 <span class="math inline">\(X\)</span> 中任意互不相交的开子集族都是可数的。
-</details>
-</div>
-</div>
-</div>
-</section>
-<section id="first-countable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="first-countable-spaces.">14.1.2 First countable spaces.</h3>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.2.1 Theorem:</strong> A subspace of a first-countable space is first-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.2.1 定理：</strong> 第一可数空间的子空间是第一可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.2.2 Theorem:</strong> A countable product of first-countable spaces is first-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.2.2 定理：</strong> 第一可数空间的可数乘积是第一可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>[7, Theorem 30.1] <strong>14.1.2.3 Theorem:</strong> Let <span class="math inline">\(X\)</span> be a first countable topological space. Then</p>
-<ul>
-<li>it is Hausdorff iff every sequence in <span class="math inline">\(X\)</span> has at most one limit point;</li>
-<li>a point <span class="math inline">\(p \in X\)</span> belongs to the closure of a subset <span class="math inline">\(A \subseteq X\)</span> iff there is a sequence in <span class="math inline">\(A\)</span> converging to <span class="math inline">\(p\)</span>;</li>
-<li>a map <span class="math inline">\(f: X \to Y\)</span> is continuous iff it sends convergent sequences to convergent sequences;</li>
-<li>it is sequentially compact iff it is countably compact.</li>
-</ul>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<p>[7, 定理 30.1] <strong>14.1.2.3 定理：</strong> 设 <span class="math inline">\(X\)</span> 是一个第一可数拓扑空间。那么</p>
-<ul>
-<li>它是 Hausdorff 空间，当且仅当 <span class="math inline">\(X\)</span> 中的每个序列至多有一个极限点；</li>
-<li>点 <span class="math inline">\(p \in X\)</span> 属于子集 <span class="math inline">\(A \subseteq X\)</span> 的闭包，当且仅当存在 <span class="math inline">\(A\)</span> 中的序列收敛到 <span class="math inline">\(p\)</span>；</li>
-<li>映射 <span class="math inline">\(f: X \to Y\)</span> 是连续的，当且仅当它将收敛序列映射为收敛序列；</li>
-<li>它是序列紧的，当且仅当它是可数紧的。</li>
+<li>是连续的；</li>
+<li>是单射，当且仅当 <span class="math inline">\(\mathcal{F}\)</span> 分离 <span class="math inline">\(X\)</span> 的点；并且</li>
+<li>到其像上是开映射，当且仅当 <span class="math inline">\(\mathcal{F}\)</span> 将点与 <span class="math inline">\(X\)</span> 中不相交的闭子集分离。</li>
 </ul>
 </details>
 </div>
@@ -459,23 +447,77 @@ window.Quarto = {
 <summary style="color: gray; cursor: pointer;">
 [点击展开证明]
 </summary>
-<em>Proof:</em> We prove the second item. Let <span class="math inline">\(\mathcal{B}_p = (U_n)_{n\in\mathbb{N}}\)</span> be a countable neighborhood base of <span class="math inline">\(p \in X\)</span>. If <span class="math inline">\(p \in \overline{A}\)</span> then there is <span class="math inline">\(p_n \in U_n \cap A\)</span> for any <span class="math inline">\(n \in \mathbb{N}\)</span>. By definition of a neighborhood base, we have <span class="math inline">\(p_n \to p\)</span>. If there is <span class="math inline">\((p_k)_{k\in\mathbb{N}} \subseteq A\)</span> with <span class="math inline">\(p_k \to p\)</span>, then for any <span class="math inline">\(U \in \mathcal{N}_p\)</span>, by definition of a neighborhood base, there is <span class="math inline">\(U_n \subseteq U\)</span> and then there is some <span class="math inline">\(p_k \in U_n \cap A \subseteq U \cap A\)</span>. Therefore, <span class="math inline">\(p \in \overline{A}\)</span>. <span class="math inline">\(\blacksquare\)</span>
+<em>Proof:</em> Since for any <span class="math inline">\(f \in \mathcal{F}\)</span>, <span class="math inline">\(\text{pr}_f \circ \text{ev} = f\)</span> is continuous, the map <span class="math inline">\(\text{ev}\)</span> is continuous. The map <span class="math inline">\(\text{ev}\)</span> is injective iff for any distinct <span class="math inline">\(p, q \in X\)</span>, there is <span class="math inline">\(f \in \mathcal{F}\)</span> with <span class="math inline">\(f(p) = \text{ev}_p(f) \neq \text{ev}_q(f) = f(q)\)</span>, which exactly means that <span class="math inline">\(\mathcal{F}\)</span> separates points of <span class="math inline">\(X\)</span>. If the map <span class="math inline">\(\text{ev}\)</span> separates points from disjoint closed subsets of <span class="math inline">\(X\)</span>, then for any <span class="math inline">\(p \in X\)</span> and any <span class="math inline">\(U \in \mathcal{N}_p\)</span>, there is <span class="math inline">\(f \in \mathcal{F}\)</span> with <span class="math inline">\(f(p) = 0\)</span> and <span class="math inline">\(f|_{X \setminus U} = 1\)</span>. In particular, <span class="math inline">\(V = \text{pr}_f^{-1}([0, 1[) = \text{ev}(f^{-1}([0, 1[))\)</span> is an open neighborhood of <span class="math inline">\(\text{ev}_p\)</span> in <span class="math inline">\(\text{ev}(X)\)</span>, which implies that <span class="math inline">\(\text{ev}\)</span> is open onto its image. <span class="math inline">\(\blacksquare\)</span>
+</details>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.2.1.6 Urysohn metrization theorem:</strong> Any regular second countable topological space is metrizable.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.1.6 Urysohn 度量化定理：</strong> 任何正则的第二可数拓扑空间都是可度量化的。
+</details>
+</div>
+</div>
+</div>
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开证明]
+</summary>
+<em>Proof:</em> Let <span class="math inline">\(X\)</span> be a regular second countable topological space with <span class="math inline">\(\mathcal{B}\)</span> a countable topological base. Note that second countablility implies Lindelöfness, which together with regularity implies normality, and we have Urysohn lemma. For any <span class="math inline">\(U, V \in \mathcal{B}\)</span> with <span class="math inline">\(\overline{U} \subseteq V\)</span> choose <span class="math inline">\(f_{U,V} \in C(X; [0, 1])\)</span> with <span class="math inline">\(f_{U,V}|_{\overline{U}} = 0\)</span> and <span class="math inline">\(f_{U,V}|_{X \setminus V} = 1\)</span>, and let <span class="math inline">\(\mathcal{F}\)</span> be the countable collection of such <span class="math inline">\(f_{U,V}\)</span>. If <span class="math inline">\(B \in \mathcal{P}(X)\)</span> is closed and <span class="math inline">\(p \in X \setminus B\)</span>, choose <span class="math inline">\(V \in \mathcal{B}\)</span> with <span class="math inline">\(p \in V \subseteq X \setminus B\)</span> and by regularity choose <span class="math inline">\(U \in \mathcal{B}\)</span> with <span class="math inline">\(p \in \overline{U} \subseteq V\)</span>. Then <span class="math inline">\(f_{U,V}\)</span> separates <span class="math inline">\(p\)</span> and <span class="math inline">\(B\)</span>. By the Frechètness single points are closed in <span class="math inline">\(X\)</span>. We conclude that <span class="math inline">\(\mathcal{F}\)</span> separates points and separates points from disjoint closed subsets of <span class="math inline">\(X\)</span>. By Lemma 18.2.1.5, the evaluation map <span class="math inline">\(\text{ev}: X \to [0, 1]^\mathcal{F}\)</span> is an embedding into a metrizable space and then <span class="math inline">\(X\)</span> is metrizable. <span class="math inline">\(\blacksquare\)</span>
 </details>
 </section>
-<section id="second-countable-spaces." class="level3">
-<h3 class="anchored" data-anchor-id="second-countable-spaces.">14.1.3 Second countable spaces.</h3>
+<section id="smirnov-metrization-theorem.-smirnov-度量化定理" class="level3">
+<h3 class="anchored" data-anchor-id="smirnov-metrization-theorem.-smirnov-度量化定理">18.2.2 Smirnov metrization theorem. | Smirnov 度量化定理</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.2.2.1 Definition:</strong> A topological space <span class="math inline">\(X\)</span> is <em>locally metrizable</em> iff it has an open cover consisting of metrizable subspaces.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.2.1 定义：</strong> 拓扑空间 <span class="math inline">\(X\)</span> 是<strong>局部可度量化的</strong> (locally metrizable)，当且仅当它有一个由可度量化子空间组成的开覆盖。
+</details>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<strong>14.1.3.1 Theorem:</strong> Any second countable space is first countable, separable, and Lindelöf.
+<strong>18.2.2.2 Nagata–Smirnov metrization theorem:</strong> Any topological space is metrizable iff it is a regular with a countably locally finite base.
 <details>
 <summary style="color: gray; cursor: pointer;">
 [点击展开翻译]
 </summary>
-<strong>14.1.3.1 定理：</strong> 任何第二可数空间都是第一可数的、可分的且是 Lindelöf 空间。
+<strong>18.2.2.2 Nagata–Smirnov 度量化定理：</strong> 任何拓扑空间是可度量化的，当且仅当它是一个具有可数局部有限基的正则空间。
+</details>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<strong>18.2.2.3 Smirnov metrization theorem:</strong> Any topological space is metrizable iff it is a paracompact Hausdorff locally metrizable space.
+<details>
+<summary style="color: gray; cursor: pointer;">
+[点击展开翻译]
+</summary>
+<strong>18.2.2.3 Smirnov 度量化定理：</strong> 任何拓扑空间是可度量化的，当且仅当它是一个仿紧的 Hausdorff 局部可度量化空间。
 </details>
 </div>
 </div>
@@ -484,80 +526,7 @@ window.Quarto = {
 <summary style="color: gray; cursor: pointer;">
 [点击展开证明]
 </summary>
-<em>Proof:</em> For the Lindelöfness, note that any open cover has a countable subcover by leaving only one member containing each basic open subset. <span class="math inline">\(\blacksquare\)</span>
-</details>
-<p><strong>14.1.3.2 Corollary:</strong> Each base of a second countable space has a countable subbase.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.3.3 Proposition:</strong> The lexicographical order space <span class="math inline">\(([0,1]^2, \mathcal{T}_{\text{lexi}})\)</span> is separable but not first countable. The excluded point space <span class="math inline">\((X, \mathcal{T}_p')\)</span> is first countable but not separable if <span class="math inline">\(X\)</span> is uncountable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.3.3 命题：</strong> 字典序空间 <span class="math inline">\(([0,1]^2, \mathcal{T}_{\text{lexi}})\)</span> 是可分的但不是第一可数的。排除点空间 <span class="math inline">\((X, \mathcal{T}_p')\)</span> 是第一可数的，但如果 <span class="math inline">\(X\)</span> 是不可数的，则它不是可分的。
-</details>
-</div>
-</div>
-</div>
-<p><strong>14.1.3.4 Example:</strong> The <em>long line</em> is not second countable.</p>
-<p><strong>14.1.3.5 Example:</strong> The space <span class="math inline">\(\mathbb{R}_{\text{lower}}\)</span> is first countable, separable, and Lindelöf, but not second countable.</p>
-<div class="callout callout-style-simple callout-important">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<strong>14.1.3.6 Proposition:</strong> A locally compact, paracompact connected Hausdorff space is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-<strong>14.1.3.6 命题：</strong> 局部紧的、仿紧的连通 Hausdorff 空间是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.3.7 Theorem:</strong> A subspace of a second-countable space is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.3.7 定理：</strong> 第二可数空间的子空间是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-[7, Theorem 30.2] <strong>14.1.3.8 Theorem:</strong> A countable product of second-countable spaces is second-countable.
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开翻译]
-</summary>
-[7, 定理 30.2] <strong>14.1.3.8 定理：</strong> 第二可数空间的可数乘积是第二可数的。
-</details>
-</div>
-</div>
-</div>
-<details>
-<summary style="color: gray; cursor: pointer;">
-[点击展开证明]
-</summary>
-<em>Proof:</em> Let <span class="math inline">\(X\)</span> be a second-countable space with a countable base <span class="math inline">\(\mathcal{B}\)</span>. Then <span class="math inline">\(\{B \cap A : B \in \mathcal{B}\}\)</span> is a countable base for the subspace <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span>. Let <span class="math inline">\(X_i\)</span>, <span class="math inline">\(i \in I\)</span>, be second-countable spaces with countable base <span class="math inline">\(\mathcal{B}_i\)</span>. Then <span class="math display">\[\left\{ \prod_{i \in I} U_i : (\forall i \in I)(U_i \in \mathcal{B}_i) \wedge (U_i = X_i \text{ for all but finitely many } i \in I) \right\} \qquad (225)\]</span> is a countable base for <span class="math inline">\(\prod_{i \in I} X_i\)</span>. <span class="math inline">\(\blacksquare\)</span>
+<em>Proof:</em> If a topological space <span class="math inline">\(X\)</span> is metrizable, it is locally metrizable, paracompact, and Hausdorff. Suppose <span class="math inline">\(X\)</span> is a paracompact Hausdorff locally metrizable space. Let <span class="math inline">\(\mathcal{A}\)</span> be an open cover of <span class="math inline">\(X\)</span> consisting of metrizable subspaces. By paracompactness of <span class="math inline">\(X\)</span>, the open cover <span class="math inline">\(\mathcal{A}\)</span> has a locally finite open refinement <span class="math inline">\(\mathcal{A}_0\)</span>. Since every <span class="math inline">\(U \in \mathcal{A}_0\)</span> is metrizable we let <span class="math inline">\(d_U\)</span> be the metric on <span class="math inline">\(U\)</span> generating the subspace topology. For any <span class="math inline">\(p \in U\)</span> and <span class="math inline">\(r &gt; 0\)</span>, let <span class="math inline">\(B_U(p, r) = B_{d_U}(p, r)\)</span>, which is open in <span class="math inline">\(U\)</span> and hence open in <span class="math inline">\(X\)</span>. For any <span class="math inline">\(m \in \mathbb{N}\)</span>, let <span class="math inline">\(\mathcal{A}_m\)</span> be the cover of <span class="math inline">\(X\)</span> by open balls of radius <span class="math inline">\(\frac{1}{m}\)</span>: <span class="math display">\[\mathcal{A}_m = \left\{ B_U\left(p, \frac{1}{m}\right) : p \in U, U \in \mathcal{A}_0 \right\}. \qquad (257)\]</span> Let <span class="math inline">\(\mathcal{D}_m\)</span> be a locally finite open refinement of <span class="math inline">\(\mathcal{A}_m\)</span> that covers <span class="math inline">\(X\)</span> and let <span class="math inline">\(\mathcal{D} = \bigcup_{m=1}^\infty \mathcal{D}_m\)</span>. Then <span class="math inline">\(\mathcal{D}\)</span> is countably locally finite. We claim that <span class="math inline">\(\mathcal{D}\)</span> is a base for the topology on <span class="math inline">\(X\)</span>, and then by Theorem 18.2.2.2 <span class="math inline">\(X\)</span> is metrizable. Let <span class="math inline">\(p \in X\)</span> and <span class="math inline">\(O \in \mathcal{N}_p\)</span>. Let <span class="math inline">\(\{U_1, ..., U_N\}\)</span> be the finitely many elements of <span class="math inline">\(\mathcal{A}_0\)</span> that have <span class="math inline">\(p\)</span>. Since <span class="math inline">\(O \cap U_i\)</span> is a neighborhood of <span class="math inline">\(p\)</span> in <span class="math inline">\(U_i\)</span>, there is <span class="math inline">\(\varepsilon_i &gt; 0\)</span> such that <span class="math inline">\(B_{U_i}(p, \varepsilon_i) \subseteq O \cap U_i\)</span>. Choose <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(\frac{2}{m} &lt; \min\{\varepsilon_1, ..., \varepsilon_N\}\)</span>. Since <span class="math inline">\(\mathcal{D}_m\)</span> covers <span class="math inline">\(X\)</span>, there is <span class="math inline">\(V \in \mathcal{D}_m\)</span> having <span class="math inline">\(p\)</span>. Since <span class="math inline">\(\mathcal{D}_m\)</span> refines <span class="math inline">\(\mathcal{A}_m\)</span>, there is an element <span class="math inline">\(B_W(q, \frac{1}{m}) \in \mathcal{A}_m\)</span> with <span class="math inline">\(W \in \mathcal{A}_0\)</span> and <span class="math inline">\(q \in W\)</span> and <span class="math inline">\(V \subseteq B_W(q, \frac{1}{m})\)</span>. Then <span class="math inline">\(p \in W\)</span> and <span class="math inline">\(W = U_i\)</span> for some <span class="math inline">\(1 \le i \le N\)</span>. Then <span class="math inline">\(V \subseteq B_{U_i}(q, \frac{1}{m}) \subseteq B_{U_i}(p, \varepsilon_i) \subseteq O\)</span>. Thus, <span class="math inline">\(\mathcal{D}\)</span> is a base for the topology on <span class="math inline">\(X\)</span>. <span class="math inline">\(\blacksquare\)</span>
 </details>
 
 
